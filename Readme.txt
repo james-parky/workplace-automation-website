@@ -1,6 +1,5 @@
-Thanks for downloading this template!
+###Workplace Automation IXN Project - Team 42
 
-Template Name: Rapid
-Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+This website contains all of the information regarding our final project and all the work that was done during the design and developemnt process.
+
+It also features a weekly blog detailing exactly what we accomplished each week.
