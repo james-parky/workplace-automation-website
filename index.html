@@ -64,6 +64,9 @@
           <li class="dropdown"><a href="#documentation"><span>Documentation</span><i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#documentation-data_connectors">Data Connectors</a></li>
+              <li><a href="#documentation-data_privacy">Data Privacy</a></li>
+              <li><a href="#documentation-liquid">Liquid</a></li>
+              <li><a href="#documentation-web_roles">Web Roles</a></li>
               <li><a href="#documentation-web_templates">Web Templates</a></li>
             </ul>
           </li>
@@ -339,29 +342,91 @@
     <!-- End Why Us Section -->
 
     <!-- ======= Documentation Section ======= -->
-    <section id="documentation" class="documentation">
+    <section id="documentation" class="documentation section-bg">
       <div class="container">
 
         <!-- Docs Header -->
         <header class="section-header">
           <h3>Documentation</h3>
           <p>
-            Here is our documentation
+            In this section, we hope to explain the inner workings of our project.<br>This may be useful to read not only if you hope
+            to understand our project more comprehensively, but for those who look to make similar projects using similar technologies.
+            <br><br>
+            This section is written by students who have very recently learnt to use these technologies from scratch, and so may
+            offer a unique perspective which may supplement (but not replace!)
+            <a href="#services">Microsoft Documentation</a> for novices with likeminded goals.
+            <br><br> *** ONCE DOCUMENTATION FINISHED, FIX ALTERNATING ALIGNMENT ***
           </p>
         </header>
 
         <!-- Data Connector Subsection -->
-        <section id="documentation-data_connectors">
+        <section id="documentation-data_connectors" class="documentation-data_connectors">
           <div class="row feature-item mt-5 pt-5">
-            <div class="col-lg-6" >
+            <div class="col-lg-6">
               <img src="assets/img/features-1.svg" class="img-fluid" alt="" />
             </div>
-            <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            <div class="col-lg-6 pt-5 pt-lg-0">
               <h4>
                 Data Connectors
               </h4>
               <p>
-                *** Here is how you do a connector ***
+                *** Here is how you do a data connector ***
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Data Privacy Subsection -->
+        <section id="documentation-data_privacy" class="documentation-data_privacy">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="col-lg-6">
+              <img src="assets/img/features-1.svg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 pt-5 pt-lg-0">
+              <h4>
+                Data Privacy
+              </h4>
+              <p>
+                When developing a website, it is very important that you do not accidentally display sensitive data that would
+                violate <a href="https://gdpr-info.eu">GDPR</a> regulations.
+                <br><br>
+                As a failsafe, it's a great idea to use exclusively fake data right up until your project is ready for production.
+                <br><br>
+                Often, you will need different data to be shown to different people. For example, in our project our two user types
+                (students and professors) should be given access to very different sets of data. To ensure this, we used 
+                <a href="#documentation-web_roles">web roles</a> and <a href="#">table permissions</a> to hide or show information based on user type.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Liquid Subsection -->
+        <section id="documentation-liquid" class="documentation-liquid">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="col-lg-6 order-1 order-lg-2">
+              <img src="assets/img/features-1.svg" class="img-fluid" alt=""/>
+            </div>
+            <div class="col-lg-6 pt-5 pt-lg-0">
+              <h4>Liquid</h4>
+              <p>
+                *** Insert basic explanation of what liquid is for and how it's used, then link to liquid official docs ***
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Web Roles Subsection -->
+        <section id="documentation-web_roles">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="col-lg-6">
+              <img src="assets/img/features-2.svg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+              <h4>
+                Web Roles
+              </h4>
+              <p>
+                *** Here is how to establish and use web roles ***
               </p>
             </div>
           </div>
@@ -370,11 +435,10 @@
         <!-- Web Templates Subsection -->
         <section id="documentation-web_templates">
           <div class="row feature-item mt-5 pt-5">
-            <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <div class="col-lg-6">
               <img src="assets/img/features-2.svg" class="img-fluid" alt="" />
             </div>
-
-            <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
               <h4>
                 Web Templates
               </h4>
@@ -390,7 +454,7 @@
     <!-- End Features Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
         <header class="section-header">
           <h3 class="section-title">Our Portfolio</h3>
@@ -577,7 +641,7 @@
     <!-- End Portfolio Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="zoom-in">
         <header class="section-header">
           <h3>Testimonials</h3>
@@ -667,7 +731,7 @@
     <!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <section id="team" class="team">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3>Team</h3>
@@ -755,7 +819,7 @@
     <!-- End Team Section -->
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
+    <section id="clients" class="clients section-bg">
       <div class="container" data-aos="zoom-in">
         <header class="section-header">
           <h3>Our Clients</h3>
