@@ -435,18 +435,18 @@
                 <u>Objects</u>
                 <ul style="list-style-type:none">
                     <li>Objects contain the content that Liquid displays on a page and are surrounded by <strong>{{ ... }}</strong></li>
-                    <li><strong>{{ page.title }}</strong> will display the title of the current page object.</li>
+                    <li><strong>{{ <span style="color:#1BB1DC">page.title</span> }}</strong> will display the title of the current page object.</li>
                 </ul>
                 <u>Tags</u>
                 <ul style="list-style-type:none">
                     <li>Tags create the logic and control flow for templates and are surrounded by <strong>{% ... %}</strong>
                         This lets you assign variables and create conditions or loops without showing any of the Liquid logic on the page.</li>
-                    <li><strong>{% if user %}</strong><br/>&nbsp Hello <strong>{{ user.name }}</strong>!<br/><strong>{% endif %}</strong><br/>will display the title of the current page object.</li>
+                    <li><strong>{% <span style="color:#1BB1DC">if user</span> %}</strong><br/>&nbsp Hello <strong>{{ <span style="color:#1BB1DC">user.name</span> }}</strong>!<br/><strong>{% <span style="color:#1BB1DC">endif</span> %}</strong><br/>will display the title of the current page object.</li>
                 </ul>
                 <u>Filters</u>
                 <ul style="list-style-type:none">
                     <li>Filters change the output of a Liquid object or variable. They are used within double curly braces <strong>{{ ... }}</strong> and filter functions are called using the <strong>|</strong> operator</li>
-                    <li><strong>{{ "/my/fancy/url" | append: ".html" }}</strong> will append ".html" to the end of the "/my/fancy/url" string.</li>
+                    <li><strong>{{ <span style="color:#1BB1DC">"/my/fancy/url"</span> | <span style="color: darkblue;">append</span>: <span style="color:#1BB1DC">".html"</span> }}</strong> will append ".html" to the end of the "/my/fancy/url" string.</li>
                 </ul>
               </ul>
 
