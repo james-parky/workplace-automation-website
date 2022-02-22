@@ -1423,3 +1423,8 @@ section {
 #footer .credits a:hover {
     color: #0a98c0;
 }
+
+#liquid {
+    filter: invert(62%) sepia(33%) saturate(1077%) hue-rotate(149deg)
+        brightness(89%) contrast(93%);
+}
