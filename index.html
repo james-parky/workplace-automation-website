@@ -187,7 +187,9 @@
               <div class="icon">
                 <img class="dataverse" src="assets/img/Dataverse_scalable.svg" alt="Dataverse"></img>
               </div>
-              <h4 class="title"><a href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro">Dataverse</a></h4>
+              <h4 class="title"><a
+                  href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro">Dataverse</a>
+              </h4>
               <p class="description">
                 Dataverse lets you securely store and manage data that's used by business applications. Standard and
                 custom tables within Dataverse provide a secure and cloud-based storage option for your data.
@@ -267,7 +269,8 @@
                   modules running in the department.
                 </p>
                 <p>
-                  24th Nov: Presented the work we've currently done on our statement of work to our stakeholders in the weekly standup meeting.
+                  24th Nov: Presented the work we've currently done on our statement of work to our stakeholders in the
+                  weekly standup meeting.
                   Received more guidance on how to approach vetting viable technologies for our solution.
                 </p>
                 <p>
@@ -295,7 +298,8 @@
                   13th Jan: Added content to this website pertaining to the technologies we've chosen to go with.
                 </p>
                 <p>
-                  15th Jan: Learnt how to crete custom custom power apps solutions that can be used to extend our basic project operations template.
+                  15th Jan: Learnt how to crete custom custom power apps solutions that can be used to extend our basic
+                  project operations template.
                 </p>
                 <i class="bi bi-chevron-right" style="color: #f058dc"></i>
                 <h4>Week Beginning Mon 17th Jan 2022</h4>
@@ -314,16 +318,19 @@
                 <i class="bi bi-chevron-right" style="color: #f058dc"></i>
                 <h4>Week Beginning Mon 24th Jan 2022</h4>
                 <p>
-                  27th Jan:  Decided on what content about professors / researches was suitable for the portal and what complied with GDPR regulations.
+                  27th Jan: Decided on what content about professors / researches was suitable for the portal and what
+                  complied with GDPR regulations.
                   Removed offending data from the table.
                 </p>
                 <i class="bi bi-chevron-right" style="color: #f058dc"></i>
                 <h4>Week Beginning Mon 31st Jan 2022</h4>
                 <p>
-                  3rd Feb: Changed table redirect to contact page to use a powerapps form rather than Javascript dom element manipulation.
+                  3rd Feb: Changed table redirect to contact page to use a powerapps form rather than Javascript dom
+                  element manipulation.
                 </p>
                 <p>
-                  4th Feb: Added auto-generated hyperlinks on the generated contact page for links that professors and researchers supplied.
+                  4th Feb: Added auto-generated hyperlinks on the generated contact page for links that professors and
+                  researchers supplied.
                 </p>
                 <i class="bi bi-chevron-right" style="color: #f058dc"></i>
                 <h4>Week Beginning Mon 14th Feb 2022</h4>
@@ -349,10 +356,13 @@
         <header class="section-header">
           <h3>Documentation</h3>
           <p>
-            In this section, we hope to explain the inner workings of our project.<br>This may be useful to read not only if you hope
-            to understand our project more comprehensively, but for those who look to make similar projects using similar technologies.
+            In this section, we hope to explain the inner workings of our project.<br>This may be useful to read not
+            only if you hope
+            to understand our project more comprehensively, but for those who look to make similar projects using
+            similar technologies.
             <br><br>
-            This section is written by students who have very recently learnt to use these technologies from scratch, and so may
+            This section is written by students who have very recently learnt to use these technologies from scratch,
+            and so may
             offer a unique perspective which may supplement (but not replace!)
             <a href="#services">Microsoft Documentation</a> for novices with likeminded goals.
             <br><br> *** ONCE DOCUMENTATION FINISHED, FIX ALTERNATING ALIGNMENT ***
@@ -387,14 +397,18 @@
                 Data Privacy
               </h4>
               <p>
-                When developing a website, it is very important that you do not accidentally display sensitive data that would
+                When developing a website, it is very important that you do not accidentally display sensitive data that
+                would
                 violate <a href="https://gdpr-info.eu">GDPR</a> regulations.
                 <br><br>
-                As a failsafe, it's a great idea to use exclusively fake data right up until your project is ready for production.
+                As a failsafe, it's a great idea to use exclusively fake data right up until your project is ready for
+                production.
                 <br><br>
-                Often, you will need different data to be shown to different people. For example, in our project our two user types
-                (students and professors) should be given access to very different sets of data. To ensure this, we used 
-                <a href="#documentation-web_roles">web roles</a> and <a href="#">table permissions</a> to hide or show information based on user type.
+                Often, you will need different data to be shown to different people. For example, in our project our two
+                user types
+                (students and professors) should be given access to very different sets of data. To ensure this, we used
+                <a href="#documentation-web_roles">web roles</a> and <a href="#">table permissions</a> to hide or show
+                information based on user type.
               </p>
             </div>
           </div>
@@ -404,13 +418,38 @@
         <section id="documentation-liquid" class="documentation-liquid">
           <div class="row feature-item mt-5 pt-5">
             <div class="col-lg-6 order-1 order-lg-2">
-              <img src="assets/img/features-1.svg" class="img-fluid" alt=""/>
+              <img src="assets/img/features-1.svg" class="img-fluid" alt="" />
             </div>
             <div class="col-lg-6 pt-5 pt-lg-0">
-              <h4>Liquid</h4>
+              <a href="https://shopify.github.io/liquid/basics/introduction/">
+                <h4>Liquid</h4>
+              </a>
               <p>
-                *** Insert basic explanation of what liquid is for and how it's used, then link to liquid official docs ***
+                Liquid is a template language, written amongst HTML that uses a combination of objects, tags, and
+                filters inside template files to display dynamic content.
+                Liquid, like any template language, creates a bridge between an HTML file and a data store—in our
+                context, the data we use for matching.
               </p>
+              <span><p>Liquid can be broken down into <strong>three</strong> types of statement:</p></span>
+              <ul style="list-style-type:none;">
+                <u>Objects</u>
+                <ul style="list-style-type:none">
+                    <li>Objects contain the content that Liquid displays on a page and are surrounded by <strong>{{ ... }}</strong></li>
+                    <li><strong>{{ page.title }}</strong> will display the title of the current page object.</li>
+                </ul>
+                <u>Tags</u>
+                <ul style="list-style-type:none">
+                    <li>Tags create the logic and control flow for templates and are surrounded by <strong>{% ... %}</strong>
+                        This lets you assign variables and create conditions or loops without showing any of the Liquid logic on the page.</li>
+                    <li><strong>{% if user %}</strong><br/>     Hello <strong>{{ user.name }}</strong>!<br/><strong>{% endif %}</strong><br/>will display the title of the current page object.</li>
+                </ul>
+                <u>Filters</u>
+                <ul style="list-style-type:none">
+                    <li>Filters change the output of a Liquid object or variable. They are used within double curly braces <strong>{{ ... }}</strong> and filter functions are called using the <strong>|</strong> operator</li>
+                    <li><strong>{{ "/my/fancy/url" | append: ".html" }}</strong> will append ".html" to the end of the "/my/fancy/url" string.</li>
+                </ul>
+              </ul>
+
             </div>
           </div>
         </section>
