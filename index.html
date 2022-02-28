@@ -427,26 +427,51 @@
               <p>
                 Liquid is a template language, written amongst HTML that uses a combination of objects, tags, and
                 filters inside template files to display dynamic content.
-                Liquid, like any template language, creates a bridge between an HTML file and a data store—in our
+                Liquid, like any template language, creates a bridge between an HTML file and a data store — in our
                 context, the data we use for matching.
               </p>
-              <span><p>Liquid can be broken down into <strong>three</strong> types of statement:</p></span>
+              <span><p>Liquid can be learnt fairly quickly through the use of the <a href="https://shopify.github.io/liquid/basics/introduction/">official
+                        documentation.</a> Here are a few examples of how we used Liquid in our project:</p></span>
+
               <ul style="list-style-type:none;">
-                <u>Objects</u>
+                <u>Hiding Sensitive Data During Development</u>
                 <ul style="list-style-type:none">
-                    <li>Objects contain the content that Liquid displays on a page and are surrounded by <strong>{{ ... }}</strong></li>
-                    <li><strong>{{ <span style="color:#1BB1DC">page.title</span> }}</strong> will display the title of the current page object.</li>
+                    <li>At times during our development, we needed to display data that should be available to authenticated users <strong>only</strong>.
+                        To do this, we used Liquid <a href="https://shopify.github.io/liquid/tags/control-flow/">control flow</a> tags to show or hide data 
+                        based on this condition:
+                    </li>
+                    <li>&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC">if user</span> %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC;">include 'my_page'</span> %}</strong></li>
+                    <li>&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC;">endif</span> %}</strong></li>
+                    <br>
+                    <li>If the user is not signed in, <strong>'user'</strong> will not exist, meaning the variable holds a value
+                        of <strong>'Nil'</strong>. This means the <strong>'user'</strong> variable is <strong>'falsy'</strong>, causing the condition to be
+                        evaluated as <strong>false</strong> and therefore not display <strong>my_page</strong>.</li>
+                    <br>
+                    <li>It should be noted that this is <strong>not</strong> the most sound and elegant solution to hide content from the unauthorised.
+                        PowerApps offers mechanisms to acheive this through <a href="#documentation-web_roles">Web Roles</a>.</li>
                 </ul>
-                <u>Tags</u>
+                <br>
+                <u>Displaying User-Specific Information</u>
                 <ul style="list-style-type:none">
-                    <li>Tags create the logic and control flow for templates and are surrounded by <strong>{% ... %}</strong>
-                        This lets you assign variables and create conditions or loops without showing any of the Liquid logic on the page.</li>
-                    <li><strong>{% <span style="color:#1BB1DC">if user</span> %}</strong><br/>&nbsp Hello <strong>{{ <span style="color:#1BB1DC">user.name</span> }}</strong>!<br/><strong>{% <span style="color:#1BB1DC">endif</span> %}</strong><br/>will display the title of the current page object.</li>
+                    <li>It's often useful to have a webpage display different content depending on who the user is, and what information we have about them.
+                        Objects may have certain attributes which can be used to acheive this. As a simple example, we used:
+                    </li>
+                    <li>&nbsp;&nbsp;<strong>{{ <span style="color: #1BB1DC;">user.fullname</span> }}</strong></li>
+                    <li>to display a header which display the correct name for the user that's currently logged in.</li>
                 </ul>
-                <u>Filters</u>
+                <br>
+                <u>Iteration to Display Elements in an Array</u>
                 <ul style="list-style-type:none">
-                    <li>Filters change the output of a Liquid object or variable. They are used within double curly braces <strong>{{ ... }}</strong> and filter functions are called using the <strong>|</strong> operator.</li>
-                    <li><strong>{{ <span style="color:#1BB1DC">"/my/fancy/url"</span> | <span style="color: darkblue;">append</span>: <span style="color:#1BB1DC">".html"</span> }}</strong> will append ".html" to the end of the "/my/fancy/url" string.</li>
+                    <li>Under different conditions, different content may need to be included in the header. We used Liquid to display all headings which
+                        should be displayed within a given Web Link Set. Here is a heavily simplified method with which we did this:
+                    </li>
+                    <li>&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">for link in primary_nav.sublinks</span> %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">unless forloop.first</span> %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;div style="vertical-divider"&gt;&lt;/div&gt;</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">endunless</span> %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ <span style="color: #1BB1DC;">link.name</span> }}</strong></li>
+                    <li>&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">endfor</span> %}</strong></li>
                 </ul>
               </ul>
 
