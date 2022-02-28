@@ -66,6 +66,7 @@
               <li><a href="#documentation-data_connectors">Data Connectors</a></li>
               <li><a href="#documentation-data_privacy">Data Privacy</a></li>
               <li><a href="#documentation-liquid">Liquid</a></li>
+              <li><a href="#documentation-portal_structure">Portal Structure</a></li>
               <li><a href="#documentation-web_roles">Web Roles</a></li>
               <li><a href="#documentation-web_templates">Web Templates</a></li>
             </ul>
@@ -479,11 +480,39 @@
           </div>
         </section>
 
+        <!-- Portal Structure -->
+        <section id="documentation-portal_structure">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="col-lg-6">
+              <img src="assets/img/features-1.svg" class="img-fluid" alt=""/>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+              <h4>
+                Portal Structure
+              </h4>
+              <p>
+                You could describe a portal as a conglomeration of web pages, data structures, and automated flows such that users may easily interact with 
+                data relevant to themselves. You could describe the top-down structure of the portal as follows:
+                <br><br>
+                Portal &#8594 Web Pages &#8594 Web Templates &#8594 Page Templates &#8594 HTML, Liquid, Content Snippets
+                <br><br>
+                To elaborate; a Portal may be thought to be a directed graph, where 
+                <a href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/page-templates">each node is a webpage</a> and edges are a 
+                redirection, such as clicking a button to reach a different page.
+                <br><br>
+                To display content on a webpage, you must associate the page with a particular page template. Where a web page is essentially an exact URL,
+                 a page template may be described as a blueprint for how the content of the page will be displayed. Within this page template, you may
+                 write the actualy content of the page, through some combination of HTML, Liquid, and JavaScript.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <!-- Web Roles Subsection -->
         <section id="documentation-web_roles">
           <div class="row feature-item mt-5 pt-5">
             <div class="col-lg-6">
-              <img src="assets/img/features-2.svg" class="img-fluid" alt="" />
+              <img src="assets/img/features-2.svg" class="img-fluid" alt=""/>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
               <h4>
