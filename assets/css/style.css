@@ -587,6 +587,7 @@ section {
 }
 #why-us .row {
 }
+
 #why-us .why-us-content .features {
     margin: 0 0 15px 0;
     padding: 0;
@@ -624,6 +625,42 @@ section {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     color: #8a87b6;
+}
+
+#why-us .difficulties {
+    padding-left: 13px;
+}
+
+#why-us .difficulties  .difficulties_button {
+    transition: all 0.5s;
+    width: 450px;
+    font-size: 24px;
+    display: inline-block;
+    text-align: center;
+}
+
+#why-us .difficulties .difficulties_button .difficulties_span {
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+}
+
+#why-us .difficulties .difficulties_button .difficulties_span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#why-us .difficulties .difficulties_button:hover .difficulties_span {
+    padding-right: 25px;
+}
+
+#why-us .difficulties .difficulties_button:hover .difficulties_span:after {
+    opacity: 1;
+    right: 0;
 }
 
 /* Call To Action Section
