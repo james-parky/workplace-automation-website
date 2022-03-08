@@ -48,26 +48,26 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li>
-            <a class="nav-link scrollto active" href="#hero">Home</a>
+            <a class="nav-link scrollto active" href="index.html#hero">Home</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="#context">Context</a>
+            <a class="nav-link scrollto" href="index.html#context">Context</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="#services">Technologies</a>
+            <a class="nav-link scrollto" href="index.html#services">Technologies</a>
           </li>
           <li>
-            <a class="nav-link scrollto" href="#why-us">Report</a>
+            <a class="nav-link scrollto" href="index.html#why-us">Report</a>
           </li>
 
-          <li class="dropdown"><a href="#documentation"><span>Documentation</span><i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="index.html#documentation"><span>Documentation</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#documentation-data_connectors">Data Connectors</a></li>
-              <li><a href="#documentation-data_privacy">Data Privacy</a></li>
-              <li><a href="#documentation-liquid">Liquid</a></li>
-              <li><a href="#documentation-portal_structure">Portal Structure</a></li>
-              <li><a href="#documentation-web_roles">Web Roles</a></li>
-              <li><a href="#documentation-web_templates">Web Templates</a></li>
+              <li><a href="index.html#documentation-data_connectors">Data Connectors</a></li>
+              <li><a href="index.html#documentation-data_privacy">Data Privacy</a></li>
+              <li><a href="index.html#documentation-liquid">Liquid</a></li>
+              <li><a href="index.html#documentation-portal_structure">Portal Structure</a></li>
+              <li><a href="index.html#documentation-web_roles">Web Roles</a></li>
+              <li><a href="index.html#documentation-web_templates">Web Templates</a></li>
             </ul>
           </li>
 
@@ -81,13 +81,6 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <!-- .navbar -->
-
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      </div>
     </div>
   </header>
   <!-- End Header -->
@@ -123,7 +116,8 @@
 
             <div class="accordion accordion-flush" id="faqlist">
 
-              <!-- Start Issue -->
+              <!-- Issue Template
+              <!- Start Issue --
               <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
@@ -134,13 +128,14 @@
                   <div class="accordion-body">
                     <strong>Description: </strong> *Issue description*
                     <br><br>
-                    <strong>Suggested solution: </strong> *solution*
+                    <strong>Workaround: </strong> *workaround*
                     <br><br>
-                    <strong>Workaround: </strong> *Workaround description*
+                    <strong>Suggested Solution: </strong>*solution*
                   </div>
                 </div>
               </div>
-              <!-- End Issue -->
+              <-- End Issue --
+              End Issue Template -->
 
               <!-- Start Issue -->
               <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
@@ -205,6 +200,32 @@
                     autonumber ID, ACM Keyword, and Supervisor Response. The Contact field is also automatically populated using a flow.
                     <br><br>
 
+                    <strong>Suggested Solution: </strong>I was expecting that it would be possible to use a flow to access data in
+                    hidden tables created by many-to-many relationships using a flow or otherwise. Creating custom N:N relationships
+                    should also be part of Microsoft documentation, as I found there to be little help with this process. 
+                  </div>
+                </div>
+              </div>
+              <!-- End Issue -->
+
+              <!-- Start Issue -->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    Subgrid on the First Tab of an Advanced Form
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <strong>Description: </strong>Whilst creating an advanced form with multiple tabs, I wanted to put a subgrid on the
+                    first page of the form. When I implemented this and viewed the results on the corresponding webpage, the subgrid 
+                    did not appear on the form – the tab was empty (there were no other elements on that tab).
+                    <br><br>
+
+                    <strong>Workaround: </strong>The subgrid had to be moved to the second tab and the first tab was turned into an
+                    instructions page.
+                    <br><br>
+
                     <strong>Suggested solution: </strong> Either it should be possible to have subgrids on the first tab of an advanced
                     form, or it should be clearly documented on
                     <a href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">this 
@@ -214,13 +235,38 @@
               </div>
               <!-- End Issue -->
 
+              <!-- Start Issue -->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    PowerAutomate Filter by Lookup Column
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <strong>Description: </strong>Assume a table (called table_1) with an arbitrary number of columns, one of which is a
+                    Lookup column (called lookup_column) to another arbitrary table. A cloud flow which uses the Dataverse step
+                    “List rows” with an OData filter of type
+                    <span style="font-family: 'Courier New', Courier, monospace">lookup_column eq [arbitrary value]</span> will produce the following error:
+                    <br><br>
+                    <span style="font-family: 'Courier New', Courier, monospace;">Could not find a property named 'lookup_column' on
+                      type 'Microsoft.Dynamics.CRM.table_1'.</span>
+                    <br><br>
+
+                    <strong>Workaround: </strong>We changed the OData filter to
+                    <span style="font-family: 'Courier New', Courier, monospace">_lookup_column_value eq [GUID]</span>
+                    <br><br>
+                    
+                    <strong>Suggested Solution: </strong>This quirk does not necessarily need to be changed, but it should be documented
+                    that lookup columns need to be referenced in this (or another) specific way to be filtered by in PowerAutomate.
+                  </div>
+                </div>
+              </div>
+              <!-- End Issue -->
+
             </div>
-
           </div>
-
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
         </div>
-
       </div>
     </section><!-- End F.A.Q Section -->
     

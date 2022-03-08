@@ -83,12 +83,6 @@
       </nav>
       <!-- .navbar -->
 
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      </div>
     </div>
   </header>
   <!-- End Header -->
@@ -369,26 +363,8 @@
             and so may
             offer a unique perspective which may supplement (but not replace!)
             <a href="#services">Microsoft Documentation</a> for novices with likeminded goals.
-            <br><br> *** ONCE DOCUMENTATION FINISHED, FIX ALTERNATING ALIGNMENT ***
           </p>
         </header>
-
-        <!-- Data Connector Subsection -->
-        <section id="documentation-data_connectors" class="documentation-data_connectors">
-          <div class="row feature-item mt-5 pt-5">
-            <div class="col-lg-6">
-              <img src="assets/img/features-1.svg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-lg-6 pt-5 pt-lg-0">
-              <h4>
-                Data Connectors
-              </h4>
-              <p>
-                *** Here is how you do a data connector ***
-              </p>
-            </div>
-          </div>
-        </section>
 
         <!-- Data Privacy Subsection -->
         <section id="documentation-data_privacy" class="documentation-data_privacy">
@@ -418,6 +394,45 @@
           </div>
         </section>
 
+        <!-- Forms Subsection -->
+        <section id="documentation-forms" class="documentation-forms">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                Forms
+              </h4>
+              <p>
+                Forms belong to tables. To create a form with X number of fields, you must first create a table with the same matching X number of columns.
+                The data collected by filling out this form is stored in this table in the respective columns. There are 2 main Insert forms used by the portal:
+                <ol>
+                  <li>
+                    <strong>Supervisor Application</strong>
+                    <br>This can be found in PowerApps inside Supervisor Responses v2 (table) > Supervisor Responses v2 main form. It should be accessed this
+                    way to customize the fields that appear on the form (and each individual tab). It can be further customized through
+                    Portal Management > Advanced Forms > Supervisor Application. Here, it is possible to reorder the steps of the form and manage form Sessions.
+                    To configure subgrids on this form, you should go to Portal Management > Basic Forms > Supervisor Application v2 > Related >
+                    Advanced Form Metadata. It may be confusing that there is both a Basic Form and an Advanced Form for the supervisor application, however
+                    they are both linked to the Supervisor Responses v2 main form (under the Supervisor Responses v2 table), so they work in harmony.
+                  </li>
+                  <li>
+                    <strong>Student Application</strong>
+                    <br>This can be found in PowerApps inside Student Responses > Student Responses main form. It should be accessed this way to customize the
+                    fields that appear on the form (and each individual tab). It can be further customized through Portal Management > Advanced Forms > Student
+                    Application. Here, it is possible to reorder the steps of the form and manage form Sessions.
+                  </li>
+                </ol>
+                If you want to manually add a record to a table, you go to the Table Name > Data > Add record. This opens a new tab and shows the default
+                Information (main) form, which is simplistic by default and may only show 2 fields. To alter this and allow more fields to be populated this
+                way, edit the Information form (of type Main, as opposed to Card or QuickViewForm). If you have multiple main forms, the pop-up tab may open in
+                either of the main forms. You can select which main form you want to fill out using the drop down menu on the form tab. Advanced forms can
+                support multiple steps, branching (I.e. conditional steps), and subgrids, all of which cannot be achieved with basic forms. Here is more
+                information on <a href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/entity-forms">basic forms</a> and
+                <a href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/web-form-properties">advanced forms</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <!-- Liquid Subsection -->
         <section id="documentation-liquid" class="documentation-liquid">
           <div class="row feature-item mt-5 pt-5">
@@ -425,9 +440,7 @@
               <img id="liquid" src="assets/img/liquid-logo.png" class="img-fluid" alt="<liquid-logo>" />
             </div>
             <div class="col-lg-6 pt-5 pt-lg-0">
-              <a href="https://shopify.github.io/liquid/basics/introduction/">
-                <h4>Liquid</h4>
-              </a>
+              <h4>Liquid</h4>
               <p>
                 Liquid is a template language, written amongst HTML that uses a combination of objects, tags, and
                 filters inside template files to display dynamic content.
@@ -486,10 +499,7 @@
         <!-- Portal Structure -->
         <section id="documentation-portal_structure">
           <div class="row feature-item mt-5 pt-5">
-            <div class="col-lg-6">
-              <img src="assets/img/features-1.svg" class="img-fluid" alt=""/>
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
+            <div class="pt-4 pt-lg-0 order-2 order-lg-1">
               <h4>
                 Portal Structure
               </h4>
@@ -506,6 +516,147 @@
                 To display content on a webpage, you must associate the page with a particular page template. Where a web page is essentially an exact URL,
                  a page template may be described as a blueprint for how the content of the page will be displayed. Within this page template, you may
                  write the actualy content of the page, through some combination of HTML, Liquid, and JavaScript.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Table Descriptions Subsection -->
+        <section id="documentation-table_descriptions" class="documentation-table_descriptions">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                Table Descriptions
+              </h4>
+
+                <!-- Default Tables -->
+                <i>Default Tables</i>
+                <ul>
+                  <li>
+                    <strong>Contact Table</strong>
+                    <br>Stores information about persons with whom a business unit has a relationship, such as customer, supplier, and
+                    colleague. Keeps track of who is signed into a portal.
+                    <a href="https://docs.microsoft.com/en-us/powerapps/developer/data-platform/reference/entities/contact">More
+                      Information.</a>
+                  </li>
+                </ul>
+                <!-- End Default Tables-->
+
+                <!-- Custom Tables -->
+                <i>Custom Tables</i>
+                <ul>
+                  <li>
+                    <strong>ACM Classification Codes</strong>
+                    <br>Stores each ACM Classification Code and corresponding Keyword. The display names should be followed instead of
+                    the names (in form team42_*) of the columns.
+                  </li>
+
+                  <li>
+                    <strong>FYP Options</strong>
+                    <br>Temporary table storing supervisor responses in an unordered way. This data will be mapped into the Supervisor
+                    Responses table.
+                  </li>
+
+                  <li>
+                    <strong>Research Groups</strong>
+                    <br>Single-column table storing all research groups the supervisors are part of. This table is up to date as of
+                    03/2022 and should be manually kept up to date with new (relevant) research groups if they appear.
+                  </li>
+
+                  <li>
+                    <strong>Student-ACM</strong>
+                    <br>Holds records linking Contacts (students) to the ACM Keywords they selected along with the priority of each
+                    keyword – not all keywords are equally important to the contact. 1 = highest priority. 3 = lowest priority.
+                    This table is automatically populated using a flow, Create Student-ACM Record.
+                  </li>
+
+                  <li>
+                    <strong>Student Responses</strong>
+                    <br>The foundation of the Student Application form – automatically records all form responses. Has a column for
+                    each of the form’s questions.
+                  </li>
+
+                  <li>
+                    <strong>Student Topic Options</strong>
+                    <br>Single-column table storing the generic topics that students can indicate an interest in on their Student
+                    Application. This table is up to date as of 03/2022 and should be manually kept up to date.
+                  </li>
+
+                  <li>
+                    <strong>Supervisor-ACM</strong>
+                    <br>Holds records linking Supervisor Responses to the relevant Contact (supervisor) to the ACM Keywords they selected.
+                    The Supervisor Response ID and ACM Keywords fields are automatically populated using a subgrid. The Contact field
+                    is also automatically populated using a flow, Add Contact field to Supervisor-ACM.
+                  </li>
+
+                  <li>
+                    <strong>Supervisor Responses v2</strong>
+                    <br>The foundation of the Student Application form – automatically records all form responses. Has a column for
+                    each of the form’s questions except for ACM Keywords and Research Groups. These fields are handled using subgrids
+                    and a one-to-many and a many-to-many relationships respectively.
+                  </li>
+
+                  <li>
+                    <strong>Topic-ACM Map</strong>
+                    <br>Students can only pick generic topics from the Student Topic Options table – they cannot pick ACM keywords.
+                    The topics are mapped into ACM keywords (and then inserted into the Student-ACM table) using the mapping stored in
+                    this table.
+                  </li>
+                </ul>
+                <!--End Custom Tables -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Table Relationships Subsection -->
+        <section id="documentation-table_relationships" class="documentation-table_relationships">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                Table Relationships
+              </h4>
+              <p>
+                Below is a diagram showing the relationship of all tables listed above:
+              </p>
+              <img style="border: 5px solid black; width: 70%;" src="assets/img/table-relationships.png">
+            </div>
+          </div>
+        </section>
+
+        <!-- X:Y Relationships Subsection -->
+        <section id="documentation-x_y_relationships" class="documentation-x_y_relationships">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                1:N, N:1, and N:N Table Relationships
+              </h4>
+              <p>
+                In PowerApps, a N:1 relationship is called a Lookup. A 1:N relationship is simply a reversed Lookup (lookup from the
+                other table into this one). Creating either of these will create a column in the table that holds the lookup, and you
+                must give this column a name. N:N relationships are not tied to a column the same way and one does not need to be
+                created to create an N:N relationship. A “hidden” table is created to enable an N:N relationship. This table cannot be
+                accessed through Dynamics – it can only be queried using FetchXML in XRMToolBox. If you require the data that would be
+                stored in this table please reference the Issues, Workarounds, and Ideal Solution section. Detailed instructions on
+                creating relationships can be found
+                <a href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-entity-lookup">here</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subgrids -->
+        <section id="documentation-subgrids" class="documentation-subgrids">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                Subgrids
+              </h4>
+              <p>
+                Subgrids can be used to relate records in a N:N relationship. 2 subgrids are used on the Supervisor Application
+                (advanced) form to receive input about the user’s Research Groups and ACM Keywords. Subgrids can be used on advanced
+                forms but not on the first tab, if the form has multiple steps. Instructions on adding and configuring a subgrid can be
+                found
+                <a href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">here</a>.
               </p>
             </div>
           </div>
