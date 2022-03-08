@@ -102,46 +102,54 @@
           <li><a href="index.html">Home</a></li>
           <li>Difficulties</li>
         </ol>
-        <h2>Difficulties</h2>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Blog Section ======= -->
-    <section id="why-us" class="why-us">
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
       <div class="container-fluid" data-aos="fade-up">
-        <header class="section-header">
-          <h3>Difficulties We Faced Along the Way</h3>
-          <p>
-            In this section, we are marking areas which we have identified as particular pain points from the perspective of a novice
-            learning to use Microsoft PowerApps. This may serve as useful feedback to improve the experience of using PowerApps for web
-            development, making it more accessible for completely new users to learn.
-          </p>
-        </header>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="why-us-content">
+        <div class="row gy-4">
 
-              <!-- Beginning of Item -->
-              <div class="features clearfix" data-aos="fade-up" data-aos-delay="100">
-                <i class="bi bi-chevron-right" style="color: #f058dc"></i>
-                <h4>Microsoft Documentation of PowerApps</h4>
-                <p>
-                  The documentation provided in the 'Learn' section of the PowerApps dashboard provides a huge amount of information which covers many aspects of
-                  portal creation. However, this can sometimes feel like navigating a huge maze - especially for a complete novice. I (Rory) almost never used
-                  Microsoft's own documentation, because I often found it difficult to find the exact information I needed, explained in a clear and concise way.
-                  I found far more success finding third party explanations elsewhere, such as <a href="https://www.youtube.com/playlist?list=PLcwrIWK7WBcT8lGkj6cCeNh9Eilmltu_k">this Youtube playlist on portal development.</a>
-                </p>
-              </div>
-              <!-- End of Item -->
-              
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content px-xl-5">
+              <h3><strong>Difficulties We Faced</strong></h3>
+              <p>
+                Below is a list of issues we faced when developing our project, how we worked around them, and suggested solutions to
+                make Microsoft PowerApps more easy to learn and use in the future.
+              </p>
             </div>
+
+            <div class="accordion accordion-flush" id="faqlist">
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    Issue Title
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <strong>Description: </strong> *Issue description*
+                    <br><br>
+                    <strong>Workaround: </strong> *Workaround description*
+                    <br><br>
+                    <strong>Suggested solution: </strong> *solution*
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+            </div>
+
           </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
         </div>
 
-    </section>
-    <!-- End Why Us Section -->
+      </div>
+    </section><!-- End F.A.Q Section -->
+    
 
   </main><!-- End #main -->
 
