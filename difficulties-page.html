@@ -123,6 +123,7 @@
 
             <div class="accordion accordion-flush" id="faqlist">
 
+              <!-- Start Issue -->
               <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
@@ -133,12 +134,85 @@
                   <div class="accordion-body">
                     <strong>Description: </strong> *Issue description*
                     <br><br>
-                    <strong>Workaround: </strong> *Workaround description*
-                    <br><br>
                     <strong>Suggested solution: </strong> *solution*
+                    <br><br>
+                    <strong>Workaround: </strong> *Workaround description*
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div>
+              <!-- End Issue -->
+
+              <!-- Start Issue -->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    N:N Relationships
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <strong>Description: </strong>
+                    We have a table called Supervisor Responses that holds our users’ (the supervisors’) responses to a Supervisor 
+                    Application. The Supervisor Application is an advanced form belonging to the Supervisor Responses table. 
+                    Another table called ACM Classification Codes holds records which represent keywords we want our user to select from.
+                    They should be able to select more than one keyword.
+                    <br><br>
+
+                    <strong>Attempted Solution: </strong>
+                    This situation calls for a N:N relationship. We attempted to create a many-to-many relationship between Supervisor 
+                    Responses and ACM Classification Codes using the built-in option (Supervisor Responses table > Relationships > Add 
+                    relationship > Many-to-many; select ACM Classification Codes). This enabled us to use a subgrid in the form to 
+                    enable the user to select multiple ACM keywords while filling out the form.
+                    <br><br>
+                    The issue arose when we attempted to store additional information about the relationship between Supervisor 
+                    Responses and ACM Classification Codes. We also needed to store a lookup to the Contact table to be able to relate 
+                    each selected ACM keyword to a specific user. We understood that when a many-to-many relationship is created in this
+                    way a hidden table is created, forming the structure: Supervisor Responses <strong>1:N</strong> Hidden Table 
+                    <strong>N:1</strong> ACM Classification Codes.
+                    <br><br>
+                    To be able to store the extra Contact lookup column, we wanted to access the records in this hidden table and copy 
+                    them into another table (along with the additional data). We were able to view the records of the hidden table using
+                    the FetchXML tool in XRMToolbox. However, when we attempted to reproduce this retrieval using an automated cloud 
+                    flow, it was not possible. The List Rows step could not see the hidden table we were trying to retrieve rows from, 
+                    so the FetchXML we added to that step was never run.
+                    <br><br>
+
+                    <strong>Workaround: </strong>We had to scrap the many-to-many relationship and create a new table called 
+                    Supervisor-ACM to act in place of the hidden table. The Supervisor-ACM table has 4 columns:
+                    <ul>
+                      <li>ID (Autonumber)</li>
+                      <li>Contacts (Lookup into Contact table)</li>
+                      <li>ACM Keyword (Lookup into ACM Classification Codes)</li>
+                      <li>Supervisor Response ID (Lookup into Supervisor Responses</li>
+                    </ul>
+                    With this new method, the subgrid became more cumbersome to use. We had to create a basic form in the Supervisor-ACM 
+                    table to select and submit a single ACM keyword at a time. The basic form is triggered through the subgrid 
+                    configuration as shown below.
+                    <br><br>
+                    <img class="accordion-img" src="assets/img/new-advanced-form-metadata.png">
+                    <br><br>
+                    As shown in the following three images, the process of selecting a keyword is lengthier and more awkward than 
+                    using a subgrid with a many-to-many relationship.
+                    <br><br>
+                    <img class="accordion-img" src="assets/img/select-keywords1.png">
+                    <br><br>
+                    <img class="accordion-img" src="assets/img/select-keywords2.png">
+                    <br><br>
+                    <img class="accordion-img" src="assets/img/select-keywords3.png">
+                    <br><br>
+                    This process must be repeated for each keyword, as multiple selections are not possible. When keywords are 
+                    submitted (as in the previous image), a record is automatically added to the Supervisor-ACM table containing the 
+                    autonumber ID, ACM Keyword, and Supervisor Response. The Contact field is also automatically populated using a flow.
+                    <br><br>
+
+                    <strong>Suggested solution: </strong> Either it should be possible to have subgrids on the first tab of an advanced
+                    form, or it should be clearly documented on
+                    <a href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">this 
+                    page</a> that subgrids cannot appear on the first tab – it took much fiddling to discover this quirk.
+                  </div>
+                </div>
+              </div>
+              <!-- End Issue -->
 
             </div>
 

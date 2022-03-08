@@ -130,6 +130,11 @@ h6 {
     box-shadow: none;
 }
 
+.accordion-img {
+    border: 5px solid black;
+    width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
