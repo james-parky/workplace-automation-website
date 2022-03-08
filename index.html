@@ -63,10 +63,20 @@
 
           <li class="dropdown"><a href="#documentation"><span>Documentation</span><i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#documentation-data_connectors">Data Connectors</a></li>
               <li><a href="#documentation-data_privacy">Data Privacy</a></li>
+              <li><a href="#documentation-flows">Flows</a></li>
+              <li><a href="#documentation-forms">Forms</a></li>
               <li><a href="#documentation-liquid">Liquid</a></li>
               <li><a href="#documentation-portal_structure">Portal Structure</a></li>
+
+              <li class="dropdown"><a href="#"><span>Tables</span><i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="#documentation-table_descriptions">Table Descriptions</a></li>
+                  <li><a href="#documentation-table_permissions">Table Permissions</a></li>
+                  <li><a href="#documentation-table_relationships">Table Relationships</a></li>
+                </ul>
+              </li>
+              
               <li><a href="#documentation-web_roles">Web Roles</a></li>
               <li><a href="#documentation-web_templates">Web Templates</a></li>
             </ul>
@@ -394,6 +404,45 @@
           </div>
         </section>
 
+        <!-- Flows Subsection -->
+        <section id="documentation-flows" class="documentation-flows">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                Flows
+              </h4>
+              <p>
+                Flows are pieces of logic that allow the otherwise static elements (such as the tables) to move data between them and trigger events to happen.
+                Below are our existing flows:
+                <ol>
+                  <li>
+                    <strong>Add Contact Field to Supervisor ACM</strong>
+                    <br>This flow is triggered by the addition/modification/deletion of a record inside Supervisor Responses v2. When a Supervisor Application
+                    is submitted/modified/deleted, a record is created inside Supervisor-ACM and the ID, ACM Keyword, and Supervisor Response ID fields are
+                    populated in that record. This flow is used to populate the remaining Contact field of this new record. The flow does this by extracting
+                    the Contact field from the newly modified Supervisor Response record and inserting it into the Supervisor-ACM records belonging to that
+                    supervisor.
+                  </li>
+                  <li>
+                    <strong>Create Student-ACM Record</strong>
+                    <br>This flow is triggered by the addition/modification/deletion of a record inside Student Responses. When a Student Application is
+                    submitted/modified/deleted, a record is created inside Student Responses. We also want to create records inside Student-ACM, populating the
+                    columns ACM Keyword and Contact. The First-choice Interest field is extracted from the submitted record, and this is mapped to ACM Keywords
+                    using the Topic-ACM Maps. A record is created for the student associating them with each of these ACM keywords.
+                  </li>
+                  <li>
+                    <strong>Insert Topic-ACM Records</strong>
+                    <br>This flow is triggered manually, and was created for the purpose of efficiently populating the lookup table which maps student topics to
+                    ACM keywords. It works by extracting all ACM keywords pertaining to a certain section and creating a row in the lookup table mapping the
+                    keyword to a particular student topic. For example, it may select all ACM keywords beginning with '2.1', and create a record mapping them to
+                    'Algorithms and CS Core Theory'.
+                  </li>
+                </ol>
+              </p>
+            </div>
+          </div>
+        </section>
+
         <!-- Forms Subsection -->
         <section id="documentation-forms" class="documentation-forms">
           <div class="row feature-item mt-5 pt-5">
@@ -608,6 +657,24 @@
           </div>
         </section>
 
+        <!-- Table Permissions Subsection -->
+        <section id="documentation-table_permissions" class="documentation-table_permissions">
+          <div class="row feature-item mt-5 pt-5">
+            <div class="pt-5 pt-lg-0">
+              <h4>
+                Table Permissions
+              </h4>
+              <p>
+                Information about data security and table permissions may be found 
+                <a href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/assign-entity-permissions">here</a>. It is important to note that
+                without creating a Table Permission (inside Portal Management), it is not possible to display data from a table onto a webpage: the webpage will
+                show <i>"You don't have the appropriate permissions"</i>. The table permission should also have the correct web roles added to it so the
+                appropriate user types are able to interact with the table.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <!-- Table Relationships Subsection -->
         <section id="documentation-table_relationships" class="documentation-table_relationships">
           <div class="row feature-item mt-5 pt-5">
@@ -616,47 +683,26 @@
                 Table Relationships
               </h4>
               <p>
-                Below is a diagram showing the relationship of all tables listed above:
+                Below is a diagram showing the relationship of all tables listed in the Table Descriptions section:
               </p>
               <img style="border: 5px solid black; width: 70%;" src="assets/img/table-relationships.png">
-            </div>
-          </div>
-        </section>
-
-        <!-- X:Y Relationships Subsection -->
-        <section id="documentation-x_y_relationships" class="documentation-x_y_relationships">
-          <div class="row feature-item mt-5 pt-5">
-            <div class="pt-5 pt-lg-0">
-              <h4>
-                1:N, N:1, and N:N Table Relationships
-              </h4>
               <p>
-                In PowerApps, a N:1 relationship is called a Lookup. A 1:N relationship is simply a reversed Lookup (lookup from the
-                other table into this one). Creating either of these will create a column in the table that holds the lookup, and you
-                must give this column a name. N:N relationships are not tied to a column the same way and one does not need to be
-                created to create an N:N relationship. A “hidden” table is created to enable an N:N relationship. This table cannot be
-                accessed through Dynamics – it can only be queried using FetchXML in XRMToolBox. If you require the data that would be
-                stored in this table please reference the Issues, Workarounds, and Ideal Solution section. Detailed instructions on
-                creating relationships can be found
-                <a href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-entity-lookup">here</a>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Subgrids -->
-        <section id="documentation-subgrids" class="documentation-subgrids">
-          <div class="row feature-item mt-5 pt-5">
-            <div class="pt-5 pt-lg-0">
-              <h4>
-                Subgrids
-              </h4>
-              <p>
-                Subgrids can be used to relate records in a N:N relationship. 2 subgrids are used on the Supervisor Application
-                (advanced) form to receive input about the user’s Research Groups and ACM Keywords. Subgrids can be used on advanced
-                forms but not on the first tab, if the form has multiple steps. Instructions on adding and configuring a subgrid can be
-                found
-                <a href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">here</a>.
+              <br>
+              <h5><i>1:N, N:1, and N:N Relationships</i></h5>
+              In PowerApps, a N:1 relationship is called a Lookup. A 1:N relationship is simply a reversed Lookup (lookup from the
+              other table into this one). Creating either of these will create a column in the table that holds the lookup, and you
+              must give this column a name. N:N relationships are not tied to a column the same way and one does not need to be
+              created to create an N:N relationship. A “hidden” table is created to enable an N:N relationship. This table cannot be
+              accessed through Dynamics – it can only be queried using FetchXML in XRMToolBox. If you require the data that would be
+              stored in this table please reference the Issues, Workarounds, and Ideal Solution section. Detailed instructions on
+              creating relationships can be found
+              <a href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-entity-lookup">here</a>.
+              <br><br><h5><i>Subgrids</i></h5>
+              Subgrids can be used to relate records in a N:N relationship. 2 subgrids are used on the Supervisor Application
+              (advanced) form to receive input about the user’s Research Groups and ACM Keywords. Subgrids can be used on advanced
+              forms but not on the first tab, if the form has multiple steps. Instructions on adding and configuring a subgrid can be
+              found
+              <a href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">here</a>.
               </p>
             </div>
           </div>
