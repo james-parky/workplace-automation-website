@@ -43,7 +43,9 @@
       <h1 class="logo me-auto">
         <a href="index.html"><span>Team 42 - Modern Workplace Automation</span></a>
       </h1>
+    </div>
 
+      <!-- Navbar -->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li>
@@ -76,20 +78,16 @@
           <li class="dropdown"><a hred="#appendix">Appendix <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="appendix-gdpr">GDPR Statement</a></li>
-              <li><a href="appendix-blog">Development Blog</a></li>
+              <li><a href="blog-page.html">Development Blog</a></li>
               <li><a href="appendix-video">Monthly Video</a></li>
+              <li><a href="difficulties-page.html">Feedback for Microsoft</a></li>
             </ul>
           </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
-      <!-- .navbar -->
+      <!-- End Navbar -->
 
-      <div class="social-links">
-        <span style="width: 30px;"></span>
-      </div>
-
-    </div>
   </header>
   <!-- End Header -->
 
@@ -169,43 +167,104 @@
 
     <!-- ======= Research ======= -->
     <section id="research">
-      hi
+      <div class="container-fluid" data-aos="fade-up">
+        x
+      </div>
     </section>
     <!-- End Research -->
 
     <!-- ======= Algorithms ======= -->
     <section id="algorithms">
-      hellaaa
+      <div class="container-fluid" data-aos="fade-up">
+        x
+      </div>
     </section>
     <!-- End Algorithms -->
 
     <!-- ======= UI Design ======= -->
     <section id="ui-design">
-      uuiii
+      <div class="container-fluid" data-aos="fade-up">
+        x
+      </div>
     </section>
     <!-- End UI Design -->
 
     <!-- ======= System Design ======= -->
     <section id="system-design">
-      hello
+      <div class="container-fluid" data-aos="fade-up">
+        x
+      </div>
     </section>
     <!-- End System Design -->
 
     <!-- ======= Implementation ======= -->
     <section id="implementation">
-      hello
+      <div class="container-fluid" data-aos="fade-up">
+
+        <header>
+          <h3>
+            Implementation
+          </h3>
+        </header>
+        
+        <!-- Start implements -->
+        <div class="accordion accordion-flush" id="implements">
+
+          <!-- Cloud Flows -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#implement-1">
+                Cloud Flows
+              </button>
+            </h3>
+            <div id="implement-1" class="accordion-collapse collapse" data-bs-parent="#implements">
+                <div class="accordion-body">
+                    <ol>
+                      <li>
+                        <strong>Add Contact Field to Supervisor ACM</strong>
+                        <br>
+                        This flow is triggered by the addition/modification/deletion of a record inside Supervisor Responses v2. When a Supervisor Application is submitted/modified/deleted, a record is created inside Supervisor-ACM and the ID, ACM Keyword, and Supervisor Response ID fields are populated in that record. This flow is used to populate the remaining Contact field of this new record. The flow does this by extracting the Contact field from the newly modified Supervisor Response record and inserting it into the Supervisor-ACM records belonging to that supervisor.
+                        <br>
+                      </li>
+                      <li>
+                        <strong>Create Student-ACM Record</strong>
+                        <br>
+                        This flow is triggered by the addition/modification/deletion of a record inside Student Responses. When a Student Application is submitted/modified/deleted, a record is created inside Student Responses. We also want to create records inside Student-ACM, populating the columns ACM Keyword and Contact. The First-choice Interest field is extracted from the submitted record, and this is mapped to ACM Keywords using the Topic-ACM Maps. A record is created for the student associating them with each of these ACM keywords.
+                        <br>
+                      </li>
+                      <li>
+                        <strong>Insert Topic-ACM Records</strong>
+                        <br>
+                        This flow is triggered manually, and was created for the purpose of efficiently populating the lookup table which maps student topics to ACM keywords. It works by extracting all ACM keywords pertaining to a certain section and creating a row in the lookup table mapping the keyword to a particular student topic. For example, it may select all ACM keywords beginning with '2.1', and create a record mapping them to 'Algorithms and CS Core Theory'.
+                        <br>
+                      </li>
+                    </ol>
+                </div>
+            </div>
+          </div>
+          <!-- end Cloud Flows -->
+
+        </div>
+      </div>
+        <!-- End implements -->
+
+      </div>
     </section>
     <!-- End Implementation -->
 
     <!-- ======= Testing ======= -->
     <section id="testing">
-      tes
+      <div class="container-fluid" data-aos="fade-up">
+        x
+      </div>
     </section>
     <!-- End Testing -->
 
     <!-- ======= Evaluation ======= -->
     <section id="evaluation">
-      eva
+      <div class="container-fluid" data-aos="fade-up">
+        x
+      </div>
     </section>
     <!-- End Evaluation -->
 
