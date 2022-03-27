@@ -485,10 +485,11 @@ section {
     font-weight: 700;
     position: relative;
     font-family: "Montserrat", sans-serif;
+    margin: 5%;
 }
+
 .section-header p {
-    text-align: center;
-    margin: auto;
+    text-align: left;
     font-size: 15px;
     padding-bottom: 60px;
     color: #535074;
