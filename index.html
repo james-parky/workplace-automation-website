@@ -45,48 +45,48 @@
       </h1>
     </div>
 
-      <!-- Navbar -->
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li>
-            <a class="nav-link scrollto active" href="#">Home</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#requirements">Requirements</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#research">Research</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#algorithms">Algorithms</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#ui-design">UI Design</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#system-design">System Design</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#implementation">Implementation</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#testing">Testing</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#evaluation">Evaluation</a>
-          </li>
-          <li class="dropdown"><a hred="#appendix">Appendix <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="appendix-gdpr">GDPR Statement</a></li>
-              <li><a href="blog-page.html">Development Blog</a></li>
-              <li><a href="appendix-video">Monthly Video</a></li>
-              <li><a href="difficulties-page.html">Feedback for Microsoft</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- End Navbar -->
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li>
+          <a class="nav-link scrollto active" href="#">Home</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#requirements">Requirements</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#research">Research</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#algorithms">Algorithms</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#ui-design">UI Design</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#system-design">System Design</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#implementation">Implementation</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#testing">Testing</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#evaluation">Evaluation</a>
+        </li>
+        <li class="dropdown"><a hred="#appendix">Appendix <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="appendix-gdpr">GDPR Statement</a></li>
+            <li><a href="blog-page.html">Development Blog</a></li>
+            <li><a href="appendix-video">Monthly Video</a></li>
+            <li><a href="difficulties-page.html">Feedback for Microsoft</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- End Navbar -->
 
   </header>
   <!-- End Header -->
@@ -112,17 +112,17 @@
   <main id="main">
 
     <!-- ======= Requirements ======= -->
-    <section id="requirements" class="section-header">
+    <section id="requirements">
       <div class="container-fluid" data-aos="fade-up">
-        
-        <header>
+
+        <header class="section-header">
           <h3>Requirements</h3>
         </header>
 
         <!-- Example element -->
         <div class="col-lg-6">
-        <h4>Example Subheading</h4>
-        <p>Example Content</p>
+          <h4>Example Subheading</h4>
+          <p>Example Content</p>
         </div>
         <!-- End Example element -->
 
@@ -201,23 +201,25 @@
     <section id="implementation">
       <div class="container-fluid" data-aos="fade-up">
 
-        <header>
+        <header class="section-header">
           <h3>
             Implementation
           </h3>
         </header>
-        
+
         <!-- Start implements -->
         <div class="accordion accordion-flush" id="implements">
 
           <!-- Cloud Flows -->
           <div class="accordion-item">
             <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#implement-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-1">
                 Cloud Flows
               </button>
             </h3>
             <div id="implement-1" class="accordion-collapse collapse" data-bs-parent="#implements">
+<<<<<<< HEAD
                 <div class="accordion-body">
                   <p>
                   Flows are pieces of logic which allow some level of automation to otherwise static objects, such as tables. Flows can be triggered by
@@ -360,6 +362,107 @@
             </div>
           </div>
           <!-- end Liquid -->
+
+          <!-- Matching Algorithm -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" tpye="button" data-bs-toggle="collapse"
+                data-bs-target="#matching-1">
+                Matching Algorithm
+              </button>
+            </h3>
+            <div class="accordion-collapse collapse" id="matching-1" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <ol>
+                  <li>
+                    <strong>Collection of Data</strong>
+                    <p>Since our code is written in pure JavaScript, the required data is pulled from our solution’s
+                      database using simple http GET requests. There are 5 different requests, that pull 5 separate sets
+                      of data. This data is initially collected using PowerAutomate instant cloud flows (As seen above).
+                      The flow can be broken down into three steps.
+                    </p>
+                    <ul class="matchgin__flow-steps" style="text-align: center;list-style: none;">
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/http_get.png" alt="">
+                        <p>
+                          As you can see by this image, the flow is waiting for a GET request to its specified API. Upon
+                          receiving this request. Since the request doesnt need to send any data initially, the payload
+                          format is left empyty. </p>
+                      </li>
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/list_rows.png" alt="">
+                        <p>Next, the flow performs a ‘list rows’ operation on the specified table to get all of
+                          the lists into a JSON (JavaScript Object Notation) format. Only the rows containing data
+                          necessary
+                          for matching are included to reduce the size of the payload sent back to our code. In this
+                          case, the rows: 'acmclassificationcodesid', 'keyword', and 'id' are pulled from the 'ACM
+                          Classification Codes' table.</p>
+                      </li>
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/http_response.png" alt="">
+                        <p>Finally, an http request
+                          of code 200 is sent back, including the JSON formatted list of data. This procedure is
+                          repeated 5 times, once for each different table that we require data from.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Cleaning the Received Data</strong>
+                    <p>When the data for each table is received by the code, it needs to be cleaned and put into a named
+                      JavaScript object, so that it can be easily accessed by the algorithm.
+                      Here is an example of the aforementioned get requests. The data is initially fetched from the API
+                      of the flow pulling data from the desired table. The data is then parsed into a new JavaScript
+                      object, with more human-readble attribute names.
+                      Data is also 'cleaned' where it needs to be. For example, in this function, we remove any records
+                      that do not have a specified 'responseId.'
+                    </p>
+                    <img src="assets/img/implementation/matching/code/get_request.png" alt="">
+                  </li>
+                  <li>
+                    <strong>Parsing of the Data</strong>
+                    <p>The received student data and supervisor data is then parsed into a more usable format. This is
+                      done for multiple reasons. Firstly, when a student fills out a response form, they choose which
+                      rough topics they have interests in. Each one of these topics relate to hundreds of ACM keywords.
+                      Therefore the ACM keywords need to be collated into one student response object.
+                      Secondly, when a supervisor fills out a response form, a news Supervisor-ACM table record is
+                      generated for each ACM keyword they selected as relevant to them. To make matching more simple,
+                      these too are collated so that there is only one supervisor response object per unique supervisor,
+                      having many ACM keywords related to it.
+                    </p>
+                    <p>The below example shows the supervisor response parsing function. It can be seen that when
+                      sorting through Supervisor-ACM table records, responses that have a responseId that has already
+                      been used, have their ACM keywords appended to the already exisiting object, rather than creating
+                      a new one.</p>
+                    <img src="assets/img/implementation/matching/code/supervisor_parse.png" alt="">
+                  </li>
+                  <li><strong>Finding All Possible Matches</strong>
+                    <p>The next process is to find all possible students matched to each supervisor. These matches are
+                      found based on whether the supervisor and student share an common ACM keyword in their responses.
+                      If a student is found to match to a supervisor, the student's response object is inserted into an
+                      array
+                      of 'matched students' for the supervisor. This also contains the ACM keyword that they matched on,
+                      and the priority that the student assigned to it.
+                      This process is repeated for all students for all supervisors.</p>
+                    <p>Below is the actual code for finding matches. It simply loops through each parsed supervisor
+                      response object (formed in the previous step) and calls the findMatchingStudents function.
+                      The findMatchingStudents function then loops through each parsed student response object and sees
+                      if the response contains an ACM keyword that is also present in the current supervisor resposne
+                      object.
+                      If so, the student object is added to the supervisors list of matched students, as described
+                      above.
+                      The list of matches to that sueprvisor is returned.
+                      This is repeated for every supervisor.
+                    </p>
+                    <img src="assets/img/implementation/matching/code/find_matching_students.png" alt="">
+                    <p>Then, for each supervisor, the matches are ordered based on the priority that the student assigned to the ACM keyword that they matched with the supervisor on.</p>
+                    <img src="assets/img/implementation/matching/code/ordering.png" alt="">
+                  </li>
+                  <li><strong></strong><br></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- End Matching Algorithm -->
 
           <!-- Tables -->
           <div class="accordion-item">
@@ -509,7 +612,7 @@
 
         </div>
       </div>
-        <!-- End implements -->
+      <!-- End implements -->
 
       </div>
     </section>
