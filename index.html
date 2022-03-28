@@ -45,48 +45,48 @@
       </h1>
     </div>
 
-      <!-- Navbar -->
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li>
-            <a class="nav-link scrollto active" href="#">Home</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#requirements">Requirements</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#research">Research</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#algorithms">Algorithms</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#ui-design">UI Design</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#system-design">System Design</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#implementation">Implementation</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#testing">Testing</a>
-          </li>
-          <li>
-            <a class="nav-link scrollto active" href="#evaluation">Evaluation</a>
-          </li>
-          <li class="dropdown"><a hred="#appendix">Appendix <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="appendix-gdpr">GDPR Statement</a></li>
-              <li><a href="blog-page.html">Development Blog</a></li>
-              <li><a href="appendix-video">Monthly Video</a></li>
-              <li><a href="difficulties-page.html">Feedback for Microsoft</a></li>
-            </ul>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- End Navbar -->
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li>
+          <a class="nav-link scrollto active" href="#">Home</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#requirements">Requirements</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#research">Research</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#algorithms">Algorithms</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#ui-design">UI Design</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#system-design">System Design</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#implementation">Implementation</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#testing">Testing</a>
+        </li>
+        <li>
+          <a class="nav-link scrollto active" href="#evaluation">Evaluation</a>
+        </li>
+        <li class="dropdown"><a hred="#appendix">Appendix <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="appendix-gdpr">GDPR Statement</a></li>
+            <li><a href="blog-page.html">Development Blog</a></li>
+            <li><a href="appendix-video">Monthly Video</a></li>
+            <li><a href="difficulties-page.html">Feedback for Microsoft</a></li>
+          </ul>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- End Navbar -->
 
   </header>
   <!-- End Header -->
@@ -112,17 +112,17 @@
   <main id="main">
 
     <!-- ======= Requirements ======= -->
-    <section id="requirements" class="section-header">
+    <section id="requirements">
       <div class="container-fluid" data-aos="fade-up">
-        
-        <header>
+
+        <header class="section-header">
           <h3>Requirements</h3>
         </header>
 
         <!-- Example element -->
         <div class="col-lg-6">
-        <h4>Example Subheading</h4>
-        <p>Example Content</p>
+          <h4>Example Subheading</h4>
+          <p>Example Content</p>
         </div>
         <!-- End Example element -->
 
@@ -201,52 +201,136 @@
     <section id="implementation">
       <div class="container-fluid" data-aos="fade-up">
 
-        <header>
+        <header class="section-header">
           <h3>
             Implementation
           </h3>
         </header>
-        
+
         <!-- Start implements -->
         <div class="accordion accordion-flush" id="implements">
 
           <!-- Cloud Flows -->
           <div class="accordion-item">
             <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#implement-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-1">
                 Cloud Flows
               </button>
             </h3>
             <div id="implement-1" class="accordion-collapse collapse" data-bs-parent="#implements">
-                <div class="accordion-body">
-                    <ol>
-                      <li>
-                        <strong>Add Contact Field to Supervisor ACM</strong>
-                        <br>
-                        This flow is triggered by the addition/modification/deletion of a record inside Supervisor Responses v2. When a Supervisor Application is submitted/modified/deleted, a record is created inside Supervisor-ACM and the ID, ACM Keyword, and Supervisor Response ID fields are populated in that record. This flow is used to populate the remaining Contact field of this new record. The flow does this by extracting the Contact field from the newly modified Supervisor Response record and inserting it into the Supervisor-ACM records belonging to that supervisor.
-                        <br>
-                      </li>
-                      <li>
-                        <strong>Create Student-ACM Record</strong>
-                        <br>
-                        This flow is triggered by the addition/modification/deletion of a record inside Student Responses. When a Student Application is submitted/modified/deleted, a record is created inside Student Responses. We also want to create records inside Student-ACM, populating the columns ACM Keyword and Contact. The First-choice Interest field is extracted from the submitted record, and this is mapped to ACM Keywords using the Topic-ACM Maps. A record is created for the student associating them with each of these ACM keywords.
-                        <br>
-                      </li>
-                      <li>
-                        <strong>Insert Topic-ACM Records</strong>
-                        <br>
-                        This flow is triggered manually, and was created for the purpose of efficiently populating the lookup table which maps student topics to ACM keywords. It works by extracting all ACM keywords pertaining to a certain section and creating a row in the lookup table mapping the keyword to a particular student topic. For example, it may select all ACM keywords beginning with '2.1', and create a record mapping them to 'Algorithms and CS Core Theory'.
-                        <br>
-                      </li>
-                    </ol>
-                </div>
+              <div class="accordion-body">
+                <ol>
+                  <li>
+                    <strong>Add Contact Field to Supervisor ACM</strong>
+                    <br>
+                    This flow is triggered by the addition/modification/deletion of a record inside Supervisor Responses
+                    v2. When a Supervisor Application is submitted/modified/deleted, a record is created inside
+                    Supervisor-ACM and the ID, ACM Keyword, and Supervisor Response ID fields are populated in that
+                    record. This flow is used to populate the remaining Contact field of this new record. The flow does
+                    this by extracting the Contact field from the newly modified Supervisor Response record and
+                    inserting it into the Supervisor-ACM records belonging to that supervisor.
+                    <br>
+                  </li>
+                  <li>
+                    <strong>Create Student-ACM Record</strong>
+                    <br>
+                    This flow is triggered by the addition/modification/deletion of a record inside Student Responses.
+                    When a Student Application is submitted/modified/deleted, a record is created inside Student
+                    Responses. We also want to create records inside Student-ACM, populating the columns ACM Keyword and
+                    Contact. The First-choice Interest field is extracted from the submitted record, and this is mapped
+                    to ACM Keywords using the Topic-ACM Maps. A record is created for the student associating them with
+                    each of these ACM keywords.
+                    <br>
+                  </li>
+                  <li>
+                    <strong>Insert Topic-ACM Records</strong>
+                    <br>
+                    This flow is triggered manually, and was created for the purpose of efficiently populating the
+                    lookup table which maps student topics to ACM keywords. It works by extracting all ACM keywords
+                    pertaining to a certain section and creating a row in the lookup table mapping the keyword to a
+                    particular student topic. For example, it may select all ACM keywords beginning with '2.1', and
+                    create a record mapping them to 'Algorithms and CS Core Theory'.
+                    <br>
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
           <!-- end Cloud Flows -->
 
+          <!-- Matching Algorithm -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" tpye="button" data-bs-toggle="collapse"
+                data-bs-target="#matching-1">
+                Matching Algorithm
+              </button>
+            </h3>
+            <div class="accordion-collapse collapse" id="matching-1" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <ol>
+                  <li>
+                    <strong>Collection of Data</strong>
+                    <p>Since our code is written in pure JavaScript, the required data is pulled from our solution’s
+                      database using simple http GET requests. There are 5 different requests, that pull 5 separate sets
+                      of data. This data is initially collected using PowerAutomate instant cloud flows (As seen above).
+                      The flow can be broken down into three steps.
+                    </p>
+                    <ul class="matchgin__flow-steps" style="display:flex;text-align: center;list-style: none;">
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/http_get.png" alt="">
+                        <p>
+                          As you can see by this image, the flow is waiting for a GET request to its specified API. Upon
+                          receiving this request. Since the request doesnt need to send any data initially, the payload
+                          format is left empyty. </p>
+                      </li>
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/list_rows.png" alt="">
+                        <p>Next, the flow performs a ‘list rows’ operation on the specified table to get all of
+                          the lists into a JSON (JavaScript Object Notation) format. Only the rows containing data
+                          necessary
+                          for matching are included to reduce the size of the payload sent back to our code. In this
+                          case, the rows: 'acmclassificationcodesid', 'keyword', and 'id' are pulled from the 'ACM
+                          Classification Codes' table.</p>
+                      </li>
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/http_response.png" alt="">
+                        <p>Finally, an http request
+                          of code 200 is sent back, including the JSON formatted list of data. This procedure is
+                          repeated 5 times, once for each different table that we require data from.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Cleaning the Received Data</strong>
+                    <p>When the data for each table is received by the code, it needs to be cleaned and put into a named
+                      JavaScript object, so that it can be easily accessed by the algorithm.
+                      Here is an example of the aforementioned get requests. The data is initially fetched from the API
+                      of the flow pulling data from the desired table. The data is then parsed into a new JavaScript
+                      object, with more human-readble attribute names.
+                      Data is also 'cleaned' where it needs to be. For example, in this function, we remove any records
+                      that do not have a specified 'responseId.'
+                    </p>
+                    <img src="assets/img/implementation/matching/code/get_request.png" alt="">
+                  </li>
+                  <li>
+                    <strong>Parsing of the Data</strong>
+                    <p>The received student data and supervisor data is then parsed into a more usable format. This is
+                      done for multiple reasons. Firstly, when a student fills out a response form, they choose which
+                      rough topics they have interests in. Each one of these topics relate to hundreds of ACM keywords.
+                    </p>
+                  </li>
+                  <li><strong></strong><br></li>
+                  <li><strong></strong><br></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- End Matching Algorithm -->
         </div>
       </div>
-        <!-- End implements -->
+      <!-- End implements -->
 
       </div>
     </section>
