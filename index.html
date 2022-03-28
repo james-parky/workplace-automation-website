@@ -277,7 +277,7 @@
                       of data. This data is initially collected using PowerAutomate instant cloud flows (As seen above).
                       The flow can be broken down into three steps.
                     </p>
-                    <ul class="matchgin__flow-steps" style="display:flex;text-align: center;list-style: none;">
+                    <ul class="matchgin__flow-steps" style="text-align: center;list-style: none;">
                       <li style="display:inline-block">
                         <img src="assets/img/implementation/matching/http_get.png" alt="">
                         <p>
@@ -319,9 +319,28 @@
                     <p>The received student data and supervisor data is then parsed into a more usable format. This is
                       done for multiple reasons. Firstly, when a student fills out a response form, they choose which
                       rough topics they have interests in. Each one of these topics relate to hundreds of ACM keywords.
+                      Therefore the ACM keywords need to be collated into one student response object.
+                      Secondly, when a supervisor fills out a response form, a news Supervisor-ACM table record is
+                      generated for each ACM keyword they selected as relevant to them. To make matching more simple,
+                      these too are collated so that there is only one supervisor response object per unique supervisor,
+                      having many ACM keywords related to it.
                     </p>
+                    <p>The below example shows the supervisor response parsing function. It can be seen that when
+                      sorting through Supervisor-ACM table records, responses that have a responseId that has already
+                      been used, have their ACM keywords appended to the already exisiting object, rather than creating
+                      a new one.</p>
+                    <img src="assets/img/implementation/matching/code/supervisor_parse.png" alt="">
                   </li>
-                  <li><strong></strong><br></li>
+                  <li><strong>Finding All Possible Matches</strong>
+                    <p>The next process is to find all possible students matched to each supervisor. These matches are
+                      found based on whether the supervisor and student share an common ACM keyword in their responses.
+                      If a student is found to match to a supervisor, the student's response object is inserted into an
+                      array
+                      of 'matched students' for the supervisor. This also contains the ACM keyword that they matched on,
+                      and the priority that the student assigned to it.
+                      This process is repeated for all students for all supervisor.</p>
+                      <img src="assets/img/implementation/matching/code/find_matching_students.png" alt="">
+                  </li>
                   <li><strong></strong><br></li>
                 </ol>
               </div>
