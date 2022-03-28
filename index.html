@@ -353,14 +353,31 @@
                       create a record mapping them to 'Algorithms and CS Core Theory'.
                     </p>
                   </li>
-                  <li><strong>Assign Web Role to Contact</strong>
+                  <li>
+                    <strong>Assign Web Role to Contact</strong>
                     <p>This flow is triggered when a user signs in on the Portal for the first time and selects a role.
                       The flow is expecting a request with a JSON payload of a specific shape. This payload contains the
                       id of the currently signed-in user, along with the id of the web role that they just selected. The
                       flow then relates the record of the currently signed-in user in the Contact table with the record
-                      of the selected web role in the Web Roles Table. Doing this gives the permissions of that web role to the user.</p>
+                      of the selected web role in the Web Roles Table. Doing this gives the permissions of that web role
+                      to the user.</p>
                   </li>
-                  <li><strong></strong></li>
+                  <li>
+                    <strong>Update Student Responses Availability</strong>
+                    <p>This is the longest and most complex flow in the solution and is triggered by the
+                      addition/modification of record inside the Supervisor-Student Pairs table. When a pair record is
+                      added or editted in this table, there are two things that may happen depending on the value of the
+                      'Approved' field in the record in focus.</p>
+                    <p>If this has a value of 'Rejected,' meaning the supervisor didn't approve the match, the student
+                      response of that match has it's 'Availability' field set to 'Yes.' Then, if the matches supervisor
+                      has a remaining capacity less than the actual capacity, the supervior's 'Availability' is set to
+                      'Yes' as well.</p>
+                    <p>If instead the value is 'Approved,' if the matches supervisor's remaining capacity is equal to 0,
+                      meaning they cannot facilitate any more students, the supervior's 'Availability' is set to 'No,'
+                      while the student's is 'Yes.' The pair's 'Approved' field is also set to 'Rejected.' If instead
+                      the supervisors remaining capacity is not equal to 0, it is decreased by 1, and the student's
+                      'Availability' is set to 'No.'</p>
+                  </li>
                   <li><strong></strong></li>
                   <li><strong></strong></li>
                   <li><strong></strong></li>
