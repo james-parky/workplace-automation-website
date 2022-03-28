@@ -317,35 +317,62 @@
                 <ol>
                   <li>
                     <strong>Add Contact Field to Supervisor ACM</strong>
-                    <br>
-                    This flow is triggered by the addition/modification/deletion of a record inside Supervisor Responses
-                    v2. When a Supervisor Application is submitted/modified/deleted, a record is created inside
-                    Supervisor-ACM and the ID, ACM Keyword, and Supervisor Response ID fields are populated in that
-                    record. This flow is used to populate the remaining Contact field of this new record. The flow does
-                    this by extracting the Contact field from the newly modified Supervisor Response record and
-                    inserting it into the Supervisor-ACM records belonging to that supervisor.
-                    <br><br>
+                    <p>
+                      This flow is triggered by the addition/modification/deletion of a record inside Supervisor
+                      Responses
+                      v2. When a Supervisor Application is submitted/modified/deleted, a record is created inside
+                      Supervisor-ACM and the ID, ACM Keyword, and Supervisor Response ID fields are populated in that
+                      record. This flow is used to populate the remaining Contact field of this new record. The flow
+                      does
+                      this by extracting the Contact field from the newly modified Supervisor Response record and
+                      inserting it into the Supervisor-ACM records belonging to that supervisor.
+                    </p>
                   </li>
                   <li>
                     <strong>Create Student-ACM Record</strong>
                     <br>
-                    This flow is triggered by the addition/modification/deletion of a record inside Student Responses.
-                    When a Student Application is submitted/modified/deleted, a record is created inside Student
-                    Responses. We also want to create records inside Student-ACM, populating the columns ACM Keyword and
-                    Contact. The First-choice Interest field is extracted from the submitted record, and this is mapped
-                    to ACM Keywords using the Topic-ACM Maps. A record is created for the student associating them with
-                    each of these ACM keywords.
-                    <br><br>
+                    <p>
+                      This flow is triggered by the addition/modification/deletion of a record inside Student Responses.
+                      When a Student Application is submitted/modified/deleted, a record is created inside Student
+                      Responses. We also want to create records inside Student-ACM, populating the columns ACM Keyword
+                      and
+                      Contact. The First-choice Interest field is extracted from the submitted record, and this is
+                      mapped
+                      to ACM Keywords using the Topic-ACM Maps. A record is created for the student associating them
+                      with
+                      each of these ACM keywords.
+                    </p>
                   </li>
                   <li>
                     <strong>Insert Topic-ACM Records</strong>
-                    <br>
-                    This flow is triggered manually, and was created for the purpose of efficiently populating the
-                    lookup table which maps student topics to ACM keywords. It works by extracting all ACM keywords
-                    pertaining to a certain section and creating a row in the lookup table mapping the keyword to a
-                    particular student topic. For example, it may select all ACM keywords beginning with '2.1', and
-                    create a record mapping them to 'Algorithms and CS Core Theory'.
-                    <br><br>
+                    <p>
+                      This flow is triggered manually, and was created for the purpose of efficiently populating the
+                      lookup table which maps student topics to ACM keywords. It works by extracting all ACM keywords
+                      pertaining to a certain section and creating a row in the lookup table mapping the keyword to a
+                      particular student topic. For example, it may select all ACM keywords beginning with '2.1', and
+                      create a record mapping them to 'Algorithms and CS Core Theory'.
+                    </p>
+                  </li>
+                  <li><strong>Assign Web Role to Contact</strong>
+                    <p>This flow is triggered when a user signs in on the Portal for the first time and selects a role.
+                      The flow is expecting a request with a JSON payload of a specific shape. This payload contains the
+                      id of the currently signed-in user, along with the id of the web role that they just selected. The
+                      flow then relates the record of the currently signed-in user in the Contact table with the record
+                      of the selected web role in the Web Roles Table. Doing this gives the permissions of that web role to the user.</p>
+                  </li>
+                  <li><strong></strong></li>
+                  <li><strong></strong></li>
+                  <li><strong></strong></li>
+                  <li><strong></strong></li>
+                  <li><strong>Post Match Data to Supervisor-Student Pairs Table</strong></li>
+                  <li style="list-style: none;"><strong>HTTP Get Flows</strong>
+                    <ol start="10">
+                      <li><strong>Get ACM Data</strong></li>
+                      <li><strong>Get ACM Map Data</strong></li>
+                      <li><strong>Get Student Response Data</strong></li>
+                      <li><strong>Get Supervisor Response Data</strong></li>
+                      <li><strong>Get Supervisor-ACM Table Data</strong></li>
+                      </ul>
                   </li>
                 </ol>
               </div>
@@ -681,8 +708,9 @@
                 <img src="assets/img/implementation/matching/matching_page_status_completed.png" alt="">
                 <p>As described in the above section, the results from the matching algorithm are inputted into the
                   'Supervisor-Student Pairs' table, which is viewable by the administrator. Here the matches can be
-                  reviewed and then approved or rejected. When a pair record is editted as shown below, a PowerAutomate instant flow is run, which performs the following logic.</p>
-                  <img src="assets/img/implementation/matching/edit_status_of_pair.png" alt="">
+                  reviewed and then approved or rejected. When a pair record is editted as shown below, a PowerAutomate
+                  instant flow is run, which performs the following logic.</p>
+                <img src="assets/img/implementation/matching/edit_status_of_pair.png" alt="">
                 <p>
                   If a pair is rejected by an administrator, the involved student's availability is set to 'Yes' and if
                   the supervisor's remaining capacity is less than their total capacity, the supervisor's availability
