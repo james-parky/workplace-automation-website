@@ -548,10 +548,18 @@
                     <strong>Sending the Matches Back to Our Solution</strong>
                     <p>After all of the matches between students and superviors have been reviewed, and matchless
                       supervisors and students have been found, the data is properly formatted and sent back to our
-                      solution's database using an http POST request. There is another flow in our solution waiting for
-                      a POST request to a specific API, expecting a payload containing a specifically shapped JSON. </p>
+                      solution's database using an http POST request. </p>
                     <img src="assets/img/implementation/matching/code/post_request.png" alt="">
-                  </li>
+                    <p>There is another flow in our solution waiting for
+                      a POST request to a specific API, expecting a payload containing a specifically shapped JSON.</p>
+                    <img src="assets/img/implementation/matching/post_request.png" alt="">
+                    <p>The flow then iterates through the payload to extract all 'pairs' between a supervisor and
+                      student. From each pair, it takes the studentResponseId and supervisorResponseId associated with
+                      the pair. It uses these ID's to get the contacts of the people that submitted the responses.</p>
+                      <img src="assets/img/implementation/matching/get_contacts.png" alt="">
+                      <p>The rest of the data in the pair is then extracted and a new 'Supervisor-Student Pairs' table record is generated.</p>
+                      <img src="assets/img/implementation/matching/add_row.png" alt="">
+                  </li> 
                 </ol>
               </div>
             </div>
