@@ -441,7 +441,7 @@
                       of data. This data is initially collected using PowerAutomate instant cloud flows (As seen above).
                       The flow can be broken down into three steps.
                     </p>
-                    <ul class="matchgin__flow-steps" style="text-align: center;list-style: none;">
+                    <ul class="matchgin__flow-steps" style="list-style: none;">
                       <li style="display:inline-block">
                         <img src="assets/img/implementation/matching/http_get.png" alt="">
                         <p>
@@ -556,16 +556,31 @@
                     <p>The flow then iterates through the payload to extract all 'pairs' between a supervisor and
                       student. From each pair, it takes the studentResponseId and supervisorResponseId associated with
                       the pair. It uses these ID's to get the contacts of the people that submitted the responses.</p>
-                      <img src="assets/img/implementation/matching/get_contacts.png" alt="">
-                      <p>The rest of the data in the pair is then extracted and a new 'Supervisor-Student Pairs' table record is generated.</p>
-                      <img src="assets/img/implementation/matching/add_row.png" alt="">
-                  </li> 
+                    <img src="assets/img/implementation/matching/get_contacts.png" alt="">
+                    <p>The rest of the data in the pair is then extracted and a new 'Supervisor-Student Pairs' table
+                      record is generated.</p>
+                    <img src="assets/img/implementation/matching/add_row.png" alt="">
+                  </li>
                 </ol>
               </div>
             </div>
           </div>
           <!-- End Matching Algorithm -->
 
+          <!-- Supervised Matching -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#supervised-matching-1">
+                Supervised Matching
+              </button>
+            </h3>
+            <div id="supervised-matching-1" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>The above mentioned 'Matching Algorithm' is the backend logic for what happens during the matching process, but how is it actually triggered?</p>
+              </div>
+            </div>
+          </div>
           <!-- Tables -->
           <div class="accordion-item">
             <h3 class="accordion-header">
