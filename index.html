@@ -125,11 +125,12 @@
           <div class="accordion-item">
 
             <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#req-moscow">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#req-moscow">
                 MoSCoW Requirements
               </button>
             </h3>
-            
+
             <div id="req-moscow" class="accordion-collapse collapse" data-bs-parent="reqs">
               <div class="accordion-body">
 
@@ -202,7 +203,7 @@
                     <br>
                   </li>
                   <!-- End Should-haves -->
-                  
+
                   <!-- Could-have -->
                   <li>
                     <strong>Could-have</strong><br>
@@ -228,14 +229,14 @@
                       <li>
                         This project will not concern the logistics of post-allocation,
                         such as contract generation, or communication between students
-                        and supervisors; this project concerns 
+                        and supervisors; this project concerns
                       </li>
                     </ol>
                   </li>
                   <!-- End Won't haves -->
 
                 </ul>
-                
+
               </div>
             </div>
 
@@ -297,7 +298,8 @@
           <!-- Cloud Flows -->
           <div class="accordion-item">
             <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#implement-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-1">
                 Cloud Flows
               </button>
             </h3>
@@ -516,6 +518,12 @@
             </h3>
             <div class="accordion-collapse collapse" id="matching-1" data-bs-parent="#implements">
               <div class="accordion-body">
+                <p>We had initially decided to use Project Operations for the supervised matching section of our
+                  solution. However, after closer inspection of how the matching works in Project Operations, we decided
+                  that we wouldn’t have enough control over how students were matched to supervisors. Instead, we
+                  created a custom algorithm using Javascript.</p>  
+
+                  <p>Our matching process can be split into 5 main, distinct components. </p>
                 <ol>
                   <li>
                     <strong>Collection of Data</strong>
@@ -660,7 +668,8 @@
             </h3>
             <div id="supervised-matching-1" class="accordion-collapse collapse" data-bs-parent="#implements">
               <div class="accordion-body">
-                <p>The above mentioned 'Matching Algorithm' is the backend logic for what happens during the matching process, but how is it actually triggered?</p>
+                <p>The above mentioned 'Matching Algorithm' is the backend logic for what happens during the matching
+                  process, but how is it actually triggered?</p>
               </div>
             </div>
           </div>
