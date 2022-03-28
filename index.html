@@ -521,9 +521,9 @@
                 <p>We had initially decided to use Project Operations for the supervised matching section of our
                   solution. However, after closer inspection of how the matching works in Project Operations, we decided
                   that we wouldn’t have enough control over how students were matched to supervisors. Instead, we
-                  created a custom algorithm using Javascript.</p>  
+                  created a custom algorithm using Javascript.</p>
 
-                  <p>Our matching process can be split into 5 main, distinct components. </p>
+                <p>Our matching process can be split into 5 main, distinct components. </p>
                 <ol>
                   <li>
                     <strong>Collection of Data</strong>
@@ -670,6 +670,12 @@
               <div class="accordion-body">
                 <p>The above mentioned 'Matching Algorithm' is the backend logic for what happens during the matching
                   process, but how is it actually triggered?</p>
+                <p>The administrator has sole access to a page on our portal wesbite from where the supervised matching
+                  process can be initiated. The administrator is presented with instructions on how to use the page,
+                  is given a button to click, and a label displays the current status of the algorithm. This is shown below.</p>
+                  <img src="assets/img/implementation/matching/matching_page_initial.png" alt="">
+                  <p>After the administrator clicks the button and the above described matching algorithm has taken place, the status label is updated, as seen below.</p>
+                  <img src="assets/img/implementation/matching/matching_page_completed.png" alt="">
               </div>
             </div>
           </div>
