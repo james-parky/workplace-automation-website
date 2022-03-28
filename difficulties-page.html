@@ -398,7 +398,7 @@
                     true
                   </button>
                 </h3>
-                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                   <div class="accordion-body">
                     <strong>Description: </strong>
                     <p>
@@ -418,36 +418,6 @@
                       eyesight, or those only able to
                       use a keyboard.
                     </p>
-                    <span style="
-                                                    font-family: 'Courier New',
-                                                        Courier, monospace;
-                                                ">lookup_column eq [arbitrary
-                      value]</span>
-                    will produce the following error:
-                    <br /><br />
-                    <span style="
-                                                    font-family: 'Courier New',
-                                                        Courier, monospace;
-                                                ">Could not find a property named
-                      'lookup_column' on type
-                      'Microsoft.Dynamics.CRM.table_1'.</span>
-                    <br /><br />
-
-                    <strong>Workaround: </strong>We
-                    changed the OData filter to
-                    <span style="
-                                                    font-family: 'Courier New',
-                                                        Courier, monospace;
-                                                ">_lookup_column_value eq
-                      [GUID]</span>
-                    <br /><br />
-
-                    <strong>Suggested Solution: </strong>This quirk does not necessarily
-                    need to be changed, but it should be
-                    documented that lookup columns need
-                    to be referenced in this (or
-                    another) specific way to be filtered
-                    by in PowerAutomate.
                   </div>
                 </div>
               </div>
