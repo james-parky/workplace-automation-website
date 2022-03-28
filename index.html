@@ -338,8 +338,20 @@
                       array
                       of 'matched students' for the supervisor. This also contains the ACM keyword that they matched on,
                       and the priority that the student assigned to it.
-                      This process is repeated for all students for all supervisor.</p>
-                      <img src="assets/img/implementation/matching/code/find_matching_students.png" alt="">
+                      This process is repeated for all students for all supervisors.</p>
+                    <p>Below is the actual code for finding matches. It simply loops through each parsed supervisor
+                      response object (formed in the previous step) and calls the findMatchingStudents function.
+                      The findMatchingStudents function then loops through each parsed student response object and sees
+                      if the response contains an ACM keyword that is also present in the current supervisor resposne
+                      object.
+                      If so, the student object is added to the supervisors list of matched students, as described
+                      above.
+                      The list of matches to that sueprvisor is returned.
+                      This is repeated for every supervisor.
+                    </p>
+                    <img src="assets/img/implementation/matching/code/find_matching_students.png" alt="">
+                    <p>Then, for each supervisor, the matches are ordered based on the priority that the student assigned to the ACM keyword that they matched with the supervisor on.</p>
+                    <img src="assets/img/implementation/matching/code/ordering.png" alt="">
                   </li>
                   <li><strong></strong><br></li>
                 </ol>
