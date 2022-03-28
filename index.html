@@ -676,16 +676,28 @@
                   below.</p>
                 <img src="assets/img/implementation/matching/matching_page_initial.png" alt="">
                 <p>After the administrator clicks the button and the above described matching algorithm has taken place,
-                  the status label is updated, as seen below.</p>
+                  the status label is updated, as seen below.
+                </p>
                 <img src="assets/img/implementation/matching/matching_page_status_completed.png" alt="">
                 <p>As described in the above section, the results from the matching algorithm are inputted into the
                   'Supervisor-Student Pairs' table, which is viewable by the administrator. Here the matches can be
-                  reviewed and then approved or rejected. Since students and supervisors that have matches found for
-                  them have their response records set to 'Unavailable,' if a pair is accepted, nothing changes.
-                  However, if a pair is rejected by an administrator, the respective student and supervisor responses
-                  have their availability set back to 'Yes.' This allows them to be included in the matching algorithm
-                  when the administrator runs it again. The administrator should review matches and rerun the algorithm
-                  until they are completely satisfied with the outcome.</p>
+                  reviewed and then approved or rejected. When a pair record is editted as shown below, a PowerAutomate instant flow is run, which performs the following logic.</p>
+                  <img src="assets/img/implementation/matching/edit_status_of_pair.png" alt="">
+                <p>
+                  If a pair is rejected by an administrator, the involved student's availability is set to 'Yes' and if
+                  the supervisor's remaining capacity is less than their total capacity, the supervisor's availability
+                  is also set to 'Yes.'
+                </p>
+                <p>
+                  If a pair is instead accpeted by an administrator, if the supervior's remaining capacity is equal to
+                  0, the student's availability is set to 'Yes,' the supervisor's availability is set to 'No' and the
+                  pairs status is set to 'Rejected.' Otheriwise, the students availability is set to 'No' and the
+                  supervisor's remaining capacity is reduced by 1.
+                </p>
+                <p>
+                  The administrator should review matches and rerun the algorithm
+                  until they are completely satisfied with the outcome.
+                </p>
               </div>
             </div>
           </div>
