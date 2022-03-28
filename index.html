@@ -119,47 +119,131 @@
           <h3>Requirements</h3>
         </header>
 
-        <!-- Example element -->
-        <div class="col-lg-6">
-          <h4>Example Subheading</h4>
-          <p>Example Content</p>
-        </div>
-        <!-- End Example element -->
+        <div class="accordion accordion-flush" id="reqs">
 
-        <!-- Project background -->
-        <div class="col-lg-6">
-          <h4>Project Background</h4>
-          <p>*** Content ***</p>
-        </div>
-        <!-- End Project background -->
+          <!-- MoSCoW Requirements -->
+          <div class="accordion-item">
 
-        <!-- Requirement Gathering -->
-        <div class="col-lg-6">
-          <h4>Requirement Gathering</h4>
-          <p>*** Content ***</p>
-        </div>
-        <!-- End Requirement Gathering -->
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#req-moscow">
+                MoSCoW Requirements
+              </button>
+            </h3>
+            
+            <div id="req-moscow" class="accordion-collapse collapse" data-bs-parent="reqs">
+              <div class="accordion-body">
 
-        <!-- Personas -->
-        <div class="col-lg-6">
-          <h4>Personas</h4>
-          <p>*** Content ***</p>
-        </div>
-        <!-- End Personas -->
+                <ul>
 
-        <!-- Use Cases -->
-        <div class="col-lg-6">
-          <h4>Use Cases</h4>
-          <p>*** Content ***</p>
-        </div>
-        <!-- End Use Cases -->
+                  <!-- Must-haves -->
+                  <li>
+                    <strong>Must-have</strong><br>
+                    <ol>
+                      <li>
+                        The system should be able to allocate Students to
+                        Professors based on common interests and expertise
+                      </li>
+                      <li>
+                        The system should be able to allocate Students to
+                        industry projects based on common interests and expertise
+                      </li>
+                      <li>
+                        Students and Professors should be able to fill in forms
+                        to provide all relevant information.
+                      </li>
+                      <li>
+                        Existing data concerning users may be imported
+                        from external sources if necessary.
+                      </li>
+                      <li>
+                        Users may be pre-allocated under special arrangements, so as
+                        to remove them from the pool of entities to be allocated.
+                      </li>
+                      <li>
+                        Administrators are able to approve/reject matches, whether
+                        they are made through automatic allocation or through
+                        pre-allocation.
+                      </li>
+                      <li>
+                        Any matches that have not been approved by the administrators
+                        within a certain deadline are automatically approved.
+                      </li>
+                      <li>
+                        Data pertaining to Students, Professors, or projects should
+                        be adequately and consistently stored as to make it
+                        accessible to all those who have the need and permissions
+                        to use it.
+                      </li>
+                    </ol>
+                    <br>
+                  </li>
+                  <!-- End Must-haves -->
 
-        <!-- MoSCoW -->
-        <div class="col-lg-6">
-          <h4>Requirement Gathering</h4>
-          <p>*** Content ***</p>
+                  <!-- Should-haves -->
+                  <li>
+                    <strong>Should-have</strong><br>
+                    <ol>
+                      <li>
+                        Users may modify information about themselves that they previously filled out, by resubmitting
+                        a form or modifying previous answers.
+                      </li>
+                      <li>
+                        A user whose data is imported or inferred should be asked to
+                        check, amend, and confirm that this data is correct.
+                      </li>
+                      <li>
+                        Data from forms that users have previously submitted is
+                        preserved such that it does not need to be resubmitted for
+                        every recurring event. For example, an Academic who tends to
+                        supervise a similar project each year should be able to easily
+                        resubmit their form submission from the previous year.
+                      </li>
+                    </ol>
+                    <br>
+                  </li>
+                  <!-- End Should-haves -->
+                  
+                  <!-- Could-have -->
+                  <li>
+                    <strong>Could-have</strong><br>
+                    <ol>
+                      <li>
+                        Information concerning academics may be imported from modules they teach,
+                        research papers they have published, or previous acheivements/credentials.
+                      </li>
+                      <li>
+                        Information concerning students may be imported from modules
+                        they have completed (and performed well in), and any known
+                        previous acheivements.
+                      </li>
+                    </ol>
+                    <br>
+                  </li>
+                  <!-- End Could-haves-->
+
+                  <!-- Won't haves -->
+                  <li>
+                    <strong>Won't have</strong><br>
+                    <ol>
+                      <li>
+                        This project will not concern the logistics of post-allocation,
+                        such as contract generation, or communication between students
+                        and supervisors; this project concerns 
+                      </li>
+                    </ol>
+                  </li>
+                  <!-- End Won't haves -->
+
+                </ul>
+                
+              </div>
+            </div>
+
+          </div>
+          <!-- End MoSCoW Requirements -->
+
         </div>
-        <!-- End MoSCoW -->
+
 
       </div>
     </section>
@@ -213,8 +297,7 @@
           <!-- Cloud Flows -->
           <div class="accordion-item">
             <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#implement-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#implement-1">
                 Cloud Flows
               </button>
             </h3>
