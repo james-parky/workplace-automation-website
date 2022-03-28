@@ -302,11 +302,14 @@
               </button>
             </h3>
             <div id="implement-1" class="accordion-collapse collapse" data-bs-parent="#implements">
-                <div class="accordion-body">
-                  <p>
-                  Flows are pieces of logic which allow some level of automation to otherwise static objects, such as tables. Flows can be triggered by
-                  several things, like the manual press of a button, the modification of a particular table, or the arrival of a certain time of day.
-                  They can be used to do things like edit data in a table or send an email. Below are some of the most important ways in which we used
+              <div class="accordion-body">
+                <p>
+                  Flows are pieces of logic which allow some level of automation to otherwise static objects, such as
+                  tables. Flows can be triggered by
+                  several things, like the manual press of a button, the modification of a particular table, or the
+                  arrival of a certain time of day.
+                  They can be used to do things like edit data in a table or send an email. Below are some of the most
+                  important ways in which we used
                   flows:
                 </p>
                 <ol>
@@ -343,464 +346,508 @@
                     <br><br>
                   </li>
                 </ol>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- end Cloud Flows -->
+          <!-- end Cloud Flows -->
 
-        <!-- Forms -->
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#implement-2">
-              Forms
-            </button>
-          </h3>
-          <div id="implement-2" class="accordion-collapse collapse" data-bs-parent="#implements">
-            <div class="accordion-body">
-              <p>
-                Forms belong to tables. To create a form with X number of fields, you must first create a table with the
-                same matching X number of columns. The data collected by filling out this form is stored in this table
-                in the respective columns. There are 2 main Insert forms used by the portal:
-              </p>
+          <!-- Forms -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-2">
+                Forms
+              </button>
+            </h3>
+            <div id="implement-2" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>
+                  Forms belong to tables. To create a form with X number of fields, you must first create a table with
+                  the
+                  same matching X number of columns. The data collected by filling out this form is stored in this table
+                  in the respective columns. There are 2 main Insert forms used by the portal:
+                </p>
 
-              <ol>
-                <li>
-                  <strong>Supervisor Application</strong>
+                <ol>
+                  <li>
+                    <strong>Supervisor Application</strong>
+                    <br>
+                    This can be found in PowerApps inside Supervisor Responses v2 (table) > Supervisor Responses v2 main
+                    form. It should be accessed this way to customize the fields that appear on the form (and each
+                    individual tab). It can be further customized through Portal Management > Advanced Forms >
+                    Supervisor
+                    Application. Here, it is possible to reorder the steps of the form and manage form Sessions. To
+                    configure subgrids on this form, you should go to Portal Management > Basic Forms > Supervisor
+                    Application v2 > Related > Advanced Form Metadata. It may be confusing that there is both a Basic
+                    Form
+                    and an Advanced Form for the supervisor application, however they are both linked to the Supervisor
+                    Responses v2 main form (under the Supervisor Responses v2 table), so they work in harmony.
+                  </li>
                   <br>
-                  This can be found in PowerApps inside Supervisor Responses v2 (table) > Supervisor Responses v2 main
-                  form. It should be accessed this way to customize the fields that appear on the form (and each
-                  individual tab). It can be further customized through Portal Management > Advanced Forms > Supervisor
-                  Application. Here, it is possible to reorder the steps of the form and manage form Sessions. To
-                  configure subgrids on this form, you should go to Portal Management > Basic Forms > Supervisor
-                  Application v2 > Related > Advanced Form Metadata. It may be confusing that there is both a Basic Form
-                  and an Advanced Form for the supervisor application, however they are both linked to the Supervisor
-                  Responses v2 main form (under the Supervisor Responses v2 table), so they work in harmony.
-                </li>
-                <br>
-                <li>
-                  <strong>Student Application</strong>
-                  <br>
-                  This can be found in PowerApps inside Student Responses > Student Responses main form. It should be
-                  accessed this way to customize the fields that appear on the form (and each individual tab). It can be
-                  further customized through Portal Management > Advanced Forms > Student Application. Here, it is
-                  possible to reorder the steps of the form and manage form Sessions.
-                </li>
-              </ol>
+                  <li>
+                    <strong>Student Application</strong>
+                    <br>
+                    This can be found in PowerApps inside Student Responses > Student Responses main form. It should be
+                    accessed this way to customize the fields that appear on the form (and each individual tab). It can
+                    be
+                    further customized through Portal Management > Advanced Forms > Student Application. Here, it is
+                    possible to reorder the steps of the form and manage form Sessions.
+                  </li>
+                </ol>
 
-              <p>
-                If you want to manually add a record to a table, you go to the
-                Table Name > Data > Add record. This opens a new tab and shows
-                the default Information (main) form, which is simplistic by
-                default and may only show 2 fields. To alter this and allow more
-                fields to be populated this way, edit the Information form
-                (of type Main, as opposed to Card or QuickViewForm). If you have
-                multiple main forms, the pop-up tab may open in either of the
-                main forms. You can select which main form you want to fill out
-                using the drop down menu on the form tab. Advanced forms can
-                support multiple steps, branching (I.e. conditional steps), and
-                subgrids, all of which cannot be achieved with basic forms. Here
-                is more information on <a
-                  href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/entity-forms">basic forms</a>
-                and <a
-                  href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/web-form-properties">advanced
-                  forms.</a>
-              </p>
+                <p>
+                  If you want to manually add a record to a table, you go to the
+                  Table Name > Data > Add record. This opens a new tab and shows
+                  the default Information (main) form, which is simplistic by
+                  default and may only show 2 fields. To alter this and allow more
+                  fields to be populated this way, edit the Information form
+                  (of type Main, as opposed to Card or QuickViewForm). If you have
+                  multiple main forms, the pop-up tab may open in either of the
+                  main forms. You can select which main form you want to fill out
+                  using the drop down menu on the form tab. Advanced forms can
+                  support multiple steps, branching (I.e. conditional steps), and
+                  subgrids, all of which cannot be achieved with basic forms. Here
+                  is more information on <a
+                    href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/entity-forms">basic
+                    forms</a>
+                  and <a
+                    href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/web-form-properties">advanced
+                    forms.</a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- end Forms -->
+          <!-- end Forms -->
 
-        <!-- Liquid -->
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#implement-3">
-              Liquid
-            </button>
-          </h3>
-          <div id="implement-3" class="accordion-collapse collapse" data-bs-parent="#implements">
-            <div class="accordion-body">
-              <p>
-                Liquid is a template language, written amongst HTML that uses a combination of objects, tags, and
-                filters inside template files to display dynamic content. Liquid, like any template language, creates a
-                bridge between an HTML file and a data store — in our context, the data we use for matching.
-              </p>
-              <p>
-                Liquid can be learnt fairly quickly using the <a
-                  href="https://shopify.github.io/liquid/basics/introduction/">official documentation</a>.
-                Here are some examples where we used Liquid in our project:
-              </p>
+          <!-- Liquid -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-3">
+                Liquid
+              </button>
+            </h3>
+            <div id="implement-3" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>
+                  Liquid is a template language, written amongst HTML that uses a combination of objects, tags, and
+                  filters inside template files to display dynamic content. Liquid, like any template language, creates
+                  a
+                  bridge between an HTML file and a data store — in our context, the data we use for matching.
+                </p>
+                <p>
+                  Liquid can be learnt fairly quickly using the <a
+                    href="https://shopify.github.io/liquid/basics/introduction/">official documentation</a>.
+                  Here are some examples where we used Liquid in our project:
+                </p>
 
-              <ul style="list-style-type:none;">
-                <u>Hiding Sensitive Data During Development</u>
-                <ul style="list-style-type:none">
-                  <li>At times during our development, we needed to display data that should be available to
-                    authenticated users <strong>only</strong>.
-                    To do this, we used Liquid <a href="https://shopify.github.io/liquid/tags/control-flow/">control
-                      flow</a> tags to show or hide data
-                    based on this condition:
-                  </li>
-                  <li>&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC">if user</span> %}</strong></li>
-                  <li>&nbsp;&nbsp;&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC;">include 'my_page'</span>
-                      %}</strong></li>
-                  <li>&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC;">endif</span> %}</strong></li>
-                  <br>
-                  <li>If the user is not signed in, <strong>'user'</strong> will not exist, meaning the variable holds a
-                    value
-                    of <strong>'Nil'</strong>. This means the <strong>'user'</strong> variable is
-                    <strong>'falsy'</strong>, causing the condition to be
-                    evaluated as <strong>false</strong> and therefore not display <strong>my_page</strong>.
-                  </li>
-                  <br>
-                  <li>It should be noted that this is <strong>not</strong> the most sound and elegant solution to hide
-                    content from the unauthorised.
-                    PowerApps offers mechanisms to acheive this through <a href="#documentation-web_roles">Web
-                      Roles</a>.</li>
-                </ul>
-                <br>
-                <u>Displaying User-Specific Information</u>
-                <ul style="list-style-type:none">
-                  <li>It's often useful to have a webpage display different content depending on who the user is, and
-                    what information we have about them.
-                    Objects may have certain attributes which can be used to acheive this. As a simple example, we used:
-                  </li>
-                  <li>&nbsp;&nbsp;<strong>{{ <span style="color: #1BB1DC;">user.fullname</span> }}</strong></li>
-                  <li>to display a header which display the correct name for the user that's currently logged in.</li>
-                </ul>
-                <br>
-                <u>Iteration to Display Elements in an Array</u>
-                <ul style="list-style-type:none">
-                  <li>Under different conditions, different content may need to be included in the header. We used
-                    Liquid to display all headings which
-                    should be displayed within a given Web Link Set. Here is a heavily simplified method with which we
-                    did this:
-                  </li>
-                  <li>&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">for link in primary_nav.sublinks</span>
-                      %}</strong></li>
-                  <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">unless forloop.first</span>
-                      %}</strong></li>
-                  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;div
-                      style="vertical-divider"&gt;&lt;/div&gt;</strong></li>
-                  <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">endunless</span> %}</strong></li>
-                  <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ <span style="color: #1BB1DC;">link.name</span> }}</strong></li>
-                  <li>&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">endfor</span> %}</strong></li>
-                </ul>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-        <!-- end Liquid -->
-
-        <!-- Matching Algorithm -->
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" tpye="button" data-bs-toggle="collapse"
-              data-bs-target="#matching-1">
-              Matching Algorithm
-            </button>
-          </h3>
-          <div class="accordion-collapse collapse" id="matching-1" data-bs-parent="#implements">
-            <div class="accordion-body">
-              <ol>
-                <li>
-                  <strong>Collection of Data</strong>
-                  <p>Since our code is written in pure JavaScript, the required data is pulled from our solution’s
-                    database using simple http GET requests. There are 5 different requests, that pull 5 separate sets
-                    of data. This data is initially collected using PowerAutomate instant cloud flows (As seen above).
-                    The flow can be broken down into three steps.
-                  </p>
-                  <ul class="matchgin__flow-steps" style="text-align: center;list-style: none;">
-                    <li style="display:inline-block">
-                      <img src="assets/img/implementation/matching/http_get.png" alt="">
-                      <p>
-                        As you can see by this image, the flow is waiting for a GET request to its specified API. Upon
-                        receiving this request. Since the request doesnt need to send any data initially, the payload
-                        format is left empyty. </p>
+                <ul style="list-style-type:none;">
+                  <u>Hiding Sensitive Data During Development</u>
+                  <ul style="list-style-type:none">
+                    <li>At times during our development, we needed to display data that should be available to
+                      authenticated users <strong>only</strong>.
+                      To do this, we used Liquid <a href="https://shopify.github.io/liquid/tags/control-flow/">control
+                        flow</a> tags to show or hide data
+                      based on this condition:
                     </li>
-                    <li style="display:inline-block">
-                      <img src="assets/img/implementation/matching/list_rows.png" alt="">
-                      <p>Next, the flow performs a ‘list rows’ operation on the specified table to get all of
-                        the lists into a JSON (JavaScript Object Notation) format. Only the rows containing data
-                        necessary
-                        for matching are included to reduce the size of the payload sent back to our code. In this
-                        case, the rows: 'acmclassificationcodesid', 'keyword', and 'id' are pulled from the 'ACM
-                        Classification Codes' table.</p>
+                    <li>&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC">if user</span> %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC;">include 'my_page'</span>
+                        %}</strong></li>
+                    <li>&nbsp;&nbsp; <strong>{% <span style="color: #1BB1DC;">endif</span> %}</strong></li>
+                    <br>
+                    <li>If the user is not signed in, <strong>'user'</strong> will not exist, meaning the variable holds
+                      a
+                      value
+                      of <strong>'Nil'</strong>. This means the <strong>'user'</strong> variable is
+                      <strong>'falsy'</strong>, causing the condition to be
+                      evaluated as <strong>false</strong> and therefore not display <strong>my_page</strong>.
                     </li>
-                    <li style="display:inline-block">
-                      <img src="assets/img/implementation/matching/http_response.png" alt="">
-                      <p>Finally, an http request
-                        of code 200 is sent back, including the JSON formatted list of data. This procedure is
-                        repeated 5 times, once for each different table that we require data from.</p>
-                    </li>
+                    <br>
+                    <li>It should be noted that this is <strong>not</strong> the most sound and elegant solution to hide
+                      content from the unauthorised.
+                      PowerApps offers mechanisms to acheive this through <a href="#documentation-web_roles">Web
+                        Roles</a>.</li>
                   </ul>
-                </li>
-                <li>
-                  <strong>Cleaning the Received Data</strong>
-                  <p>When the data for each table is received by the code, it needs to be cleaned and put into a named
-                    JavaScript object, so that it can be easily accessed by the algorithm.
-                    Here is an example of the aforementioned get requests. The data is initially fetched from the API
-                    of the flow pulling data from the desired table. The data is then parsed into a new JavaScript
-                    object, with more human-readble attribute names.
-                    Data is also 'cleaned' where it needs to be. For example, in this function, we remove any records
-                    that do not have a specified 'responseId.'
-                  </p>
-                  <img src="assets/img/implementation/matching/code/get_request.png" alt="">
-                </li>
-                <li>
-                  <strong>Parsing of the Data</strong>
-                  <p>The received student data and supervisor data is then parsed into a more usable format. This is
-                    done for multiple reasons. Firstly, when a student fills out a response form, they choose which
-                    rough topics they have interests in. Each one of these topics relate to hundreds of ACM keywords.
-                    Therefore the ACM keywords need to be collated into one student response object.
-                    Secondly, when a supervisor fills out a response form, a news Supervisor-ACM table record is
-                    generated for each ACM keyword they selected as relevant to them. To make matching more simple,
-                    these too are collated so that there is only one supervisor response object per unique supervisor,
-                    having many ACM keywords related to it.
-                  </p>
-                  <p>The below example shows the supervisor response parsing function. It can be seen that when
-                    sorting through Supervisor-ACM table records, responses that have a responseId that has already
-                    been used, have their ACM keywords appended to the already exisiting object, rather than creating
-                    a new one.</p>
-                  <img src="assets/img/implementation/matching/code/supervisor_parse.png" alt="">
-                </li>
-                <li><strong>Finding All Possible Matches</strong>
-                  <p>The next process is to find all possible students matched to each supervisor. These matches are
-                    found based on whether the supervisor and student share an common ACM keyword in their responses.
-                    If a student is found to match to a supervisor, the student's response object is inserted into an
-                    array
-                    of 'matched students' for the supervisor. This also contains the ACM keyword that they matched on,
-                    and the priority that the student assigned to it.
-                    This process is repeated for all students for all supervisors.</p>
-                  <p>Below is the actual code for finding matches. It simply loops through each parsed supervisor
-                    response object (formed in the previous step) and calls the findMatchingStudents function.
-                    The findMatchingStudents function then loops through each parsed student response object and sees
-                    if the response contains an ACM keyword that is also present in the current supervisor resposne
-                    object.
-                    If so, the student object is added to the supervisors list of matched students, as described
-                    above.
-                    The list of matches to that sueprvisor is returned.
-                    This is repeated for every supervisor.
-                  </p>
-                  <img src="assets/img/implementation/matching/code/find_matching_students.png" alt="">
-                </li>
-                <li>
-                  <strong>Ordering</strong>
-                  <p>Then, for each supervisor, the matches are ordered based on the priority that the student assigned
-                    to the ACM keyword that they matched with the supervisor on.</p>
-                  <img src="assets/img/implementation/matching/code/ordering.png" alt="">
-                </li>
-                <li>
-                  <strong>Reviewing the Matches</strong>
-                  <p>The final stage of the code for the matching process, is the matches review. For each supervisor,
-                    the matches that were found are reviewed one by one. Using the total number of unique student
-                    responses and supervisor responses, a minimum number of matches per supervsior is calculated. Each
-                    professor then has that many of their students matches 'finalised' and inserted into a final matches
-                    array. This is why the student matches list was orderd for each professor in the previous step.</p>
-                  <p>This section of code also creates a list of any supervisors that were left with no students matched
-                    to them at the end of this process. This should only ever happend because there were more
-                    supervisors than students, not because there were no students interesting in doing what the
-                    supervisor was willing to supervise - although that is still theoretically possible.</p>
-                  <img src="assets/img/implementation/matching/code/review.png" alt="">
-                  <p>In a similar way, this piece of code finds any students that could't be matched to any of the
-                    supervisors. Again, in practice this will probably never happen since the topics that student choose
-                    as interests in their response encompass a vast amount of ACM keywords. However, since it is still
-                    techinally possible, it is handled, since it would be usefull to the administrator. </p>
-                  <img src="assets/img/implementation/matching/code/unmatched_students.png" alt="">
-                </li>
-                <li>
-                  <strong>Sending the Matches Back to Our Solution</strong>
-                  <p></p>
-                  <img src="" alt="">
-                </li>
-              </ol>
+                  <br>
+                  <u>Displaying User-Specific Information</u>
+                  <ul style="list-style-type:none">
+                    <li>It's often useful to have a webpage display different content depending on who the user is, and
+                      what information we have about them.
+                      Objects may have certain attributes which can be used to acheive this. As a simple example, we
+                      used:
+                    </li>
+                    <li>&nbsp;&nbsp;<strong>{{ <span style="color: #1BB1DC;">user.fullname</span> }}</strong></li>
+                    <li>to display a header which display the correct name for the user that's currently logged in.</li>
+                  </ul>
+                  <br>
+                  <u>Iteration to Display Elements in an Array</u>
+                  <ul style="list-style-type:none">
+                    <li>Under different conditions, different content may need to be included in the header. We used
+                      Liquid to display all headings which
+                      should be displayed within a given Web Link Set. Here is a heavily simplified method with which we
+                      did this:
+                    </li>
+                    <li>&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">for link in primary_nav.sublinks</span>
+                        %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">unless forloop.first</span>
+                        %}</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&lt;div
+                        style="vertical-divider"&gt;&lt;/div&gt;</strong></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">endunless</span> %}</strong>
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ <span style="color: #1BB1DC;">link.name</span> }}</strong>
+                    </li>
+                    <li>&nbsp;&nbsp;<strong>{% <span style="color: #1BB1DC;">endfor</span> %}</strong></li>
+                  </ul>
+                </ul>
+
+              </div>
             </div>
           </div>
-        </div>
-        <!-- End Matching Algorithm -->
+          <!-- end Liquid -->
 
-        <!-- Tables -->
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#implement-4">
-              Tables
-            </button>
-          </h3>
-          <div id="implement-4" class="accordion-collapse collapse" data-bs-parent="#implements">
-            <div class="accordion-body">
-              <!-- Default Tables -->
-              <i>Default Tables</i>
-              <ul>
-                <li>
-                  <strong>Contact Table</strong>
-                  <br>Stores information about persons with whom a business unit has a relationship, such as customer,
-                  supplier, and
-                  colleague. Keeps track of who is signed into a portal.
+          <!-- Matching Algorithm -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" tpye="button" data-bs-toggle="collapse"
+                data-bs-target="#matching-1">
+                Matching Algorithm
+              </button>
+            </h3>
+            <div class="accordion-collapse collapse" id="matching-1" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <ol>
+                  <li>
+                    <strong>Collection of Data</strong>
+                    <p>Since our code is written in pure JavaScript, the required data is pulled from our solution’s
+                      database using simple http GET requests. There are 5 different requests, that pull 5 separate sets
+                      of data. This data is initially collected using PowerAutomate instant cloud flows (As seen above).
+                      The flow can be broken down into three steps.
+                    </p>
+                    <ul class="matchgin__flow-steps" style="list-style: none;">
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/http_get.png" alt="">
+                        <p>
+                          As you can see by this image, the flow is waiting for a GET request to its specified API. Upon
+                          receiving this request. Since the request doesnt need to send any data initially, the payload
+                          format is left empyty. </p>
+                      </li>
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/list_rows.png" alt="">
+                        <p>Next, the flow performs a ‘list rows’ operation on the specified table to get all of
+                          the lists into a JSON (JavaScript Object Notation) format. Only the rows containing data
+                          necessary
+                          for matching are included to reduce the size of the payload sent back to our code. In this
+                          case, the rows: 'acmclassificationcodesid', 'keyword', and 'id' are pulled from the 'ACM
+                          Classification Codes' table.</p>
+                      </li>
+                      <li style="display:inline-block">
+                        <img src="assets/img/implementation/matching/http_response.png" alt="">
+                        <p>Finally, an http request
+                          of code 200 is sent back, including the JSON formatted list of data. This procedure is
+                          repeated 5 times, once for each different table that we require data from.</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>Cleaning the Received Data</strong>
+                    <p>When the data for each table is received by the code, it needs to be cleaned and put into a named
+                      JavaScript object, so that it can be easily accessed by the algorithm.
+                      Here is an example of the aforementioned get requests. The data is initially fetched from the API
+                      of the flow pulling data from the desired table. The data is then parsed into a new JavaScript
+                      object, with more human-readble attribute names.
+                      Data is also 'cleaned' where it needs to be. For example, in this function, we remove any records
+                      that do not have a specified 'responseId.'
+                    </p>
+                    <img src="assets/img/implementation/matching/code/get_request.png" alt="">
+                  </li>
+                  <li>
+                    <strong>Parsing of the Data</strong>
+                    <p>The received student data and supervisor data is then parsed into a more usable format. This is
+                      done for multiple reasons. Firstly, when a student fills out a response form, they choose which
+                      rough topics they have interests in. Each one of these topics relate to hundreds of ACM keywords.
+                      Therefore the ACM keywords need to be collated into one student response object.
+                      Secondly, when a supervisor fills out a response form, a news Supervisor-ACM table record is
+                      generated for each ACM keyword they selected as relevant to them. To make matching more simple,
+                      these too are collated so that there is only one supervisor response object per unique supervisor,
+                      having many ACM keywords related to it.
+                    </p>
+                    <p>The below example shows the supervisor response parsing function. It can be seen that when
+                      sorting through Supervisor-ACM table records, responses that have a responseId that has already
+                      been used, have their ACM keywords appended to the already exisiting object, rather than creating
+                      a new one.</p>
+                    <img src="assets/img/implementation/matching/code/supervisor_parse.png" alt="">
+                  </li>
+                  <li><strong>Finding All Possible Matches</strong>
+                    <p>The next process is to find all possible students matched to each supervisor. These matches are
+                      found based on whether the supervisor and student share an common ACM keyword in their responses.
+                      If a student is found to match to a supervisor, the student's response object is inserted into an
+                      array
+                      of 'matched students' for the supervisor. This also contains the ACM keyword that they matched on,
+                      and the priority that the student assigned to it.
+                      This process is repeated for all students for all supervisors.</p>
+                    <p>Below is the actual code for finding matches. It simply loops through each parsed supervisor
+                      response object (formed in the previous step) and calls the findMatchingStudents function.
+                      The findMatchingStudents function then loops through each parsed student response object and sees
+                      if the response contains an ACM keyword that is also present in the current supervisor resposne
+                      object.
+                      If so, the student object is added to the supervisors list of matched students, as described
+                      above.
+                      The list of matches to that sueprvisor is returned.
+                      This is repeated for every supervisor.
+                    </p>
+                    <img src="assets/img/implementation/matching/code/find_matching_students.png" alt="">
+                  </li>
+                  <li>
+                    <strong>Ordering</strong>
+                    <p>Then, for each supervisor, the matches are ordered based on the priority that the student
+                      assigned
+                      to the ACM keyword that they matched with the supervisor on.</p>
+                    <img src="assets/img/implementation/matching/code/ordering.png" alt="">
+                  </li>
+                  <li>
+                    <strong>Reviewing the Matches</strong>
+                    <p>The final stage of the code for the matching process, is the matches review. For each supervisor,
+                      the matches that were found are reviewed one by one. Using the total number of unique student
+                      responses and supervisor responses, a minimum number of matches per supervsior is calculated. Each
+                      professor then has that many of their students matches 'finalised' and inserted into a final
+                      matches
+                      array. This is why the student matches list was orderd for each professor in the previous step.
+                    </p>
+                    <p>This section of code also creates a list of any supervisors that were left with no students
+                      matched
+                      to them at the end of this process. This should only ever happend because there were more
+                      supervisors than students, not because there were no students interesting in doing what the
+                      supervisor was willing to supervise - although that is still theoretically possible.</p>
+                    <img src="assets/img/implementation/matching/code/review.png" alt="">
+                    <p>In a similar way, this piece of code finds any students that could't be matched to any of the
+                      supervisors. Again, in practice this will probably never happen since the topics that student
+                      choose
+                      as interests in their response encompass a vast amount of ACM keywords. However, since it is still
+                      techinally possible, it is handled, since it would be usefull to the administrator. </p>
+                    <img src="assets/img/implementation/matching/code/unmatched_students.png" alt="">
+                  </li>
+                  <li>
+                    <strong>Sending the Matches Back to Our Solution</strong>
+                    <p>After all of the matches between students and superviors have been reviewed, and matchless
+                      supervisors and students have been found, the data is properly formatted and sent back to our
+                      solution's database using an http POST request. </p>
+                    <img src="assets/img/implementation/matching/code/post_request.png" alt="">
+                    <p>There is another flow in our solution waiting for
+                      a POST request to a specific API, expecting a payload containing a specifically shapped JSON.</p>
+                    <img src="assets/img/implementation/matching/post_request.png" alt="">
+                    <p>The flow then iterates through the payload to extract all 'pairs' between a supervisor and
+                      student. From each pair, it takes the studentResponseId and supervisorResponseId associated with
+                      the pair. It uses these ID's to get the contacts of the people that submitted the responses.</p>
+                    <img src="assets/img/implementation/matching/get_contacts.png" alt="">
+                    <p>The rest of the data in the pair is then extracted and a new 'Supervisor-Student Pairs' table
+                      record is generated.</p>
+                    <img src="assets/img/implementation/matching/add_row.png" alt="">
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- End Matching Algorithm -->
+
+          <!-- Supervised Matching -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#supervised-matching-1">
+                Supervised Matching
+              </button>
+            </h3>
+            <div id="supervised-matching-1" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>The above mentioned 'Matching Algorithm' is the backend logic for what happens during the matching process, but how is it actually triggered?</p>
+              </div>
+            </div>
+          </div>
+          <!-- Tables -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-4">
+                Tables
+              </button>
+            </h3>
+            <div id="implement-4" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <!-- Default Tables -->
+                <i>Default Tables</i>
+                <ul>
+                  <li>
+                    <strong>Contact Table</strong>
+                    <br>Stores information about persons with whom a business unit has a relationship, such as customer,
+                    supplier, and
+                    colleague. Keeps track of who is signed into a portal.
+                    <a
+                      href="https://docs.microsoft.com/en-us/powerapps/developer/data-platform/reference/entities/contact">More
+                      Information.</a>
+                  </li>
+                </ul>
+                <!-- End Default Tables-->
+
+                <!-- Custom Tables -->
+                <i>Custom Tables</i>
+                <ul>
+                  <li>
+                    <strong>ACM Classification Codes</strong>
+                    <br>Stores each ACM Classification Code and corresponding Keyword. The display names should be
+                    followed instead of
+                    the names (in form team42_*) of the columns.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>FYP Options</strong>
+                    <br>Temporary table storing supervisor responses in an unordered way. This data will be mapped into
+                    the Supervisor
+                    Responses table.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Research Groups</strong>
+                    <br>Single-column table storing all research groups the supervisors are part of. This table is up to
+                    date as of
+                    03/2022 and should be manually kept up to date with new (relevant) research groups if they appear.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Student-ACM</strong>
+                    <br>Holds records linking Contacts (students) to the ACM Keywords they selected along with the
+                    priority of each
+                    keyword – not all keywords are equally important to the contact. 1 = highest priority. 3 = lowest
+                    priority.
+                    This table is automatically populated using a flow, Create Student-ACM Record.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Student Responses</strong>
+                    <br>The foundation of the Student Application form – automatically records all form responses. Has a
+                    column for
+                    each of the form’s questions.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Student Topic Options</strong>
+                    <br>Single-column table storing the generic topics that students can indicate an interest in on
+                    their
+                    Student
+                    Application. This table is up to date as of 03/2022 and should be manually kept up to date.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Supervisor-ACM</strong>
+                    <br>Holds records linking Supervisor Responses to the relevant Contact (supervisor) to the ACM
+                    Keywords they selected.
+                    The Supervisor Response ID and ACM Keywords fields are automatically populated using a subgrid. The
+                    Contact field
+                    is also automatically populated using a flow, Add Contact field to Supervisor-ACM.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Supervisor Responses v2</strong>
+                    <br>The foundation of the Student Application form – automatically records all form responses. Has a
+                    column for
+                    each of the form’s questions except for ACM Keywords and Research Groups. These fields are handled
+                    using subgrids
+                    and a one-to-many and a many-to-many relationships respectively.
+                  </li>
+                  <br>
+                  <li>
+                    <strong>Topic-ACM Map</strong>
+                    <br>Students can only pick generic topics from the Student Topic Options table – they cannot pick
+                    ACM
+                    keywords.
+                    The topics are mapped into ACM keywords (and then inserted into the Student-ACM table) using the
+                    mapping stored in
+                    this table.
+                  </li>
+                </ul>
+                <!--End Custom Tables -->
+              </div>
+            </div>
+          </div>
+          <!-- end Tables -->
+
+          <!-- Table Permissions -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-5">
+                Table Permissions
+              </button>
+            </h3>
+            <div id="implement-5" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>
+                  Information about data security and table permissions may be found
                   <a
-                    href="https://docs.microsoft.com/en-us/powerapps/developer/data-platform/reference/entities/contact">More
-                    Information.</a>
-                </li>
-              </ul>
-              <!-- End Default Tables-->
-
-              <!-- Custom Tables -->
-              <i>Custom Tables</i>
-              <ul>
-                <li>
-                  <strong>ACM Classification Codes</strong>
-                  <br>Stores each ACM Classification Code and corresponding Keyword. The display names should be
-                  followed instead of
-                  the names (in form team42_*) of the columns.
-                </li>
-                <br>
-                <li>
-                  <strong>FYP Options</strong>
-                  <br>Temporary table storing supervisor responses in an unordered way. This data will be mapped into
-                  the Supervisor
-                  Responses table.
-                </li>
-                <br>
-                <li>
-                  <strong>Research Groups</strong>
-                  <br>Single-column table storing all research groups the supervisors are part of. This table is up to
-                  date as of
-                  03/2022 and should be manually kept up to date with new (relevant) research groups if they appear.
-                </li>
-                <br>
-                <li>
-                  <strong>Student-ACM</strong>
-                  <br>Holds records linking Contacts (students) to the ACM Keywords they selected along with the
-                  priority of each
-                  keyword – not all keywords are equally important to the contact. 1 = highest priority. 3 = lowest
-                  priority.
-                  This table is automatically populated using a flow, Create Student-ACM Record.
-                </li>
-                <br>
-                <li>
-                  <strong>Student Responses</strong>
-                  <br>The foundation of the Student Application form – automatically records all form responses. Has a
-                  column for
-                  each of the form’s questions.
-                </li>
-                <br>
-                <li>
-                  <strong>Student Topic Options</strong>
-                  <br>Single-column table storing the generic topics that students can indicate an interest in on their
-                  Student
-                  Application. This table is up to date as of 03/2022 and should be manually kept up to date.
-                </li>
-                <br>
-                <li>
-                  <strong>Supervisor-ACM</strong>
-                  <br>Holds records linking Supervisor Responses to the relevant Contact (supervisor) to the ACM
-                  Keywords they selected.
-                  The Supervisor Response ID and ACM Keywords fields are automatically populated using a subgrid. The
-                  Contact field
-                  is also automatically populated using a flow, Add Contact field to Supervisor-ACM.
-                </li>
-                <br>
-                <li>
-                  <strong>Supervisor Responses v2</strong>
-                  <br>The foundation of the Student Application form – automatically records all form responses. Has a
-                  column for
-                  each of the form’s questions except for ACM Keywords and Research Groups. These fields are handled
-                  using subgrids
-                  and a one-to-many and a many-to-many relationships respectively.
-                </li>
-                <br>
-                <li>
-                  <strong>Topic-ACM Map</strong>
-                  <br>Students can only pick generic topics from the Student Topic Options table – they cannot pick ACM
-                  keywords.
-                  The topics are mapped into ACM keywords (and then inserted into the Student-ACM table) using the
-                  mapping stored in
-                  this table.
-                </li>
-              </ul>
-              <!--End Custom Tables -->
+                    href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/assign-entity-permissions">here</a>.
+                  It is important to note that
+                  without creating a Table Permission (inside Portal Management), it is not possible to display data
+                  from
+                  a table onto a webpage: the webpage will
+                  show <i>"You don't have the appropriate permissions"</i>. The table permission should also have the
+                  correct web roles added to it so the
+                  appropriate user types are able to interact with the table.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- end Tables -->
+          <!-- end Table Permissions -->
 
-        <!-- Table Permissions -->
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#implement-5">
-              Table Permissions
-            </button>
-          </h3>
-          <div id="implement-5" class="accordion-collapse collapse" data-bs-parent="#implements">
-            <div class="accordion-body">
-              <p>
-                Information about data security and table permissions may be found
+          <!-- Table Relationships -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-6">
+                Table Relationships
+              </button>
+            </h3>
+            <div id="implement-6" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>
+                  Below is a diagram showing the relationship of all tables listed in the Table Descriptions section:
+                </p>
+                <img style="border: 5px solid black; width: 70%;" src="assets/img/table-relationships.png">
+                <p>
+                  <br>
+                <h5><i>1:N, N:1, and N:N Relationships</i></h5>
+                In PowerApps, a N:1 relationship is called a Lookup. A 1:N relationship is simply a reversed Lookup
+                (lookup from the
+                other table into this one). Creating either of these will create a column in the table that holds the
+                lookup, and you
+                must give this column a name. N:N relationships are not tied to a column the same way and one does not
+                need to be
+                created to create an N:N relationship. A “hidden” table is created to enable an N:N relationship. This
+                table cannot be
+                accessed through Dynamics – it can only be queried using FetchXML in XRMToolBox. If you require the data
+                that would be
+                stored in this table please reference the Issues, Workarounds, and Ideal Solution section. Detailed
+                instructions on
+                creating relationships can be found
                 <a
-                  href="https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/assign-entity-permissions">here</a>.
-                It is important to note that
-                without creating a Table Permission (inside Portal Management), it is not possible to display data from
-                a table onto a webpage: the webpage will
-                show <i>"You don't have the appropriate permissions"</i>. The table permission should also have the
-                correct web roles added to it so the
-                appropriate user types are able to interact with the table.
-              </p>
+                  href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-entity-lookup">here</a>.
+                <br><br>
+                <h5><i>Subgrids</i></h5>
+                Subgrids can be used to relate records in a N:N relationship. 2 subgrids are used on the Supervisor
+                Application
+                (advanced) form to receive input about the user’s Research Groups and ACM Keywords. Subgrids can be used
+                on advanced
+                forms but not on the first tab, if the form has multiple steps. Instructions on adding and configuring a
+                subgrid can be
+                found
+                <a
+                  href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">here</a>.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- end Table Permissions -->
+          <!-- end Table Permissions -->
 
-        <!-- Table Relationships -->
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#implement-6">
-              Table Relationships
-            </button>
-          </h3>
-          <div id="implement-6" class="accordion-collapse collapse" data-bs-parent="#implements">
-            <div class="accordion-body">
-              <p>
-                Below is a diagram showing the relationship of all tables listed in the Table Descriptions section:
-              </p>
-              <img style="border: 5px solid black; width: 70%;" src="assets/img/table-relationships.png">
-              <p>
-                <br>
-              <h5><i>1:N, N:1, and N:N Relationships</i></h5>
-              In PowerApps, a N:1 relationship is called a Lookup. A 1:N relationship is simply a reversed Lookup
-              (lookup from the
-              other table into this one). Creating either of these will create a column in the table that holds the
-              lookup, and you
-              must give this column a name. N:N relationships are not tied to a column the same way and one does not
-              need to be
-              created to create an N:N relationship. A “hidden” table is created to enable an N:N relationship. This
-              table cannot be
-              accessed through Dynamics – it can only be queried using FetchXML in XRMToolBox. If you require the data
-              that would be
-              stored in this table please reference the Issues, Workarounds, and Ideal Solution section. Detailed
-              instructions on
-              creating relationships can be found
-              <a
-                href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-entity-lookup">here</a>.
-              <br><br>
-              <h5><i>Subgrids</i></h5>
-              Subgrids can be used to relate records in a N:N relationship. 2 subgrids are used on the Supervisor
-              Application
-              (advanced) form to receive input about the user’s Research Groups and ACM Keywords. Subgrids can be used
-              on advanced
-              forms but not on the first tab, if the form has multiple steps. Instructions on adding and configuring a
-              subgrid can be
-              found
-              <a
-                href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/form-designer-add-configure-subgrid">here</a>.
-              </p>
-            </div>
-          </div>
         </div>
-        <!-- end Table Permissions -->
-
-      </div>
       </div>
       <!-- End implements -->
 
