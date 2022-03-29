@@ -791,9 +791,6 @@
                       the supervisors remaining capacity is not equal to 0, it is decreased by 1, and the student's
                       'Availability' is set to 'No.'</p>
                   </li>
-                  <li><strong></strong></li>
-                  <li><strong></strong></li>
-                  <li><strong></strong></li>
                   <li>
                     <strong>Post Match Data to Supervisor-Student Pairs Table</strong>
                     <p>This flow is triggered when a http POST request is sent to a specific API, with a payload
@@ -808,6 +805,16 @@
                       'Pending' which can later be edited by the administrator.</p>
                   </li>
                   <li style="list-style: none;"><strong>HTTP Get Flows</strong>
+                    <p>These 5 flows all work in the exact same way and exist for the same purpose - to extract data
+                      from our database into the JavaScript code that is powering the matching algorithm process. These
+                      flows are all triggered when a the flow's API receives an http GET request. This is a plain
+                      request with no payload. Each flow will then send back the appropriate data from the correct
+                      table. Not all fields are of use to the matching algorithm, so only a select few are sent back to
+                      the JavaScript in the http response. The table that has it's data pulled is described in each
+                      flow's title. These flows could be combined into one huge flow and all the data could be sent in
+                      one response, however this would be a staggering amount of data, making the response not readable
+                      at all to humans that need to possibly debug the code in the future. Seperating them also makes
+                      the JavaScript code more orthogonal as the functions are not doing more than one task.</p>
                     <ol start="10">
                       <li><strong>Get ACM Data</strong></li>
                       <li><strong>Get ACM Map Data</strong></li>
