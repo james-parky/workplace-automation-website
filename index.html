@@ -707,7 +707,41 @@
 
         <!-- Start implements -->
         <div class="accordion accordion-flush" id="implements">
-
+          <!-- Web Roles -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#implement-0">
+                Web Roles
+              </button>
+            </h3>
+            <div id="implement-0" class="accordion-collapse collapse" data-bs-parent="#implements">
+              <div class="accordion-body">
+                <p>Web Roles are very important to our solution as they dictate what any given user can and can't see/do
+                  on our portal. There are three roles available to a user - Student, Supervisor, and Administrator.
+                  Administrator roles should be assigned by the department using the Portal Management section of our
+                  solution. The other two roles, Student and Supervisor are chosen by the user when they log in for the
+                  first time.</p>
+                <p>When a user first signs in on the portal's landing page, they are presented with this screen. After
+                  using the radio buttons and submission button to select their role, they are taken to their chosen
+                  role's respective home page. They will not have another opportunity to change this and must instead
+                  ask an administrator to change it for them.</p>
+                <img src="assets/img/implementation/web-roles/button.png" alt="">
+                <p>After clicking the above button, the following code will run, triggering the flow that will assign
+                  the correct web role to the current user based on which radio button they selected.</p>
+                <img src="assets/img/implementation/web-roles/role_selection.png" alt="">
+                <p>After a user has selected their role, whenever they next sign in, they do not see this role selected
+                  screen and are instead directed to their home page, as mentioned before. This is the code that does
+                  so.</p>
+                <img src="assets/img/implementation/web-roles/redirect.png" alt="">
+                <p>These roles are used to stop a user from seeing content that they should not be able to. Similar to
+                  the above code, liquid is used on each of our Portal's web pages to check what roles are assigned to
+                  the current users contact. If they do not have sufficient roles, they are prompted to return to the
+                  sign in page.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Web Roles -->
           <!-- Cloud Flows -->
           <div class="accordion-item">
             <h3 class="accordion-header">
