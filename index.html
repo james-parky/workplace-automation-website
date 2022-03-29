@@ -1593,6 +1593,69 @@
           </div>
         </div>
         <!-- End Site Map -->
+        <!-- Data Storage -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#system-design-data">
+              Data Storage
+            </button>
+          </h3>
+
+          <div id="system-design-data" class="accordion-collapse collapse" data-bs-parent="system-design">
+            <div class="accordion-body">
+              <p>Our solution's database consists of 12 tables, 1 default table, and 12 custom ones. More detailed
+                information about these tables can be found in the <a href="#implementation">implementation</a> section,
+                however, simply, they are as follows:</p>
+              <strong>Default Tables</strong>
+              <ol>
+                <li>
+                  <p>Contact</p>
+                </li>
+              </ol>
+              <strong>Custom Tables</strong>
+              <ol>
+                <li>
+                  <p>ACM Classification Codes</p>
+                </li>
+                <li>
+                  <p>FYP Options</p>
+                </li>
+                <li>
+                  <p>Research Groups</p>
+                </li>
+                <li>
+                  <p>Student-ACM</p>
+                </li>
+                <li>
+                  <p>Student Responses</p>
+                </li>
+                <li>
+                  <p>Student Topic Options</p>
+                </li>
+                <li>
+                  <p>Supervisor-ACM</p>
+                </li>
+                <li>
+                  <p>Supervisor Responses v2</p>
+                </li>
+                <li>
+                  <p>Topic-ACM Map</p>
+                </li>
+                <li>
+                  <p>Research Group-ACM Map</p>
+                </li>
+                <li>
+                  <p>Supervisor-Student Pairs</p>
+                </li>
+              </ol>
+              <p>The tables are related in the following fashion utilising multiple 1:N, N:1, and N:N relationships.
+                More info on this can also be found in the <a href="#implementation">implementation</a> section.</p>
+              <img src="assets/img/table-relationships.png" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- End Site Map -->
         <!-- Packages and API -->
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -1609,6 +1672,10 @@
                 within our solution, mentioned in the <a href="#implementation">implementation</a> section. By nature of
                 how they are created within PowerApps, they are usable by the public, however these are purely to kept
                 private to stop any potential leaks of information.</p>
+              <p>Since, as mentioned, the code that completes our matching algorithm is also embedded into portal page
+                containing the button for the administrator to run it, there are no packages involed, and no
+                dependencies. All of the functions used in the code utilise JavaScript functions that almost all modern
+                browsers have support for.</p>
             </div>
           </div>
         </div>
