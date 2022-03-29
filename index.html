@@ -906,6 +906,48 @@
                     possible to reorder the steps of the form and manage form Sessions.
                   </li>
                 </ol>
+                <p>There are 5 basic forms used by the portal:</p>
+                <ol>
+                  <li>
+                    <strong>View Student Application</strong>
+                    <p>This basic form is an edit form. This allows students who have already submitted an application
+                      to view and edit their application. The ability to edit their application is entirely at the
+                      discretion of the administrator, who may want to limit this capability. If so, the administrator
+                      must visit Portal Management > Basic Forms > View Student Application and set the Mode to
+                      ReadOnly. Then the administrator should also edit the app by going to Power Apps > Apps > FYP >
+                      View Student Application page. Select the form on the page and change the mode to ReadOnly in the
+                      right-hand menu bar. </p>
+                  </li>
+                  <li>
+                    <strong>View Supervisor Application</strong>
+                    <p>This basic form is an edit form. This allows supervisors who have already submitted an
+                      application to view and edit their application. The ability to edit their application is entirely
+                      at the discretion of the administrator, who may want to limit this capability. If so, the
+                      administrator must visit Portal Management > Basic Forms > View Supervisor Application and set the
+                      Mode to ReadOnly. Then the administrator should also edit the app by going to Power Apps > Apps >
+                      FYP > View Supervisor Application page. Select the form on the page and change the mode to
+                      ReadOnly in the right-hand menu bar. </p>
+                  </li>
+                  <li>
+                    <strong>Submit Supervisor-Student Pair</strong>
+                    <p>This is an insert form. Once a supervisor agrees verbally with a student to supervise them, they
+                      are required to fill out this form to report to the administration who they will be supervising
+                      and optionally provide a project title and description. </p>
+                  </li>
+                  <li>
+                    <strong>View Supervisee Responses</strong>
+                    <p>This basic form is a ReadOnly form. Once supervisors has submitted notice they will be
+                      supervising a specific student (basic form 3, above) they will be able to view their responses
+                      through this form. They cannot edit their response, but they can delete form submissions and add
+                      more submissions. </p>
+                  </li>
+                  <li>
+                    <strong>Supervisor-ACM for subgrid</strong>
+                    <p>This is a basic form used for selecting ACM Keywords through a subgrid (reference Custom N:N
+                      relationships). The subgrid “create” button (which appears as “Add ACM Keyword”) calls this form
+                      and ACM Keywords are added one-by-one through it. </p>
+                  </li>
+                </ol>
 
                 <p>
                   If you want to manually add a record to a table, you go to the
