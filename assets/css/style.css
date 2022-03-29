@@ -51,10 +51,6 @@ td {
     border: 1px solid black;
 }
 
-img {
-    max-width: 100vw;
-}
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1535,4 +1531,9 @@ section {
 #liquid {
     filter: invert(62%) sepia(33%) saturate(1077%) hue-rotate(149deg)
         brightness(89%) contrast(93%);
+}
+
+img,
+li > img {
+    max-width: 100%;
 }
