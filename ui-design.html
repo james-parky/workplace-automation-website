@@ -107,259 +107,316 @@
 
     <!-- ======= UI Design ======= -->
     <section id="ui-design">
-        <div class="container-fluid" data-aos="fade-up">
-  
-          <header class="section-header">
-            <h3>UI Design</h3>
-          </header>
-  
-          <!-- Accordion -->
-          <div class="accordion accordion-flush" id="ui-list">
-  
-            <!-- Sketches -->
-            <div class="accordion-item">
-  
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#ui-sketches">
-                  Sketches
-                </button>
-              </h3>
-  
-              <div id="ui-sketches" class="accordion-collapse collapse" data-bs-parent="ui-list">
-                <div class="accordion-body">
-                  Before we started development of the project, we produced some sketches of how our UI may appear, and then evaluated these to eliminate
-                  any weaknesses before creating more advanced wireframe prototypes.
-                  <br><br>
-                  <strong>Please note:</strong> in the early stages of our development, our client requested a project with the aim of creating a tool to
-                  solve the allocation of <strong>Teaching Assistants to Modules</strong>, before changing to <strong>Students to Supervisors</strong>. This
-                  should explain why the sketches appear to be oriented to this goal rather than our current project, however the underlying principles behind
-                  both projects are extremenly similar, and so we believe there was still adequate insight gained from evaluating these sketches.
-                  <br><br>
-                  <h4>
-                    Teaching Assistant (Equivalent to Student)
-                  </h4>
-                  The goals for these sketches were to allow prospective teaching assistants (with our new project the equivalent would be Students) to:
-                  <ol>
-                    <li>Be able to input the information required by UCL</li>
-                    <li>View details of a class they have been allocated to</li>
-                    <li>View possible classes with available spaces which they may apply for</li>
-                  </ol>
-                  The portal is split into several different pages to perform these distinct functions to prevent from overwhelming the user.
-                  The design was also loosely based off traditional Microsoft styling in order to give it a sense of familiarity and ease of use.
-                  <br><br>
-                  We also included checklists and notifications to help a user track the progress of their application and avoid missing a deadline.
-                  The form to fill out information also includes a few different input types to best suit each data point, such as a text box to list skills.
-                  This is comparable to the current project, as users will fill out forms in an almost indentical way in both projects and so similar principles
-                  can be used.
-                  <div style="margin: 20px; border: solid black 5px">
-                    <div style="width: 50%; float: left;">
-                      <img src="assets/img/ui-design/sketch-1.png">
-                    </div>
-                    <div style="margin-left: 50%;">
-                      <img src="assets/img/ui-design/sketch-2.png">
-                    </div>
+      <div class="container-fluid" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>UI Design</h3>
+        </header>
+        <p>
+          Before we started development of the project, we produced some sketches of how our UI may appear, and then
+          evaluated these to eliminate
+          any weaknesses before creating more advanced wireframe prototypes.
+        </p>
+        <p>
+          <strong>Please note:</strong> in the early stages of our development, our client requested a project with
+          the aim of creating a tool to
+          solve the allocation of <strong>Teaching Assistants to Modules</strong>, before changing to
+          <strong>Students to Supervisors</strong>. This
+          should explain why the sketches appear to be oriented to this goal rather than our current project,
+          however the underlying principles behind
+          both projects are extremenly similar, and so we believe there was still adequate insight gained from
+          evaluating these sketches.
+        </p>
+
+        <!-- Accordion -->
+        <div class="accordion accordion-flush" id="ui-list">
+
+          <!-- Sketches -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#ui-sketches">
+                Sketches
+              </button>
+            </h3>
+            <div id="ui-sketches" class="accordion-collapse collapse" data-bs-parent="ui-list">
+              <div class="accordion-body">
+                <h4>
+                  Teaching Assistant (Equivalent to Student)
+                </h4>
+                The goals for these sketches were to allow prospective teaching assistants (with our new project the
+                equivalent would be Students) to:
+                <ol>
+                  <li>Be able to input the information required by UCL</li>
+                  <li>View details of a class they have been allocated to</li>
+                  <li>View possible classes with available spaces which they may apply for</li>
+                </ol>
+                The portal is split into several different pages to perform these distinct functions to prevent from
+                overwhelming the user.
+                The design was also loosely based off traditional Microsoft styling in order to give it a sense of
+                familiarity and ease of use.
+                <br><br>
+                We also included checklists and notifications to help a user track the progress of their application and
+                avoid missing a deadline.
+                The form to fill out information also includes a few different input types to best suit each data point,
+                such as a text box to list skills.
+                This is comparable to the current project, as users will fill out forms in an almost indentical way in
+                both projects and so similar principles
+                can be used.
+                <div style="margin: 20px; border: solid black 5px">
+                  <div style="width: 50%; float: left;">
+                    <img src="assets/img/ui-design/sketch-1.png">
                   </div>
-                  <br><br>
-                  This sketch is a great start; it clearly displays all the relevant data to the student in a centralised place, and maintains a high degree of
-                  freedom for them as they may move freely around the app. The features of this sketch are intuitive and memorable, so do well to keep the process
-                  as simple as possible for the user.
-                  <br><br>
-                  
-                  <h4>
-                    Module Lead (Equivalent to Supervisor)
-                  </h4>
-                  As a Module Lead, the needs of this project would be:
-                  <ol>
-                    <li>Input information about the module they lead</li>
-                    <li>Monitor requests to teach a module from prospective Teaching Assisstants</li>
-                  </ol>
-                  <div style="margin: 20px; border: solid black 5px">
-                    <img src="assets/img/ui-design/sketch-3.png">
+                  <div style="margin-left: 50%;">
+                    <img src="assets/img/ui-design/sketch-2.png">
                   </div>
-                  Again, there are several pages to this sketch to perform these functions. Like with the Teaching Assistants, a professor would be able
-                  to view their progress of an application easily and view all relevant information in a centralised place. These sketches solve an issue
-                  similar to that of our final project, and so we still gained from being able to sketch and analyse these designs.
-                  <br><br>
-                  While these sketches are a good start, there are certainly places of improvement. For one,
-                  this design hides the progress of filling out the information form from the user, which may lead to them becoming more impatient as a result. Furthermore, the user is not
-                  able to move freely around different stages of filling out the information form due to the sequential nature of this sketch structure, and
-                  so may be hindered if they wanted to check or amend a previous answer.
-  
                 </div>
-              </div>
-  
-            </div>
-            <!-- End Sketches -->
-  
-            <!-- Prototypes -->
-            <div class="accordion-item">
-  
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ui-wireframes">
-                  Prototypes
-                </button>
-              </h3>
-  
-              <div id="ui-wireframes" class="accordion-collapse collapse" data-bs-parent="ui-list">
-                <div class="accordion-body">
-                  Following on from our sketches and their weaknesses, we created more complicated prototypes using this feeback to create an easy-to-use UI design.
-                  Once again, please note that at the time of designing these prototypes, our project aims set by our clients were not the same as they are now, as explained in the section above, 'Sketches'.
-                  <br><br>
-  
-                  <h4>
-                    Teaching Assistant (Equivalent to Student)
-                  </h4>
-                  Below are the prototypes we created for a Teaching Assistant according to our previously stated UI goals:
-                  <div style="margin: 20px; border: solid black 5px; width: 40%;">
-                    <img src="assets/img/ui-design/wireframe-1.png" style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-2.png" style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-3.png" style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-4.png"  style="width: 100%;">
-                  </div>
-                  As the feedback from the sketches was largely positive, these prototypes are for the most part realisations of the Teaching Assistant sketches.
-                  <br><br>
-  
-                  <h4>
-                    Module Lead (Equivalent to Supervisor)
-                  </h4>
-                  Below are the prototypes we created for a Module Lead according to our previously stated goals, and taking into account feeback given on the sketches following discussions with our client.
-                  <div style="margin: 20px; border: solid black 5px; width: 40%;">
-                    <img src="assets/img/ui-design/wireframe-5.png" style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-6.png" style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-7.png" style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-8.png"  style="border-bottom: solid black 5px; width: 100%;">
-                    <img src="assets/img/ui-design/wireframe-9.png"  style="width: 100%;">
-                  </div>
-                  For these prototypes, we tried to iron out weaknesses discovered in our sketches. For instance, the structure of filling out an information form was entirely changed, from one where the user must enter
-                  information sequentially to one where they may move freely between section of the form as they please. This means they may edit and check information from different
-                  sections of the form at will, and can easily see their progress through the process, which helps prevent a user from becoming frustrated or bored whilst
-                  filling out lots of information.
-                  <br><br>
-  
-                  <h4>
-                    Evaluation
-                  </h4>
-                  Following these prototypes, we decided to use Nielsens's 10 Usability Heuristics [CITE***] in order to evaluate
-                  our design, because this is a well-known and renowned method of discovering issues within a design. We surveyed some
-                  potential users of the project, and these are the main weaknesses they identified:
-                  <br><br>
-                  <table>
-                    <tr>
-                      <th>Heuristic</th>
-                      <th>Problem</th>
-                      <th>Solution</th>
-                      <th>Severity</th>
-                    </tr>
-                    <tr>
-                      <td>Consistency and Standards</td>
-                      <td>It is not clear that the checklist on the homepage of the Teaching Assistant Portal is automatically generated and that the user cannot check or uncheck these fields.</td>
-                      <td>The checkboxes could be greyed out. The fields should parallel the outlined steps in the left hand side panel and hightlight the current step to show the user that's the step they're currently on.</td>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <td>User Control and Freedom</td>
-                      <td>In the Module Lead portal, there is no obvious cancel button in case a professor accidentally clicks on "Add new TA allocation request" to return home.</td>
-                      <td>Add a "Cancel" button next to the hamburger icon which takes the user back to the homepage. A popup shoul appear to ask to save changes.</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td>Recognition Rather than Recall</td>
-                      <td>In the Module Lead portal, there is no final "Review Request" button before submitting a new Teaching Assistant allocation request.</td>
-                      <td>Reolace the "Create Request" button with a "review Request" button. This should take the user to a page where they can see all their form answers and finally click the "Create Request" button.</td>
-                      <td>2</td>
-                    </tr>
-                  </table>
-  
+                <br><br>
+                This sketch is a great start; it clearly displays all the relevant data to the student in a centralised
+                place, and maintains a high degree of
+                freedom for them as they may move freely around the app. The features of this sketch are intuitive and
+                memorable, so do well to keep the process
+                as simple as possible for the user.
+                <br><br>
+
+                <h4>
+                  Module Lead (Equivalent to Supervisor)
+                </h4>
+                As a Module Lead, the needs of this project would be:
+                <ol>
+                  <li>Input information about the module they lead</li>
+                  <li>Monitor requests to teach a module from prospective Teaching Assisstants</li>
+                </ol>
+                <div style="margin: 20px; border: solid black 5px">
+                  <img src="assets/img/ui-design/sketch-3.png">
                 </div>
+                Again, there are several pages to this sketch to perform these functions. Like with the Teaching
+                Assistants, a professor would be able
+                to view their progress of an application easily and view all relevant information in a centralised
+                place. These sketches solve an issue
+                similar to that of our final project, and so we still gained from being able to sketch and analyse these
+                designs.
+                <br><br>
+                While these sketches are a good start, there are certainly places of improvement. For one,
+                this design hides the progress of filling out the information form from the user, which may lead to them
+                becoming more impatient as a result. Furthermore, the user is not
+                able to move freely around different stages of filling out the information form due to the sequential
+                nature of this sketch structure, and
+                so may be hindered if they wanted to check or amend a previous answer.
+
               </div>
-  
             </div>
-            <!-- Prototypes -->
-  
-            <!-- Final Design -->
-            <div class="accordion-item">
-  
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ui-final">
-                  Final Design
-                </button>
-              </h3>
-  
-              <div id="ui-final" class="accordion-collapse collapse" data-bs-parent="ui-list">
-                <div class="accordion-body">
-                  
-                  Since making these sketches and prototypes, our project aims have been changed by our client. However, the new project aims are fairly similar
-                  to the previous aims explored in our earlier UI experimentation. Despite the change in project goals, we tried to draw as much as we could from the
-                  our past ideas, and so in our final design many of the elements from the earlier headings of the UI Design section still features many of these
-                  lessons. Below are some screenshots of the final look of our project from the perspective of a student:
-                  <div style="margin: 20px; border: solid #1bb1dc 5px; width: 60%;">
-                    <img src="assets/img/ui-design/fd-1.png" style="border-bottom: solid #1bb1dc 5px; width: 100%;">
-                    <img src="assets/img/ui-design/fd-4.png" style="border-bottom: solid #1bb1dc 5px; width: 100%;">
-                    <img src="assets/img/ui-design/fd-2.png" style="border-bottom: solid #1bb1dc 5px; width: 100%;">
-                    <img src="assets/img/ui-design/fd-3.png" style="width: 100%;">
-                  </div>
-                  <strong>Pictures 1&2 - View Supervisors Page</strong><br>
-                  Whilst they are now located along the top of the page, tabs to allow for easy and fast navigation between different pages of the portal
-                  remain. We tried to preserve our feedback from potential users by grouping related pieces of data closely in one space. For instance,
-                  on a single dedicated page a student may pan through a clear list of potential Supervisors. Clicking on a particular supervisor will take
-                  the user to a more detailed page, which can be seen in the second picture.
-                  <br><br>
-                  <strong>Pictures 3&4 - View Application Page</strong><br>
-                  Once they have filled out a form, a student may view all the data inputted into the form all in one place. Additionally, they may
-                  edit these fields and click 'submit' at the bottom of the page. This means that all the information a student has submitted can
-                  be viewed easily in one place. Again, this page is always easily reached through tabs along the top of the page.
-                  <br><br>
-                  In addition to acting on past feedback from sketches and prototypes, we made some changes to the general aesthetic and structure
-                  of the page. For example, in the prototypes the tabs were found along the left-hand side of the page; in the final design, they sit
-                  along the top. This way not entirely intentional, but simply a product of the way Microsoft Powerapps, our chosen development
-                  platform, works easily. We did not deem this to be a UI violation, and so we were happy to make this change. A second example of
-                  a change in our final design is the aesthetic. In our sketches and prototypes, we tried to use a colour scheme and layout to make
-                  the design resemble a traditional microsoft application. However, we instead changed the colour scheme and layout slightly such
-                  that it now resembles a UCL service more closely. We did this because our expected users were specified to be UCL students for the
-                  time being, and so we wanted to make the project as familiar to our audience as possible.
-                  
-                </div>
-              </div>
-  
-            </div>
-            <!-- End Final Design -->
-  
-            <div class="accordion-item">
-  
-              <h3 class="accodion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ui-refs">
-                  References
-                </button>
-              </h3>
-  
-              <div id="ui-refs" class="accordion-collapse collapse" data-bs-parent="ui-list">
-                <div class="accordion-body">
-  
-                  <table>
-                    <tr>
-                      <td>[1]</td>
-                      <td>
-                        Nielsen Norman Group, "10 Usability Heuristics for User Interface Design" [Online]
-                        <br>
-                        Available: <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">https://www.nngroup.com/articles/ten-usability-heuristics/</a>
-                        <br>
-                        [Accessed: Mar 29. 2022]
-                      </td>
-                    </tr>
-                  </table>
-                  
-                </div>
-              </div>
-  
-            </div>
-  
+
           </div>
-          <!-- End Accordion-->
-  
+          <!-- End Sketches -->
+
+          <!-- Prototypes -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#ui-wireframes">
+                Prototypes
+              </button>
+            </h3>
+
+            <div id="ui-wireframes" class="accordion-collapse collapse" data-bs-parent="ui-list">
+              <div class="accordion-body">
+                Following on from our sketches and their weaknesses, we created more complicated prototypes using this
+                feeback to create an easy-to-use UI design.
+                Once again, please note that at the time of designing these prototypes, our project aims set by our
+                clients were not the same as they are now, as explained in the section above, 'Sketches'.
+                <br><br>
+
+                <h4>
+                  Teaching Assistant (Equivalent to Student)
+                </h4>
+                Below are the prototypes we created for a Teaching Assistant according to our previously stated UI
+                goals:
+                <div style="margin: 20px; border: solid black 5px; width: 40%;">
+                  <img src="assets/img/ui-design/wireframe-1.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-2.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-3.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-4.png" style="width: 100%;">
+                </div>
+                As the feedback from the sketches was largely positive, these prototypes are for the most part
+                realisations of the Teaching Assistant sketches.
+                <br><br>
+
+                <h4>
+                  Module Lead (Equivalent to Supervisor)
+                </h4>
+                Below are the prototypes we created for a Module Lead according to our previously stated goals, and
+                taking into account feeback given on the sketches following discussions with our client.
+                <div style="margin: 20px; border: solid black 5px; width: 40%;">
+                  <img src="assets/img/ui-design/wireframe-5.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-6.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-7.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-8.png" style="border-bottom: solid black 5px; width: 100%;">
+                  <img src="assets/img/ui-design/wireframe-9.png" style="width: 100%;">
+                </div>
+                For these prototypes, we tried to iron out weaknesses discovered in our sketches. For instance, the
+                structure of filling out an information form was entirely changed, from one where the user must enter
+                information sequentially to one where they may move freely between section of the form as they please.
+                This means they may edit and check information from different
+                sections of the form at will, and can easily see their progress through the process, which helps prevent
+                a user from becoming frustrated or bored whilst
+                filling out lots of information.
+                <br><br>
+
+                <h4>
+                  Evaluation
+                </h4>
+                Following these prototypes, we decided to use Nielsens's 10 Usability Heuristics [CITE***] in order to
+                evaluate
+                our design, because this is a well-known and renowned method of discovering issues within a design. We
+                surveyed some
+                potential users of the project, and these are the main weaknesses they identified:
+                <br><br>
+                <table>
+                  <tr>
+                    <th>Heuristic</th>
+                    <th>Problem</th>
+                    <th>Solution</th>
+                    <th>Severity</th>
+                  </tr>
+                  <tr>
+                    <td>Consistency and Standards</td>
+                    <td>It is not clear that the checklist on the homepage of the Teaching Assistant Portal is
+                      automatically generated and that the user cannot check or uncheck these fields.</td>
+                    <td>The checkboxes could be greyed out. The fields should parallel the outlined steps in the left
+                      hand side panel and hightlight the current step to show the user that's the step they're currently
+                      on.</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>User Control and Freedom</td>
+                    <td>In the Module Lead portal, there is no obvious cancel button in case a professor accidentally
+                      clicks on "Add new TA allocation request" to return home.</td>
+                    <td>Add a "Cancel" button next to the hamburger icon which takes the user back to the homepage. A
+                      popup shoul appear to ask to save changes.</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Recognition Rather than Recall</td>
+                    <td>In the Module Lead portal, there is no final "Review Request" button before submitting a new
+                      Teaching Assistant allocation request.</td>
+                    <td>Reolace the "Create Request" button with a "review Request" button. This should take the user to
+                      a page where they can see all their form answers and finally click the "Create Request" button.
+                    </td>
+                    <td>2</td>
+                  </tr>
+                </table>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- Prototypes -->
+
+          <!-- Final Design -->
+          <div class="accordion-item">
+
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#ui-final">
+                Final Design
+              </button>
+            </h3>
+
+            <div id="ui-final" class="accordion-collapse collapse" data-bs-parent="ui-list">
+              <div class="accordion-body">
+
+                Since making these sketches and prototypes, our project aims have been changed by our client. However,
+                the new project aims are fairly similar
+                to the previous aims explored in our earlier UI experimentation. Despite the change in project goals, we
+                tried to draw as much as we could from the
+                our past ideas, and so in our final design many of the elements from the earlier headings of the UI
+                Design section still features many of these
+                lessons. Below are some screenshots of the final look of our project from the perspective of a student:
+                <div style="margin: 20px; border: solid #1bb1dc 5px; width: 60%;">
+                  <img src="assets/img/ui-design/fd-1.png" style="border-bottom: solid #1bb1dc 5px; width: 100%;">
+                  <img src="assets/img/ui-design/fd-4.png" style="border-bottom: solid #1bb1dc 5px; width: 100%;">
+                  <img src="assets/img/ui-design/fd-2.png" style="border-bottom: solid #1bb1dc 5px; width: 100%;">
+                  <img src="assets/img/ui-design/fd-3.png" style="width: 100%;">
+                </div>
+                <strong>Pictures 1&2 - View Supervisors Page</strong><br>
+                Whilst they are now located along the top of the page, tabs to allow for easy and fast navigation
+                between different pages of the portal
+                remain. We tried to preserve our feedback from potential users by grouping related pieces of data
+                closely in one space. For instance,
+                on a single dedicated page a student may pan through a clear list of potential Supervisors. Clicking on
+                a particular supervisor will take
+                the user to a more detailed page, which can be seen in the second picture.
+                <br><br>
+                <strong>Pictures 3&4 - View Application Page</strong><br>
+                Once they have filled out a form, a student may view all the data inputted into the form all in one
+                place. Additionally, they may
+                edit these fields and click 'submit' at the bottom of the page. This means that all the information a
+                student has submitted can
+                be viewed easily in one place. Again, this page is always easily reached through tabs along the top of
+                the page.
+                <br><br>
+                In addition to acting on past feedback from sketches and prototypes, we made some changes to the general
+                aesthetic and structure
+                of the page. For example, in the prototypes the tabs were found along the left-hand side of the page; in
+                the final design, they sit
+                along the top. This way not entirely intentional, but simply a product of the way Microsoft Powerapps,
+                our chosen development
+                platform, works easily. We did not deem this to be a UI violation, and so we were happy to make this
+                change. A second example of
+                a change in our final design is the aesthetic. In our sketches and prototypes, we tried to use a colour
+                scheme and layout to make
+                the design resemble a traditional microsoft application. However, we instead changed the colour scheme
+                and layout slightly such
+                that it now resembles a UCL service more closely. We did this because our expected users were specified
+                to be UCL students for the
+                time being, and so we wanted to make the project as familiar to our audience as possible.
+
+              </div>
+            </div>
+
+          </div>
+          <!-- End Final Design -->
+
+          <div class="accordion-item">
+
+            <h3 class="accodion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#ui-refs">
+                References
+              </button>
+            </h3>
+
+            <div id="ui-refs" class="accordion-collapse collapse" data-bs-parent="ui-list">
+              <div class="accordion-body">
+
+                <table>
+                  <tr>
+                    <td>[1]</td>
+                    <td>
+                      Nielsen Norman Group, "10 Usability Heuristics for User Interface Design" [Online]
+                      <br>
+                      Available: <a
+                        href="https://www.nngroup.com/articles/ten-usability-heuristics/">https://www.nngroup.com/articles/ten-usability-heuristics/</a>
+                      <br>
+                      [Accessed: Mar 29. 2022]
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
-      </section>
-      <!-- End UI Design -->
+        <!-- End Accordion-->
+
+      </div>
+    </section>
+    <!-- End UI Design -->
 
   </main><!-- End #main -->
 
@@ -381,4 +438,3 @@
 </body>
 
 </html>
-    
