@@ -261,6 +261,7 @@ td {
     left: 24px;
     top: calc(100% + 30px);
     margin: 0;
+    margin-right: 5rem;
     padding: 10px 0;
     z-index: 99;
     opacity: 0;
@@ -288,17 +289,18 @@ td {
 .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
+    left: calc(100% - 250px);
     visibility: visible;
 }
 .navbar .dropdown .dropdown ul {
     top: 0;
-    left: calc(100% - 30px);
+    left: calc(100% - 200px);
     visibility: hidden;
 }
 .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
-    left: 100%;
+    left: calc(100% - 200px);
     visibility: visible;
 }
 @media (max-width: 1366px) {
