@@ -585,7 +585,16 @@ section {
 #technologies {
     padding: 60px 0 40px 0;
 }
+
+#technologies .row {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
 #technologies .box {
+    width: auto;
     padding: 30px;
     position: relative;
     overflow: hidden;
@@ -601,14 +610,14 @@ section {
 }
 
 #technologies .icon {
-    margin-left: 33%;
+    /* margin-left: 33%;*/
     margin-bottom: 30%;
     padding-top: 12px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 100px;
 }
 #technologies .icon i {
     font-size: 36px;
@@ -631,7 +640,7 @@ section {
     margin-bottom: 0;
     text-align: left;
 }
-
+/* 
 #technologies .js-logo {
     margin-left: 33%;
     margin-bottom: 30%;
@@ -640,7 +649,7 @@ section {
     line-height: 0;
     width: 90px;
     height: 90px;
-}
+} */
 
 /* Why Us Section
 --------------------------------*/
