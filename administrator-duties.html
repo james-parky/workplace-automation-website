@@ -100,34 +100,71 @@
 
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Algorithms</li>
+          <li>Administrator Duties</li>
         </ol>
       </div>
     </section><!-- End Breadcrumbs -->
 
     
     <!-- ======= Algorithms ======= -->
-    <section id="algorithms">
+    <section id="admin-duties">
         <div class="container-fluid" data-aos="fade-up">
           <header class="section-header">
             <h3>
-              Algorithms
+              Administrator Duties
             </h3>
           </header>
-          <p>There are only two algorithms used in our entire solution.</p>
-          <ul>
+
+          <h4>
+              Before deploying this solution to users, you must ensure the tables are correctly populated,
+              as below:
+          </h4>
+          
+          <i>Default Tables</i>
+          <ol>
+              <li>
+                  <strong>Contact:</strong> this table may or may not have data in it. One must ensure,
+                  however, that any users who have already signed in before have the appropriate web roles,
+                  as they will not be asked again which group they belong to, to automate web role assignment.
+              </li>
+          </ol>
+          <br>
+          <i>Custom Tables</i>
+          <ol>
             <li>
-              <p>There is a huge algorithm that we have created for the automatic mathing of supervisors to students based
-                on whether they share a common ACM Keyword. More information about this algorithms code can be found in
-                the <a href="#matching-algo">implementation</a> section.</p>
+                <strong>ACM Classification Codes:</strong> This table is pre-populated with ACM Keywords and associated IDs. This list was produced by Diego M. Plasencia and was then shortened to include only keywords whose IDs have 3 levels of precision or less, e.g., 8.3.1 . This table should not be regularly modified. 
             </li>
             <li>
-              <p>There is a small algorithm, implemented using a PowerAutomate cloud flow, to update students and
-                supervisors response table records when an administrator either approves or rejects a match proposed by
-                the above algorithm. More information can be found in the <a
-                  href="#supervised-matching">implementation</a> section.</p>
+                <strong>FYP Options:</strong> This table is pre-populated with dummy data. When this solution becomes deployable, this table will become a legacy table and the Supervisor Responses v2 table will take its place. 
             </li>
-          </ul>
+            <li>
+                <strong>Research Groups:</strong> This table is pre-populated with all the Research Groups that were available to us in the collected 2022 FYP Supervisor data. This table may require modification to remove or add research groups. If the research groups are modified, you will also have to add/remove the appropriate Research Group – ACM Maps.  
+            </li>
+            <li>
+                <strong>Student ACM:</strong> This table should be empty upon deployment. 
+            </li>
+            <li>
+                <strong>Student Responses:</strong> This table should be empty upon deployment. 
+            </li>
+            <li>
+                <strong>Student Topic Options:</strong> This table is pre-populated with all the Topics on the Student Motivation Tracking form the Student Application form is based off. This table may require modification to remove or add topics. If the topics are modified, you will also have to add/remove the appropriate Topics–ACM Maps. 
+            </li>
+            <li>
+                <strong>Supervisor-ACM: </strong> This table should be empty upon deployment. 
+            </li>
+            <li>
+                <strong>Supervisor Responses v2:</strong> This table should be empty upon deployment. 
+            </li>
+            <li>
+                <strong>Topic-ACM Map:</strong> This table is pre-populated with Topic – ACM Keyword equivalences. This may need to be changed if Topics are changed. Also, if the administrator deems an equivalence is not appropriate, they may also edit this table. 
+            </li>
+            <li>
+                <strong>Research Group - ACM Map: </strong> This table is pre-populated with Research Group – ACM Keyword equivalences. This may need to be changed if the Research Groups table records are changed. Also, if the administrator deems an equivalence is not appropriate, they may also edit this table. 
+            </li>
+            <li>
+                <strong>Supervisor-Student Pairs:</strong> This table should be empty upon deployment. 
+            </li>
+          </ol>
       </section>
       <!-- End Algorithms -->
 
