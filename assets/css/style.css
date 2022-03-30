@@ -580,12 +580,12 @@ section {
     transition: 0.5s;
 }
 
-/* Services Section
+/* technologies Section
 --------------------------------*/
-#services {
+#technologies {
     padding: 60px 0 40px 0;
 }
-#services .box {
+#technologies .box {
     padding: 30px;
     position: relative;
     overflow: hidden;
@@ -596,43 +596,43 @@ section {
     transition: all 0.3s ease-in-out;
     text-align: center;
 }
-#services .box:hover {
+#technologies .box:hover {
     transform: scale(1.1);
 }
 
-#services .icon {
+#technologies .icon {
     margin-left: 33%;
     margin-bottom: 30%;
-    /*padding-top: 12px;*/
-    /*display: inline-block;*/
+    padding-top: 12px;
+    display: inline-block;
     text-align: center;
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
-#services .icon i {
+#technologies .icon i {
     font-size: 36px;
     line-height: 0;
 }
-#services .title {
+#technologies .title {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
 }
-#services .title a {
+#technologies .title a {
     color: #111;
 }
-#services .box:hover .title a {
+#technologies .box:hover .title a {
     color: #1bb1dc;
 }
-#services .description {
+#technologies .description {
     font-size: 14px;
     line-height: 28px;
     margin-bottom: 0;
     text-align: left;
 }
 
-#services .po-logo {
+#technologies .js-logo {
     margin-left: 33%;
     margin-bottom: 30%;
     text-align: center;
