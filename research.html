@@ -103,370 +103,369 @@
         </ol>
       </div>
     </section><!-- End Breadcrumbs -->
-<!-- ======= Research ======= -->
-<section id="research">
-    <div class="container-fluid" data-aos="fade-up">
+    <!-- ======= Research ======= -->
+    <section id="research">
+      <div class="container-fluid" data-aos="fade-up">
 
-      <header class="section-header">
-        <h3>Research</h3>
-      </header>
+        <header class="section-header">
+          <h3>Research</h3>
+        </header>
+        <strong>Possible Solutions</strong>
+        <p>
+          One crude way to build a solution for our project may be to code
+          it using a combination of HTML, Javascript, and CSS, whilst using
+          an SQL database. However, this would be time consuming for such
+          a complication project specification.
+        </p>
+        <p>
+          Luckily, a much easier and cleaner option was open to us. Our
+          client for the project was Microsoft. As such, our project was
+          particularly suited to using Microsoft products to increase the
+          speed of our development.
+        </p>
+        <p>
+          After researching Microsoft development products, we decided to
+          research Microsoft Power Apps. To do so, we both read through the
+          <a href="https://docs.microsoft.com/en-us/powerapps/">official
+            documentation</a>, and discussed this service at length with our
+          clients representing Microsoft (Lee Stott, Ayca Bas), and a
+          consultant representing the Ashton Court Group (Chris Seely), who
+          acted as a mentor for us during this project.
+        </p>
+        <p>
+          Following these discussions and our research, it was determined that
+          we would use the Microsoft Power Platform to develop our project.
+          The reasons for this are as follows:
+        </p>
+        <ul>
+          <li>
+            <strong>Dataverse Integration</strong> [1]
+            <p>
+              The Dataverse acts as a centralised location to store tables of
+              data. It is also designed to be integrated into Power Apps projects;
+              one may directly access the Dataverse through Power Apps. Data
+              may be easily retrieved, modified, deleted, or created, in the Dataverse
+              from Power Apps using <a href="#implementation">cloud flows</a>.
+            </p>
+            <p>
+              Through cloud flows, developers can also automate several interactions
+              with the data relevant to a certain project. This is useful for
+              many purposes within our project. For instance, within our project
+              it is expected that we may display a page of information about
+              supervisors to students. Using cloud flows, this page may be
+              updated whenever there is a new response.
+            </p>
+            <p>
+              Therefore, we predicted that the seamless integration between the Dataverse
+              and Power Apps would prove useful throughout our project, as almost
+              all of the requirements of our project concern the manipulation of data.
+            </p>
+          </li>
+          <li>
+            <strong>Rapid Code Deployment</strong> [2]
+            <p>
+              One of the primary purposes of using Power Apps is for rapid
+              project development. Time would largely be the limiting factor
+              of the development of this project. Power Apps lends itself to
+              this purpose - if required, one can deploy a website with zero
+              code. While we will use code to perform more advanced functions,
+              using Power Apps we were able to create a host a website
+              <i>immediately</i>.
+            </p>
+            <p>
+              For instance, the Power Apps Canvas may be used to create
+              components quickly without needing to write any html, Power Automate
+              may be used to perform logical processes to data, and website
+              organisation is already set up, allowing one to tweak website
+              settings or structure at will.
+            </p>
+          </li>
+          <li>
+            <strong>Multiple Platform Types</strong> [2]
+            <p>
+              For our app, we have three main user types, as detailed in the
+              requirements section. Each of these user types have different
+              needs and access levels. Within Power Apps, there are several
+              types of platform a developer may create, each with different
+              capabilities and use cases. Of these, there are three platforms
+              which may be suited to our project - <i>Canvas Apps, Portals, and
+                Model-Driven Apps.</i>
+            </p>
+            <u>Canvas Apps</u> [3]
+            <p>
+              A Canvas App is useful for creating a very simple space for
+              a user to view and interact with data. Canvas Apps are incredibly
+              quick to create - for instance, within a few clicks and zero lines
+              of code one may create a Canvas App to display a table imported from a
+              CSV file stored in the cloud. The drawback of a Canvas App is its
+              simplicity - a developer is not afforded much customisation, and fewer
+              opportunities are present for complex interaction between a users and the data.
+            </p>
+            <u>Portals</u> [4]
+            <p>
+              A Portal, like a Canvas App, allows a developer to create a
+              space for users to view and interact with data. However, a
+              Portal is useful for giving a user for complex ways to interact
+              with said data. For example, a developer has greater control over
+              the view and layout of a deployment, or for instance can enable
+              a developer to create more advanced forms for the user to fill out.
+              In a Portal, a user still remains somewhat limited in what they have
+              access to - a user is not naturally given permission and an easy way
+              to interact with data. Therefore, a Portal is great for a middle-ground,
+              when a user will need to make more complex interactions with the project,
+              but only requires limited access to the database and needs a straightforward
+              layout to perform a few specific procedures without being swamped with a
+              complicated page of information.
+            </p>
+            <u>Model-Driven Apps</u> [6]
+            <p>
+              A Model-Driven App affords the user with a high degree of visibility and
+              control over tables in the database. Through a PowerBI dashboard [7],
+              they may also see more complicated insights in the data, visualised. The
+              drawback to this is that a user may not always <i>need</i> such close interaction
+              with the database. Additionally, there is limited room to control the user
+              interface of a Model-Driven App - it has fewer options to be as attractive
+              and simple as a Portal or Canvas App. Therefore, it is suited to a situation
+              where the user needs a high degree of interaction with a large portion of the
+              database, and will be have some pre-requisite knowledge of how to navigate and
+              use it.
+            </p>
+          </li>
+        </ul>
+        <p>
+          To reflect on our user types; Firstly, we have an administrator who needs a large
+          amount of control over the data stored in the solution and can be easily
+          familiarised with the project. Secondly, students and professors - who need a
+          high amount of controlled interaction with the data, but will not necessarily
+          all be familiar with how to use the project.
+        </p>
+        <p>
+          As a result, it appears the
+          appropriate platforms to build our project with would be a model-driven app for
+          the administrator, and a portal for the students and academics.
+        </p>
+        <strong>Project Operations</strong> [5]
+        <p>
+          A Power Apps solution may be extended using
+          Project Operations. As described in Microsoft
+          Official Documentation, Project Operations can be used for "easy
+          resource workload distribution" and "skillset matching to meet
+          demands" [5]. This fits our requirements well, as we need to
+          match the skillsets of students and academics as closely as
+          possible to find the optimal project for both. This would eliminate
+          the need to manually develop a matching algorithms ourselves -
+          development would be significantly sped up as Project Operations would
+          generate this algorithms for us
+        </p>
+        <p>There are, however, drawbacks to using Project Operations. These are:</p>
+        <ul>
+          <li>
+            <p>
+              <strong>Limited Control</strong> - while a built in allocation
+              algorithm would speep up development, naturally there would be
+              a more limited amount of control in its implementation. For
+              instance, micro-parameters may not be available for a developer
+              to tweak, and a developer is not give so much control of the
+              algorithms itself which is used in allocation.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Licence Fees</strong> - to use Project Operations, one
+              must pay a licence fee in addition to the Power Apps fee [8].
+              For a basic plan, this is £90.50 per user. If the matching
+              algorithm can be coded by hand, the amount of money saved would
+              be immense in the long run - especially when considering there
+              would likely be several users to pay for.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Longevity</strong> - linked to the above point on limited control,
+              using Project Operations makes the matching algorithm entirely tied to and
+              reliant on Project Operations. The world of technology moves quickly, and
+              it is not unlikely that at some point in the future, Project Operations
+              could become obselete, or be changed in a way which affects our project.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Project Specialisation</strong> - using an out-of-the-box algorithm
+              from Project Operations makes it more difficult to specialise and
+              optimise this algorithm to suit our project. For example, it is difficult
+              to specify if we would want to use an algorithm which prioritises the quality
+              of matches compared to one which prioritises making sure each academic has
+              at least one match.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Reproducibility</strong> - the Project Operations allocation algorithm
+              is reproducible in the sense that it is straightforward, and so the process for
+              using it in two different projects is simple. However, for projects with more
+              nuances, the stripped-down interaction with the algorithm means one will
+              struggle to apply more complicated aspects to similar projects. For instance,
+              take an example of a similar project such as allocating teaching assistants to
+              modules. If an allocation algorithm were manually coded, one could read the previous
+              for help, or code it in a more general way which allows the algorithm to be applied to
+              a range of things whilst maintaining the ability to cater to nuances. If Project
+              Operations is used, a developer would simply need to build the solution from
+              square one again, and may again struggle to deal with specific issues within a
+              particular project.
+            </p>
+          </li>
+        </ul>
+        <p>
 
-      <!-- Accordion -->
-      <div class="accordion accordion-flush" id="research-areas">
-        <!-- Possible Solutions -->
-        <div class="accordion-item">
+          As a result of this analysis, we decided that it would be more beneficial
+          to code the matching algorithm manually - our project is fairly specialised
+          and so would suffer under the contraints of Project Operations using a general
+          skills-based allocation algorithm with limited control. Secondly, given the
+          number of users interacting with our project, the cost may become extremely
+          high. Lastly, there are many situations within UCL where an automated allocation
+          algorithm would be of great help. It would therefore be of great benefit to have a
+          coded allocation algorithm which may be applied in a similar way to many projects.
+        </p>
 
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#research-solutions">
-              Possible Solutions
-            </button>
-          </h3>
+        <!-- Accordion -->
+        <div class="accordion accordion-flush" id="research-areas">
+          <!-- References -->
+          <div class="accordion-item">
 
-          <div id="research-solutions" class="accordion-collapse collapse" data-bs-parent="research-areas">
-            <div class="accordion-body">
-              One crude way to build a solution for our project may be to code
-              it using a combination of HTML, Javascript, and CSS, whilst using
-              an SQL database. However, this would be time consuming for such
-              a complication project specification.
-              <br><br>
-              Luckily, a much easier and cleaner option was open to us. Our
-              client for the project was Microsoft. As such, our project was
-              particularly suited to using Microsoft products to increase the
-              speed of our development.
-              <br><br>
-              After researching Microsoft development products, we decided to
-              research Microsoft Power Apps. To do so, we both read through the
-              <a href="https://docs.microsoft.com/en-us/powerapps/">official
-                documentation</a>, and discussed this service at length with our
-              clients representing Microsoft (Lee Stott, Ayca Bas), and a
-              consultant representing the Ashton Court Group (Chris Seely), who
-              acted as a mentor for us during this project.
-              <br><br>
-              Following these discussions and our research, it was determined that
-              we would use the Microsoft Power Platform to develop our project.
-              The reasons for this are as follows:
-              <ul>
-                <li>
-                  <strong>Dataverse Integration</strong> [1]
-                  <br>
-                  The Dataverse acts as a centralised location to store tables of
-                  data. It is also designed to be integrated into Power Apps projects;
-                  one may directly access the Dataverse through Power Apps. Data
-                  may be easily retrieved, modified, deleted, or created, in the Dataverse
-                  from Power Apps using <a href="#implementation">cloud flows</a>.
-                  <br><br>
-                  Through cloud flows, developers can also automate several interactions
-                  with the data relevant to a certain project. This is useful for
-                  many purposes within our project. For instance, within our project
-                  it is expected that we may display a page of information about
-                  supervisors to students. Using cloud flows, this page may be
-                  updated whenever there is a new response.
-                  <br><br>
-                  Therefore, we predicted that the seamless integration between the Dataverse
-                  and Power Apps would prove useful throughout our project, as almost
-                  all of the requirements of our project concern the manipulation of data.
-                </li>
-                <br>
-                <li>
-                  <strong>Rapid Code Deployment</strong> [2]
-                  <br>
-                  One of the primary purposes of using Power Apps is for rapid
-                  project development. Time would largely be the limiting factor
-                  of the development of this project. Power Apps lends itself to
-                  this purpose - if required, one can deploy a website with zero
-                  code. While we will use code to perform more advanced functions,
-                  using Power Apps we were able to create a host a website
-                  <i>immediately</i>.
-                  <br><br>
-                  For instance, the Power Apps Canvas may be used to create
-                  components quickly without needing to write any html, Power Automate
-                  may be used to perform logical processes to data, and website
-                  organisation is already set up, allowing one to tweak website
-                  settings or structure at will.
-                </li>
-                <br>
-                <li>
-                  <strong>Multiple Platform Types</strong> [2]
-                  <br>
-                  For our app, we have three main user types, as detailed in the
-                  requirements section. Each of these user types have different
-                  needs and access levels. Within Power Apps, there are several
-                  types of platform a developer may create, each with different
-                  capabilities and use cases. Of these, there are three platforms
-                  which may be suited to our project - <i>Canvas Apps, Portals, and
-                    Model-Driven Apps.</i>
-                  <br><br>
-                  <u>Canvas Apps</u> [3]
-                  <br>
-                  A Canvas App is useful for creating a very simple space for
-                  a user to view and interact with data. Canvas Apps are incredibly
-                  quick to create - for instance, within a few clicks and zero lines
-                  of code one may create a Canvas App to display a table imported from a
-                  CSV file stored in the cloud. The drawback of a Canvas App is its
-                  simplicity - a developer is not afforded much customisation, and fewer
-                  opportunities are present for complex interaction between a users and the data.
-                  <br><br>
-                  <u>Portals</u> [4]
-                  <br>
-                  A Portal, like a Canvas App, allows a developer to create a
-                  space for users to view and interact with data. However, a
-                  Portal is useful for giving a user for complex ways to interact
-                  with said data. For example, a developer has greater control over
-                  the view and layout of a deployment, or for instance can enable
-                  a developer to create more advanced forms for the user to fill out.
-                  In a Portal, a user still remains somewhat limited in what they have
-                  access to - a user is not naturally given permission and an easy way
-                  to interact with data. Therefore, a Portal is great for a middle-ground,
-                  when a user will need to make more complex interactions with the project,
-                  but only requires limited access to the database and needs a straightforward
-                  layout to perform a few specific procedures without being swamped with a
-                  complicated page of information.
-                  <br><br>
-                  <u>Model-Driven Apps</u> [6]
-                  <br>
-                  A Model-Driven App affords the user with a high degree of visibility and
-                  control over tables in the database. Through a PowerBI dashboard [7],
-                  they may also see more complicated insights in the data, visualised. The
-                  drawback to this is that a user may not always <i>need</i> such close interaction
-                  with the database. Additionally, there is limited room to control the user
-                  interface of a Model-Driven App - it has fewer options to be as attractive
-                  and simple as a Portal or Canvas App. Therefore, it is suited to a situation
-                  where the user needs a high degree of interaction with a large portion of the
-                  database, and will be have some pre-requisite knowledge of how to navigate and
-                  use it.
-                </li>
-              </ul>
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#research-references">
+                References
+              </button>
+            </h3>
 
-              <br>
-              To reflect on our user types; Firstly, we have an administrator who needs a large
-              amount of control over the data stored in the solution and can be easily
-              familiarised with the project. Secondly, students and professors - who need a
-              high amount of controlled interaction with the data, but will not necessarily
-              all be familiar with how to use the project.
-              <br><br>
-              As a result, it appears the
-              appropriate platforms to build our project with would be a model-driven app for
-              the administrator, and a portal for the students and academics.
-              <br><br>
+            <div id="research-references" class="accordion-collapse collapse" data-bs-parent="research-areas">
+              <div class="accordion-body">
 
-              <strong>Project Operations</strong> [5]
-              <br>
-              A Power Apps solution may be extended using
-              Project Operations. As described in Microsoft
-              Official Documentation, Project Operations can be used for "easy
-              resource workload distribution" and "skillset matching to meet
-              demands" [5]. This fits our requirements well, as we need to
-              match the skillsets of students and academics as closely as
-              possible to find the optimal project for both. This would eliminate
-              the need to manually develop a matching algorithms ourselves -
-              development would be significantly sped up as Project Operations would
-              generate this algorithms for us
-              <br><br>
-              There are, however, drawbacks to using Project Operations. These are:
-              <ul>
-                <li>
-                  <strong>Limited Control</strong> - while a built in allocation
-                  algorithm would speep up development, naturally there would be
-                  a more limited amount of control in its implementation. For
-                  instance, micro-parameters may not be available for a developer
-                  to tweak, and a developer is not give so much control of the
-                  algorithms itself which is used in allocation.
-                </li>
-                <br>
-                <li>
-                  <strong>Licence Fees</strong> - to use Project Operations, one
-                  must pay a licence fee in addition to the Power Apps fee [8].
-                  For a basic plan, this is £90.50 per user. If the matching
-                  algorithm can be coded by hand, the amount of money saved would
-                  be immense in the long run - especially when considering there
-                  would likely be several users to pay for.
-                </li>
-                <br>
-                <li>
-                  <strong>Longevity</strong> - linked to the above point on limited control,
-                  using Project Operations makes the matching algorithm entirely tied to and
-                  reliant on Project Operations. The world of technology moves quickly, and
-                  it is not unlikely that at some point in the future, Project Operations
-                  could become obselete, or be changed in a way which affects our project.
-                </li>
-                <br>
-                <li>
-                  <strong>Project Specialisation</strong> - using an out-of-the-box algorithm
-                  from Project Operations makes it more difficult to specialise and
-                  optimise this algorithm to suit our project. For example, it is difficult
-                  to specify if we would want to use an algorithm which prioritises the quality
-                  of matches compared to one which prioritises making sure each academic has
-                  at least one match.
-                </li>
-                <li>
-                  <strong>Reproducibility</strong> - the Project Operations allocation algorithm
-                  is reproducible in the sense that it is straightforward, and so the process for
-                  using it in two different projects is simple. However, for projects with more
-                  nuances, the stripped-down interaction with the algorithm means one will
-                  struggle to apply more complicated aspects to similar projects. For instance,
-                  take an example of a similar project such as allocating teaching assistants to
-                  modules. If an allocation algorithm were manually coded, one could read the previous
-                  for help, or code it in a more general way which allows the algorithm to be applied to
-                  a range of things whilst maintaining the ability to cater to nuances. If Project
-                  Operations is used, a developer would simply need to build the solution from
-                  square one again, and may again struggle to deal with specific issues within a
-                  particular project.
-                </li>
-              </ul>
+                <!-- Citation descriptions -->
+                <div>
 
-              As a result of this analysis, we decided that it would be more beneficial
-              to code the matching algorithm manually - our project is fairly specialised
-              and so would suffer under the contraints of Project Operations using a general
-              skills-based allocation algorithm with limited control. Secondly, given the
-              number of users interacting with our project, the cost may become extremely
-              high. Lastly, there are many situations within UCL where an automated allocation
-              algorithm would be of great help. It would therefore be of great benefit to have a
-              coded allocation algorithm which may be applied in a similar way to many projects.
+                  <table>
+                    <!-- [1] -->
+                    <tr>
+                      <td>
+                        [1]
+                      </td>
+                      <td>
+                        Microsoft Corporation, "What is Microsoft Dataverse?" [Online]
+                        <br>
+                        Available: <a
+                          href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro">https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
 
-            </div>
-          </div>
+                    <!-- [2] -->
+                    <tr>
+                      <td>
+                        [2]
+                      </td>
+                      <td>
+                        Microsoft Corporation, "What is Power Apps?" [Online]
+                        <br>
+                        Available: <a
+                          href="https://docs.microsoft.com/en-us/powerapps/powerapps-overview">https://docs.microsoft.com/en-us/powerapps/powerapps-overview</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
 
-        </div>
-        <!-- End Possible Solutions -->
+                    <!-- [3] -->
+                    <tr>
+                      <td>
+                        [3]
+                      </td>
+                      <td>
+                        Microsoft Corporation, "What are Canvas Apps?" [Online]
+                        <br>
+                        Available: <a
+                          href="https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started">https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
 
-        <!-- References -->
-        <div class="accordion-item">
+                    <!-- [4] -->
+                    <tr>
+                      <td>
+                        [4]
+                      </td>
+                      <td>
+                        Microsoft Corporation, "What are Power Apps Portals?" [Online]
+                        <br>
+                        Available: <a
+                          href="https://docs.microsoft.com/en-us/powerapps/maker/portals/overview">https://docs.microsoft.com/en-us/powerapps/maker/portals/overview</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
 
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#research-references">
-              References
-            </button>
-          </h3>
+                    <!-- [5] -->
+                    <tr>
+                      <td>
+                        [5]
+                      </td>
+                      <td>
+                        Microsoft Corporation, "Project Operations" [Online]
+                        <br>
+                        Available: <a
+                          href="https://dynamics.microsoft.com/en-gb/project-operations/overview/">https://dynamics.microsoft.com/en-gb/project-operations/overview/</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
 
-          <div id="research-references" class="accordion-collapse collapse" data-bs-parent="research-areas">
-            <div class="accordion-body">
+                    <!-- [6] -->
+                    <tr>
+                      <td>
+                        [6]
+                      </td>
+                      <td>
+                        Microsoft Corporation, "What are model-driven apps in Power Apps?" [Online]
+                        <br>
+                        Available: <a
+                          href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/model-driven-app-overview">https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/model-driven-app-overview</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
 
-              <!-- Citation descriptions -->
-              <div>
+                    <!-- [7] -->
+                    <tr>
+                      <td>
+                        [7]
+                      </td>
+                      <td>
+                        Microsoft Corportaion, "Microsoft Power BI: Data Visualisation" [Online]
+                        <br>
+                        Available: <a
+                          href="https://powerbi.microsoft.com/en-gb/">https://powerbi.microsoft.com/en-gb/</a>
+                        <br>
+                        [Accessed: Mar. 28, 2022]
+                      </td>
+                    </tr>
+                  </table>
 
-                <table>
-                  <!-- [1] -->
-                  <tr>
-                    <td>
-                      [1]
-                    </td>
-                    <td>
-                      Microsoft Corporation, "What is Microsoft Dataverse?" [Online]
-                      <br>
-                      Available: <a
-                        href="https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro">https://docs.microsoft.com/en-us/powerapps/maker/data-platform/data-platform-intro</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-
-                  <!-- [2] -->
-                  <tr>
-                    <td>
-                      [2]
-                    </td>
-                    <td>
-                      Microsoft Corporation, "What is Power Apps?" [Online]
-                      <br>
-                      Available: <a
-                        href="https://docs.microsoft.com/en-us/powerapps/powerapps-overview">https://docs.microsoft.com/en-us/powerapps/powerapps-overview</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-
-                  <!-- [3] -->
-                  <tr>
-                    <td>
-                      [3]
-                    </td>
-                    <td>
-                      Microsoft Corporation, "What are Canvas Apps?" [Online]
-                      <br>
-                      Available: <a
-                        href="https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started">https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-
-                  <!-- [4] -->
-                  <tr>
-                    <td>
-                      [4]
-                    </td>
-                    <td>
-                      Microsoft Corporation, "What are Power Apps Portals?" [Online]
-                      <br>
-                      Available: <a
-                        href="https://docs.microsoft.com/en-us/powerapps/maker/portals/overview">https://docs.microsoft.com/en-us/powerapps/maker/portals/overview</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-
-                  <!-- [5] -->
-                  <tr>
-                    <td>
-                      [5]
-                    </td>
-                    <td>
-                      Microsoft Corporation, "Project Operations" [Online]
-                      <br>
-                      Available: <a
-                        href="https://dynamics.microsoft.com/en-gb/project-operations/overview/">https://dynamics.microsoft.com/en-gb/project-operations/overview/</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-
-                  <!-- [6] -->
-                  <tr>
-                    <td>
-                      [6]
-                    </td>
-                    <td>
-                      Microsoft Corporation, "What are model-driven apps in Power Apps?" [Online]
-                      <br>
-                      Available: <a
-                        href="https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/model-driven-app-overview">https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/model-driven-app-overview</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-
-                  <!-- [7] -->
-                  <tr>
-                    <td>
-                      [7]
-                    </td>
-                    <td>
-                      Microsoft Corportaion, "Microsoft Power BI: Data Visualisation" [Online]
-                      <br>
-                      Available: <a
-                        href="https://powerbi.microsoft.com/en-gb/">https://powerbi.microsoft.com/en-gb/</a>
-                      <br>
-                      [Accessed: Mar. 28, 2022]
-                    </td>
-                  </tr>
-                </table>
+                </div>
 
               </div>
-
             </div>
+
           </div>
+          <!-- End References -->
 
         </div>
-        <!-- End References -->
+        <!-- End Accordion-->
 
       </div>
-      <!-- End Accordion-->
-
-    </div>
-  </section>
-  <!-- End Research -->
+    </section>
+    <!-- End Research -->
 
 
   </main><!-- End #main -->
@@ -489,4 +488,3 @@
 </body>
 
 </html>
-    
