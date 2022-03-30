@@ -2545,21 +2545,23 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#implementation-portal">
-              Javascript
+              data-bs-target="#testing-javascript">
+              JavaScript
             </button>
           </h3>
-          <div id="implementation-portal" class="accordion-collapse collapse" data-bs-parent="#implementation">
+          <div id="testing-javascript" class="accordion-collapse collapse" data-bs-parent="#testing">
             <div class="accordion-body">
               <p>The final home of the JavaScript code performing the automatic matching algorithm is stored insinde the
                 localised content of the administrator's matching page. However, during the development of the
                 algorithm, the code was tested extensively in the node.js environment. This is because errors are much
                 more verbose and useful than browser's consoles, and code could be quickly edited and re-tested, rather
-                than waitng for a browser to load the page again every single time. </p>
+                than waitng for a browser to load the page again every single time.
+              </p>
               <p>Along the way, JSON files were generated containing various different pieces of information, ouputted
                 from each stage of the algorithm. This was done since JSON is a very human-readble data format, and if a
                 non-crashing, logic error ocurred during execution, the multiple output files could be traced back until
-                the error was identified.</p>
+                the error was identified.
+              </p>
             </div>
           </div>
         </div>
