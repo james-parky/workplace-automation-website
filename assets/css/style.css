@@ -1537,3 +1537,32 @@ img,
 li > img {
     max-width: 100%;
 }
+
+.team-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-list-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+.team-list-card > h3 {
+    margin: 0;
+    padding: 0;
+}
+.team-list-card__links {
+    justify-content: center;
+    margin: 0;
+}
+.team-list-card__links > a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
