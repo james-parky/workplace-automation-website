@@ -118,7 +118,6 @@
         <header class="section-header">
           <h3>Requirements</h3>
         </header>
-
         <div class="accordion accordion-flush" id="reqs">
           <!-- Project Background -->
           <div class="accordion-item">
@@ -218,6 +217,15 @@
             </h3>
             <div id="req-gathering" class="accordion-collapse collapse" data-bs-parent="reqs">
               <div class="accordion-body">
+                <p>At the start of our project, we interviewed 4 students, 2 academics, and the administrator who is
+                  overseeing the FYP supervisor allocations this year.
+                </p>
+                <p>We decided to go with a semi-structured interview as the method of gathering information from would
+                  be users. We probed topics such as what they would like to be able to do with a new system and
+                  thoughts they had about the current system. We deemed this more appropriate than a questionnaire as
+                  people are more reluctant to be thorough and descriptive in questionnaires. We felt that it was also
+                  appropriate to ask open interview questions to really understand what the users want. </p>
+                <p>Below are notable points from answers to the questions we asked. </p>
                 <!-- Students -->
                 <div class="accordion accordion-flush" id="gathering">
                   <div class="accordion-item">
@@ -1489,6 +1497,20 @@
             Algorithms
           </h3>
         </header>
+        <p>There are only two algorithms used in our entire solution.</p>
+        <ul>
+          <li>
+            <p>There is a huge algorithm that we have created for the automatic mathing of supervisors to students based
+              on whether they share a common ACM Keyword. More information about this algorithms code can be found in
+              the <a href="#matching-algo">implementation</a> section.</p>
+          </li>
+          <li>
+            <p>There is a small algorithm, implemented using a PowerAutomate cloud flow, to update students and
+              supervisors response table records when an administrator either approves or rejects a match proposed by
+              the above algorithm. More information can be found in the <a
+                href="#supervised-matching">implementation</a> section.</p>
+          </li>
+        </ul>
     </section>
     <!-- End Algorithms -->
 
@@ -1588,6 +1610,8 @@
 
           <div id="system-design-site-map" class="accordion-collapse collapse" data-bs-parent="system-design">
             <div class="accordion-body">
+              <p>Below is a site map depicting the pages which can be accessed, in any order, with each of the 3
+                possible web roles.</p>
               <img src="assets/img/system-design/site-map.png" alt="">
             </div>
           </div>
@@ -1604,7 +1628,7 @@
 
           <div id="system-design-data" class="accordion-collapse collapse" data-bs-parent="system-design">
             <div class="accordion-body">
-              <p>Our solution's database consists of 12 tables, 1 default table, and 12 custom ones. More detailed
+              <p>Our solution's database consists of 13 tables, 1 default table, and 12 custom ones. More detailed
                 information about these tables can be found in the <a href="#implementation">implementation</a> section,
                 however, simply, they are as follows:</p>
               <strong>Default Tables</strong>
