@@ -1566,3 +1566,8 @@ li > img {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+p {
+    margin-left: 2em;
+    margin-right: 2em;
+}
