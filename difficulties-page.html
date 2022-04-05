@@ -146,7 +146,7 @@
               End Issue Template -->
 
               <!-- Start Issue -->
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="accordion-item" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq-content-2">
@@ -292,7 +292,7 @@
               <!-- End Issue -->
 
               <!-- Start Issue -->
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="accordion-item" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq-content-3">
@@ -337,7 +337,7 @@
               <!-- End Issue -->
 
               <!-- Start Issue -->
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="accordion-item" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq-content-4">
@@ -390,7 +390,7 @@
               </div>
               <!-- End Issue -->
               <!-- Srart Issue -->
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="accordion-item" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq-content-5">
@@ -424,7 +424,7 @@
               <!-- End Issue -->
 
               <!-- Start Issue -->
-              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="accordion-item" data-aos-delay="200">
                 <h3 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#faq-content-6">
@@ -452,6 +452,37 @@
                 </div>
               </div>
               <!-- End Issue -->
+
+              <!-- Multiple Form Responses Crash -->
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#page-crash">
+                    Multiple Form Responses Crash
+                  </button>
+                </h3>
+                <div id="page-crash" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    <strong>Description: </strong>
+                    <p style="margin-left: 0px;">
+                      We have two forms which users may fill out for student and staff applications. There is a page to view each of these forms.
+                      If a single response has been filled out, the user may view a previously submitted application. However, if a user has filled out this
+                      form twice, the page to view the form will crash. The only way to recover this page is to delete the record of one of these responses
+                      and wait for a few minutes. Then the form comes back. Below is a picture of the crashed page.
+                    </p>
+                    <img src="assets/img/page-crash.png" style="border: solid black 5px; margin-bottom: 10px;">
+                    <p style="margin-left: 0px;">
+                      In others words, if multiple responses are filled out for a particular form, the page to view the form will crash. This can be easily
+                      reproduced using our portal - just fill out a response twice on the page '/Student-Application/' (you will need the Student-fyp web role)
+                      and attempt to view it on the page '/View-Student-Application/'.
+                    </p>
+                    <strong>Suggested Solution: </strong> This bug is very easy to reproduce in our Portal, so can be investigated there. Secondly, the crash
+                    is currently entirely useless. It could be very easy to experience this bug and not realise the cause of it, which could be very
+                    frustrating. If this takes long to fix, the error page could be temporarily made to explain the cause of the error such that a developer
+                    may make a temporary workaround themselves.
+                  </div>
+                </div>
+              </div>
+              <!-- End Multiple Form Responses Crash -->
 
             </div>
           </div>
